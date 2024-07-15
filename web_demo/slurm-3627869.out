@@ -1,6 +1,0 @@
-which: no fi_info in (/mnt/petrelfs/zhangdi1/.vscode-server/cli/servers/Stable-5c3e652f63e798a5ac2f31ffd0d863669328dc4c/server/bin/remote-cli:/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/bin:/mnt/petrelfs/zhangdi1/miniforge3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin)
-please install petrel_client
-Traceback (most recent call last):
-  File "/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/internvl/serve/model_worker.py", line 21, in <module>
-    from ..model.internvl_chat import InternVLChatModel
-ImportError: attempted relative import with no known parent package

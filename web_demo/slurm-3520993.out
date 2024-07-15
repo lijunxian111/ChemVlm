@@ -1,41 +1,0 @@
-2024-05-31 16:27:14 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10016, worker_address='http://10.140.24.108:10016', controller_address='http://10.140.24.69:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-mlp_augmented_lr_1e-5', model_base=None, model_name='5.31', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
-2024-05-31 16:27:14 | INFO | model_worker | Loading the model 5.31 on worker b8ed32 ...
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
-2024-05-31 16:27:14 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
-2024-05-31 16:27:19 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
-2024-05-31 16:27:21 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:01<00:16,  1.70s/it]
-2024-05-31 16:27:23 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:03<00:15,  1.68s/it]
-2024-05-31 16:27:24 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:04<00:13,  1.64s/it]
-2024-05-31 16:27:26 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:06<00:11,  1.64s/it]
-2024-05-31 16:27:27 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [00:08<00:09,  1.65s/it]
-2024-05-31 16:27:29 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 6/11 [00:09<00:08,  1.68s/it]
-2024-05-31 16:27:31 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 7/11 [00:11<00:06,  1.69s/it]
-2024-05-31 16:27:33 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 8/11 [00:13<00:05,  1.69s/it]
-2024-05-31 16:27:35 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 9/11 [00:15<00:03,  1.82s/it]
-2024-05-31 16:27:37 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 10/11 [00:17<00:01,  1.87s/it]
-2024-05-31 16:27:38 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:18<00:00,  1.57s/it]
-2024-05-31 16:27:38 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:18<00:00,  1.67s/it]
-2024-05-31 16:27:38 | ERROR | stderr | 
-2024-05-31 16:27:38 | INFO | model_worker | Register to controller
-2024-05-31 16:27:38 | ERROR | stderr | INFO:     Started server process [218434]
-2024-05-31 16:27:38 | ERROR | stderr | INFO:     Waiting for application startup.
-2024-05-31 16:27:38 | ERROR | stderr | INFO:     Application startup complete.
-2024-05-31 16:27:38 | ERROR | stderr | ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 10016): address already in use
-2024-05-31 16:27:38 | ERROR | stderr | INFO:     Waiting for application shutdown.
-2024-05-31 16:27:38 | ERROR | stderr | INFO:     Application shutdown complete.
-2024-05-31 16:27:53 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:28:08 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:28:23 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:28:38 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:28:53 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:29:08 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:29:24 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:29:39 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:29:54 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-2024-05-31 16:30:09 | INFO | model_worker | Send heart beat. Models: ['5.31']. Semaphore: None. global_counter: 0
-slurmstepd: error: *** JOB 3520993 ON SH-IDC1-10-140-24-108 CANCELLED AT 2024-05-31T16:30:09 ***

@@ -1,18 +1,0 @@
-2024-05-29 21:21:14 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10014, worker_address='http://10.140.24.69:10014', controller_address='http://10.140.24.69:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-llm_lora', model_base=None, model_name='test', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
-2024-05-29 21:21:14 | INFO | model_worker | Loading the model test on worker 94ef95 ...
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
-2024-05-29 21:21:14 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
-2024-05-29 21:21:18 | INFO | stdout | trainable params: 72,351,744 || all params: 19,933,612,032 || trainable%: 0.3630
-2024-05-29 21:21:20 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-2024-05-29 21:21:24 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
-2024-05-29 21:21:27 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:02<00:24,  2.44s/it]
-2024-05-29 21:21:29 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:04<00:21,  2.44s/it]
-2024-05-29 21:21:31 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:06<00:18,  2.29s/it]
-2024-05-29 21:21:33 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:09<00:16,  2.29s/it]
-2024-05-29 21:21:36 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [00:11<00:13,  2.27s/it]
-slurmstepd: error: *** JOB 3517437 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-05-29T21:21:36 ***

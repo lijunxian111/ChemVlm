@@ -1,1 +1,0 @@
-/var/spool/slurmd/job3637982/slurm_script: 行 14: 186401 段错误               python -m llava.serve.gradio_web_server --controller http://10.140.24.69:10050 --model-list-mode reload --port 10055

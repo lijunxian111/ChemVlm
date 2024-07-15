@@ -1,5 +1,0 @@
-2024-06-05 16:08:32 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.63:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
-2024-06-05 16:08:32 | INFO | gradio_web_server | Models: []
-2024-06-05 16:08:32 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.63:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
-2024-06-05 16:08:50 | INFO | botocore.credentials | Found credentials in shared credentials file: ~/.aws/credentials
-slurmstepd: error: *** JOB 3528942 ON SH-IDC1-10-140-24-63 CANCELLED AT 2024-06-05T16:10:03 ***

@@ -1,37 +1,0 @@
-2024-05-29 18:03:45 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10013, worker_address='http://10.140.24.108:10013', controller_address='http://10.140.24.69:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-llm_lora', model_base=None, model_name=None, device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
-2024-05-29 18:03:45 | INFO | model_worker | Loading the model internvl_chemllm-llm_lora on worker 07bef3 ...
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
-2024-05-29 18:03:46 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
-2024-05-29 18:03:49 | INFO | stdout | trainable params: 72,351,744 || all params: 19,933,612,032 || trainable%: 0.3630
-2024-05-29 18:03:57 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
-2024-05-29 18:04:11 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:13<02:15, 13.57s/it]
-2024-05-29 18:04:24 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:26<01:57, 13.03s/it]
-2024-05-29 18:04:35 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:37<01:37, 12.21s/it]
-2024-05-29 18:04:47 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:49<01:25, 12.25s/it]
-2024-05-29 18:05:00 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [01:02<01:14, 12.42s/it]
-2024-05-29 18:05:13 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 6/11 [01:15<01:02, 12.55s/it]
-2024-05-29 18:05:26 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 7/11 [01:28<00:50, 12.65s/it]
-2024-05-29 18:05:37 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 8/11 [01:39<00:37, 12.39s/it]
-2024-05-29 18:05:50 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 9/11 [01:52<00:24, 12.33s/it]
-2024-05-29 18:06:03 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 10/11 [02:05<00:12, 12.55s/it]
-2024-05-29 18:06:08 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [02:10<00:00, 10.27s/it]
-2024-05-29 18:06:08 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [02:10<00:00, 11.85s/it]
-2024-05-29 18:06:08 | ERROR | stderr | 
-2024-05-29 18:06:09 | INFO | model_worker | Register to controller
-2024-05-29 18:06:09 | ERROR | stderr | INFO:     Started server process [146377]
-2024-05-29 18:06:09 | ERROR | stderr | INFO:     Waiting for application startup.
-2024-05-29 18:06:09 | ERROR | stderr | INFO:     Application startup complete.
-2024-05-29 18:06:09 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10013 (Press CTRL+C to quit)
-2024-05-29 18:06:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
-2024-05-29 18:06:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
-2024-05-29 18:06:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
-2024-05-29 18:07:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
-2024-05-29 18:07:14 | ERROR | model_worker | heart beat error: HTTPConnectionPool(host='10.1.8.50', port=33128): Read timed out. (read timeout=5)
-2024-05-29 18:07:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
-2024-05-29 18:07:39 | ERROR | model_worker | heart beat error: HTTPConnectionPool(host='10.1.8.50', port=33128): Read timed out. (read timeout=5)
-slurmstepd: error: *** JOB 3517050 ON SH-IDC1-10-140-24-108 CANCELLED AT 2024-05-29T18:07:47 ***

@@ -1,8 +1,0 @@
-2024-07-09 12:30:51 | INFO | controller | args: Namespace(host='0.0.0.0', port=10050, dispatch_method='shortest_queue')
-2024-07-09 12:30:51 | INFO | controller | Init controller
-2024-07-09 12:30:51 | ERROR | stderr | INFO:     Started server process [152759]
-2024-07-09 12:30:51 | ERROR | stderr | INFO:     Waiting for application startup.
-2024-07-09 12:30:51 | ERROR | stderr | INFO:     Application startup complete.
-2024-07-09 12:30:51 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10050 (Press CTRL+C to quit)
-slurmstepd: error: *** JOB 3675219 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-09T13:56:06 ***
-2024-07-09 13:56:06 | ERROR | stderr | INFO:     Shutting down

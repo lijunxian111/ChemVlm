@@ -1,62 +1,0 @@
-2024-05-29 21:15:23 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10014, worker_address='http://10.140.24.69:10014', controller_address='http://10.140.24.69:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-llm_lora', model_base=None, model_name='test', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
-2024-05-29 21:15:23 | INFO | model_worker | Loading the model test on worker 5d234f ...
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
-2024-05-29 21:15:24 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
-2024-05-29 21:15:27 | INFO | stdout | trainable params: 72,351,744 || all params: 19,933,612,032 || trainable%: 0.3630
-2024-05-29 21:15:29 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-2024-05-29 21:15:34 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
-2024-05-29 21:15:37 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:03<00:35,  3.58s/it]
-2024-05-29 21:15:41 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:07<00:31,  3.52s/it]
-2024-05-29 21:15:43 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:09<00:25,  3.19s/it]
-2024-05-29 21:15:46 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:12<00:19,  2.83s/it]
-2024-05-29 21:15:48 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [00:14<00:15,  2.62s/it]
-2024-05-29 21:15:50 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 6/11 [00:16<00:12,  2.51s/it]
-2024-05-29 21:15:52 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 7/11 [00:18<00:09,  2.42s/it]
-2024-05-29 21:15:55 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 8/11 [00:21<00:07,  2.39s/it]
-2024-05-29 21:15:57 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 9/11 [00:23<00:04,  2.34s/it]
-2024-05-29 21:15:59 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 10/11 [00:25<00:02,  2.31s/it]
-2024-05-29 21:16:00 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:26<00:00,  1.90s/it]
-2024-05-29 21:16:00 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:26<00:00,  2.43s/it]
-2024-05-29 21:16:00 | ERROR | stderr | 
-2024-05-29 21:16:01 | INFO | model_worker | Register to controller
-2024-05-29 21:16:01 | ERROR | stderr | INFO:     Started server process [133768]
-2024-05-29 21:16:01 | ERROR | stderr | INFO:     Waiting for application startup.
-2024-05-29 21:16:01 | ERROR | stderr | INFO:     Application startup complete.
-2024-05-29 21:16:01 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10014 (Press CTRL+C to quit)
-2024-05-29 21:16:16 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: None. global_counter: 0
-2024-05-29 21:16:16 | INFO | stdout | INFO:     10.140.24.69:49210 - "POST /worker_get_status HTTP/1.1" 200 OK
-2024-05-29 21:16:26 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:16:26 | INFO | stdout | INFO:     10.140.24.69:49220 - "POST /worker_generate_stream HTTP/1.1" 200 OK
-2024-05-29 21:16:26 | INFO | model_worker | max_input_tiles: 12
-2024-05-29 21:16:26 | INFO | model_worker | dynamic_image_size: False
-2024-05-29 21:16:26 | INFO | model_worker | use_thumbnail: False
-2024-05-29 21:16:26 | INFO | model_worker | Resize images to 448x448
-2024-05-29 21:16:26 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
-2024-05-29 21:16:26 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
-请描述这张图片 ASSISTANT:
-2024-05-29 21:16:26 | INFO | model_worker | num_image_tokens: 256
-2024-05-29 21:16:26 | INFO | model_worker | max_new_tokens: 1024
-2024-05-29 21:16:31 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:16:32 | ERROR | stderr | /mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/model/internvl_chat/modeling_internvl_chat.py:198: UserWarning: In ps_version 'v1', the height and width have not been swapped back, which results in a transposed image.
-2024-05-29 21:16:32 | ERROR | stderr |   warnings.warn("In ps_version 'v1', the height and width have not been swapped back, "
-2024-05-29 21:16:46 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:17:01 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:17:16 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:17:31 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:17:46 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:18:01 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:18:16 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:18:31 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:18:38 | INFO | stdout | INFO:     10.140.24.69:49284 - "POST /worker_get_status HTTP/1.1" 200 OK
-2024-05-29 21:18:46 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:19:01 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
-2024-05-29 21:19:05 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
-2024-05-29 21:19:16 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
-2024-05-29 21:19:31 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
-2024-05-29 21:19:46 | INFO | model_worker | Send heart beat. Models: ['test']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
-slurmstepd: error: *** JOB 3517414 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-05-29T21:19:52 ***

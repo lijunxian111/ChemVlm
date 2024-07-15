@@ -1,9 +1,0 @@
-2024-06-05 15:50:44 | INFO | controller | args: Namespace(host='0.0.0.0', port=10050, dispatch_method='shortest_queue')
-2024-06-05 15:50:44 | INFO | controller | Init controller
-2024-06-05 15:50:44 | ERROR | stderr | INFO:     Started server process [110735]
-2024-06-05 15:50:44 | ERROR | stderr | INFO:     Waiting for application startup.
-2024-06-05 15:50:44 | ERROR | stderr | INFO:     Application startup complete.
-2024-06-05 15:50:44 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10050 (Press CTRL+C to quit)
-2024-06-05 15:51:29 | INFO | stdout | INFO:     10.140.24.69:25184 - "POST /refresh_all_workers HTTP/1.1" 200 OK
-2024-06-05 15:51:29 | INFO | stdout | INFO:     10.140.24.69:25186 - "POST /list_models HTTP/1.1" 200 OK
-slurmstepd: error: *** JOB 3528910 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-06-05T15:56:45 ***
