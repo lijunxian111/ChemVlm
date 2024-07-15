@@ -1,0 +1,26 @@
+/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio_client/documentation.py:105: UserWarning: Could not get documentation group for <class 'gradio.mix.Parallel'>: No known documentation group for module 'gradio.mix'
+  warnings.warn(f"Could not get documentation group for {cls}: {exc}")
+/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio_client/documentation.py:105: UserWarning: Could not get documentation group for <class 'gradio.mix.Series'>: No known documentation group for module 'gradio.mix'
+  warnings.warn(f"Could not get documentation group for {cls}: {exc}")
+2024-07-03 01:38:41 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-03 01:38:41 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-03 01:38:41 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-03 01:38:59 | ERROR | stderr | Traceback (most recent call last):
+2024-07-03 01:38:59 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/networking.py", line 121, in start_server
+2024-07-03 01:38:59 | ERROR | stderr |     s.bind((LOCALHOST_NAME, server_port))
+2024-07-03 01:38:59 | ERROR | stderr | OSError: [Errno 98] Address already in use
+2024-07-03 01:38:59 | ERROR | stderr | 
+2024-07-03 01:38:59 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-07-03 01:38:59 | ERROR | stderr | 
+2024-07-03 01:38:59 | ERROR | stderr | Traceback (most recent call last):
+2024-07-03 01:38:59 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-07-03 01:38:59 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-07-03 01:38:59 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/serve/gradio_web_server.py", line 462, in <module>
+2024-07-03 01:38:59 | ERROR | stderr |     ).launch(
+2024-07-03 01:38:59 | ERROR | stderr |       ^^^^^^^
+2024-07-03 01:38:59 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/blocks.py", line 1777, in launch
+2024-07-03 01:38:59 | ERROR | stderr |     server_name, server_port, local_url, app, server = networking.start_server(
+2024-07-03 01:38:59 | ERROR | stderr |                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-03 01:38:59 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/networking.py", line 124, in start_server
+2024-07-03 01:38:59 | ERROR | stderr |     raise OSError(
+2024-07-03 01:38:59 | ERROR | stderr | OSError: Port 10055 is in use. If a gradio.Blocks is running on the port, you can close() it or gradio.close_all().

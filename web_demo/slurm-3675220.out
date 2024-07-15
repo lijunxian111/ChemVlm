@@ -1,0 +1,7 @@
+2024-07-09 12:31:59 | ERROR | stderr | Traceback (most recent call last):
+2024-07-09 12:31:59 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-07-09 12:31:59 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-07-09 12:31:59 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/serve/gradio_web_server.py", line 22, in <module>
+2024-07-09 12:31:59 | ERROR | stderr |     no_change_btn = gr.Button.update()
+2024-07-09 12:31:59 | ERROR | stderr |                     ^^^^^^^^^^^^^^^^
+2024-07-09 12:31:59 | ERROR | stderr | AttributeError: type object 'Button' has no attribute 'update'

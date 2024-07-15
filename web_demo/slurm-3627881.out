@@ -1,0 +1,47 @@
+which: no fi_info in (/mnt/petrelfs/zhangdi1/.vscode-server/cli/servers/Stable-5c3e652f63e798a5ac2f31ffd0d863669328dc4c/server/bin/remote-cli:/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/bin:/mnt/petrelfs/zhangdi1/miniforge3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin)
+2024-06-30 09:50:09 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10062, worker_address='http://10.140.24.46:10062', controller_address='http://10.140.24.69:10050', model_path='/mnt/hwfile/ai4chem/CKPT/wxz/chemvl_2B_ft_6_27_0_merge', model_base=None, model_name='chemvlm_2B', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-06-30 09:50:09 | INFO | model_worker | Loading the model chemvlm_2B on worker af38cf ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 49
+2024-06-30 09:50:10 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-06-30 09:50:12 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-06-30 09:50:12 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]
+2024-06-30 09:50:25 | ERROR | stderr | Loading checkpoint shards:  14%|█▍        | 1/7 [00:12<01:15, 12.55s/it]
+2024-06-30 09:50:38 | ERROR | stderr | Loading checkpoint shards:  29%|██▊       | 2/7 [00:25<01:05, 13.04s/it]
+2024-06-30 09:50:51 | ERROR | stderr | Loading checkpoint shards:  43%|████▎     | 3/7 [00:38<00:51, 12.86s/it]
+2024-06-30 09:51:02 | ERROR | stderr | Loading checkpoint shards:  57%|█████▋    | 4/7 [00:50<00:36, 12.33s/it]
+2024-06-30 09:51:15 | ERROR | stderr | Loading checkpoint shards:  71%|███████▏  | 5/7 [01:03<00:25, 12.57s/it]
+2024-06-30 09:51:29 | ERROR | stderr | Loading checkpoint shards:  86%|████████▌ | 6/7 [01:16<00:12, 12.97s/it]
+2024-06-30 09:51:33 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 7/7 [01:21<00:00, 10.17s/it]
+2024-06-30 09:51:33 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 7/7 [01:21<00:00, 11.60s/it]
+2024-06-30 09:51:33 | ERROR | stderr | 
+2024-06-30 09:51:34 | INFO | model_worker | Register to controller
+2024-06-30 09:51:34 | ERROR | stderr | INFO:     Started server process [90413]
+2024-06-30 09:51:34 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-06-30 09:51:34 | ERROR | stderr | INFO:     Application startup complete.
+2024-06-30 09:51:34 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10062 (Press CTRL+C to quit)
+2024-06-30 09:51:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:52:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:52:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:52:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:52:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:53:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:53:04 | INFO | model_worker | Register to controller
+2024-06-30 09:53:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:53:19 | INFO | model_worker | Register to controller
+2024-06-30 09:53:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:53:34 | INFO | model_worker | Register to controller
+2024-06-30 09:53:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:54:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:54:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:54:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:54:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:55:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:55:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-06-30 09:55:19 | INFO | model_worker | Register to controller
+2024-06-30 09:55:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+slurmstepd: error: *** JOB 3627881 ON SH-IDC1-10-140-24-75 CANCELLED AT 2024-06-30T09:55:44 ***

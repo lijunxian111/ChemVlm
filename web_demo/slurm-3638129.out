@@ -1,0 +1,2 @@
+which: no fi_info in (/mnt/petrelfs/zhangdi1/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/bin/remote-cli:/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/bin:/mnt/petrelfs/zhangdi1/miniforge3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin)
+slurmstepd: error: *** JOB 3638129 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-02T12:26:48 ***

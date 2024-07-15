@@ -1,0 +1,290 @@
+which: no fi_info in (/mnt/petrelfs/zhangdi1/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/bin/remote-cli:/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/bin:/mnt/petrelfs/zhangdi1/miniforge3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin:/mnt/petrelfs/zhangdi1/.local/bin:/mnt/petrelfs/zhangdi1/bin)
+2024-07-02 10:46:10 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10062, worker_address='http://10.140.24.69:10062', controller_address='http://10.140.24.69:10050', model_path='/mnt/hwfile/ai4chem/CKPT/chemvl_ft_6_19_0_merged', model_base=None, model_name='chemvlm', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-07-02 10:46:10 | INFO | model_worker | Loading the model chemvlm on worker c0b9a4 ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-07-02 10:46:10 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-07-02 10:46:14 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/22 [00:00<?, ?it/s]
+2024-07-02 10:46:15 | ERROR | stderr | Loading checkpoint shards:   5%|▍         | 1/22 [00:01<00:27,  1.31s/it]
+2024-07-02 10:46:16 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 2/22 [00:02<00:26,  1.34s/it]
+2024-07-02 10:46:18 | ERROR | stderr | Loading checkpoint shards:  14%|█▎        | 3/22 [00:03<00:25,  1.32s/it]
+2024-07-02 10:46:19 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 4/22 [00:05<00:24,  1.37s/it]
+2024-07-02 10:46:21 | ERROR | stderr | Loading checkpoint shards:  23%|██▎       | 5/22 [00:06<00:24,  1.43s/it]
+2024-07-02 10:46:22 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 6/22 [00:08<00:23,  1.46s/it]
+2024-07-02 10:46:24 | ERROR | stderr | Loading checkpoint shards:  32%|███▏      | 7/22 [00:09<00:21,  1.45s/it]
+2024-07-02 10:46:25 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 8/22 [00:11<00:19,  1.42s/it]
+2024-07-02 10:46:26 | ERROR | stderr | Loading checkpoint shards:  41%|████      | 9/22 [00:12<00:18,  1.40s/it]
+2024-07-02 10:46:28 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 10/22 [00:13<00:16,  1.37s/it]
+2024-07-02 10:46:29 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 11/22 [00:15<00:14,  1.35s/it]
+2024-07-02 10:46:30 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 12/22 [00:16<00:13,  1.34s/it]
+2024-07-02 10:46:32 | ERROR | stderr | Loading checkpoint shards:  59%|█████▉    | 13/22 [00:17<00:12,  1.35s/it]
+2024-07-02 10:46:33 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 14/22 [00:19<00:10,  1.33s/it]
+2024-07-02 10:46:34 | ERROR | stderr | Loading checkpoint shards:  68%|██████▊   | 15/22 [00:20<00:09,  1.32s/it]
+2024-07-02 10:46:35 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 16/22 [00:21<00:07,  1.30s/it]
+2024-07-02 10:46:37 | ERROR | stderr | Loading checkpoint shards:  77%|███████▋  | 17/22 [00:23<00:06,  1.30s/it]
+2024-07-02 10:46:38 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 18/22 [00:24<00:05,  1.29s/it]
+2024-07-02 10:46:39 | ERROR | stderr | Loading checkpoint shards:  86%|████████▋ | 19/22 [00:25<00:03,  1.29s/it]
+2024-07-02 10:46:40 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 20/22 [00:26<00:02,  1.28s/it]
+2024-07-02 10:46:42 | ERROR | stderr | Loading checkpoint shards:  95%|█████████▌| 21/22 [00:28<00:01,  1.24s/it]
+2024-07-02 10:46:42 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:28<00:00,  1.09s/it]
+2024-07-02 10:46:42 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:28<00:00,  1.31s/it]
+2024-07-02 10:46:42 | ERROR | stderr | 
+2024-07-02 10:46:43 | INFO | model_worker | Register to controller
+2024-07-02 10:46:43 | ERROR | stderr | INFO:     Started server process [42196]
+2024-07-02 10:46:43 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-07-02 10:46:43 | ERROR | stderr | INFO:     Application startup complete.
+2024-07-02 10:46:43 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10062 (Press CTRL+C to quit)
+2024-07-02 10:46:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:47:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:47:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:47:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:47:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:48:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:48:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:48:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:48:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:49:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:49:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:49:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:49:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:50:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:50:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:50:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:50:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:51:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:51:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:51:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:51:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:52:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:52:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:52:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:52:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:53:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:53:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:53:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:53:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:54:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:54:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:54:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:54:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:55:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:55:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:55:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:55:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:56:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:56:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:56:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:56:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:57:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:57:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:57:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:57:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:58:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:58:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:58:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:58:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:59:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:59:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:59:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 10:59:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:00:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:00:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:00:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:00:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:01:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:01:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:01:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:01:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:02:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:02:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:02:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:02:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:03:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:03:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:03:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:03:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:04:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:04:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:04:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:04:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:05:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:05:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:05:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:05:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:06:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:06:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:06:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:06:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:07:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:07:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:07:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:07:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:08:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:08:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:08:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:08:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:09:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:09:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:09:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:09:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:10:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:10:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:10:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:10:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:11:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:11:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:11:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:11:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:12:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:12:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:12:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:12:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:13:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:13:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:13:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:13:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:14:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:14:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:14:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:14:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:15:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:15:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:15:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:15:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:16:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:16:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:16:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:16:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:17:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:17:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:17:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:17:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:18:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:18:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:18:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:18:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:19:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:19:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:19:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:19:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:20:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:20:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:20:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:20:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:21:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:21:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:21:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:21:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:22:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:22:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:22:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:22:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:23:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:23:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:23:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:23:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:24:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:24:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:24:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:24:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:25:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:25:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:25:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:25:59 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:26:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:26:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:26:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:27:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:27:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:27:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:27:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:28:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:28:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:28:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:28:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:29:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:29:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:29:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:29:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:30:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:30:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:30:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:30:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:31:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:31:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:31:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:31:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:32:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:32:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:32:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:32:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:33:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:33:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:33:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:33:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:34:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:34:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:34:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:34:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:35:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:35:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:35:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:35:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:36:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:36:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:36:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:36:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:37:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:37:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:37:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:37:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:38:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:38:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:38:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:38:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:39:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:39:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:39:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:39:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:40:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:40:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:40:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:40:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:41:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:41:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:41:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:41:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:42:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:42:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:42:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:42:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:43:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:43:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:43:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:43:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:44:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:44:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:44:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:44:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:45:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:45:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:45:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:45:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:46:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:46:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:46:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:46:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:47:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:47:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:47:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:47:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:48:00 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:48:15 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:48:30 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-07-02 11:48:45 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+slurmstepd: error: *** JOB 3637249 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-02T11:48:48 ***
+2024-07-02 11:48:48 | ERROR | stderr | INFO:     Shutting down

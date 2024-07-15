@@ -1,0 +1,162 @@
+2024-07-02 10:12:25 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 10:12:25 | INFO | gradio_web_server | Models: []
+2024-07-02 10:12:25 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 10:12:44 | INFO | stdout | Running on local URL:  http://0.0.0.0:10055
+2024-07-02 10:12:44 | INFO | stdout | 
+2024-07-02 10:12:44 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-07-02 10:51:54 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 10:52:21 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='yt3rbkd81rf_11' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'yt3rbkd81rf'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'yt3rbkd81rf'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 10:52:21 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:48:55 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='yt3rbkd81rf_9' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'yt3rbkd81rf'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'yt3rbkd81rf'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:48:55 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:49:12 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='wxknt33cmce_11' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'wxknt33cmce'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'wxknt33cmce'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:49:12 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:49:18 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='wxknt33cmce_9' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'wxknt33cmce'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'wxknt33cmce'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:49:18 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:52:10 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='1wf6n6k555n_11' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': '1wf6n6k555n'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': '1wf6n6k555n'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:52:10 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:52:27 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='v2ko9sk9fxt_11' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'v2ko9sk9fxt'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'v2ko9sk9fxt'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:52:27 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:54:05 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='v2ko9sk9fxt_7' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'v2ko9sk9fxt'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [None, '你好',...on_hash': 'v2ko9sk9fxt'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:54:05 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+slurmstepd: error: *** JOB 3636394 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-02T11:56:20 ***

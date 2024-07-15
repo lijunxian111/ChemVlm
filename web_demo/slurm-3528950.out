@@ -1,0 +1,360 @@
+2024-06-05 16:12:17 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10052, worker_address='http://10.140.24.109:10052', controller_address='http://10.140.24.63:10050', model_path='/mnt/hwfile/ai4chem/CKPT/chemvl_ft_6_4_0-merge/', model_base=None, model_name='6.5', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-06-05 16:12:17 | INFO | model_worker | Loading the model 6.5 on worker eb54ef ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-06-05 16:12:18 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-06-05 16:12:23 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/22 [00:00<?, ?it/s]
+2024-06-05 16:12:24 | ERROR | stderr | Loading checkpoint shards:   5%|▍         | 1/22 [00:01<00:25,  1.23s/it]
+2024-06-05 16:12:25 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 2/22 [00:02<00:24,  1.24s/it]
+2024-06-05 16:12:28 | ERROR | stderr | Loading checkpoint shards:  14%|█▎        | 3/22 [00:05<00:40,  2.12s/it]
+2024-06-05 16:12:30 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 4/22 [00:06<00:32,  1.81s/it]
+2024-06-05 16:12:32 | ERROR | stderr | Loading checkpoint shards:  23%|██▎       | 5/22 [00:08<00:31,  1.88s/it]
+2024-06-05 16:12:33 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 6/22 [00:10<00:27,  1.71s/it]
+2024-06-05 16:12:35 | ERROR | stderr | Loading checkpoint shards:  32%|███▏      | 7/22 [00:12<00:27,  1.81s/it]
+2024-06-05 16:12:36 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 8/22 [00:13<00:22,  1.61s/it]
+2024-06-05 16:12:37 | ERROR | stderr | Loading checkpoint shards:  41%|████      | 9/22 [00:14<00:19,  1.52s/it]
+2024-06-05 16:12:39 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 10/22 [00:16<00:17,  1.43s/it]
+2024-06-05 16:12:40 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 11/22 [00:17<00:14,  1.35s/it]
+2024-06-05 16:12:41 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 12/22 [00:18<00:12,  1.30s/it]
+2024-06-05 16:12:42 | ERROR | stderr | Loading checkpoint shards:  59%|█████▉    | 13/22 [00:19<00:11,  1.26s/it]
+2024-06-05 16:12:43 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 14/22 [00:20<00:09,  1.23s/it]
+2024-06-05 16:12:45 | ERROR | stderr | Loading checkpoint shards:  68%|██████▊   | 15/22 [00:21<00:08,  1.22s/it]
+2024-06-05 16:12:46 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 16/22 [00:23<00:07,  1.21s/it]
+2024-06-05 16:12:47 | ERROR | stderr | Loading checkpoint shards:  77%|███████▋  | 17/22 [00:24<00:06,  1.20s/it]
+2024-06-05 16:12:48 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 18/22 [00:25<00:04,  1.19s/it]
+2024-06-05 16:12:49 | ERROR | stderr | Loading checkpoint shards:  86%|████████▋ | 19/22 [00:26<00:03,  1.21s/it]
+2024-06-05 16:12:51 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 20/22 [00:27<00:02,  1.20s/it]
+2024-06-05 16:12:52 | ERROR | stderr | Loading checkpoint shards:  95%|█████████▌| 21/22 [00:29<00:01,  1.16s/it]
+2024-06-05 16:12:52 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:29<00:00,  1.02s/it]
+2024-06-05 16:12:52 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:29<00:00,  1.35s/it]
+2024-06-05 16:12:52 | ERROR | stderr | 
+2024-06-05 16:12:53 | INFO | model_worker | Register to controller
+2024-06-05 16:12:53 | ERROR | stderr | INFO:     Started server process [145742]
+2024-06-05 16:12:53 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-06-05 16:12:53 | ERROR | stderr | INFO:     Application startup complete.
+2024-06-05 16:12:53 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10052 (Press CTRL+C to quit)
+2024-06-05 16:13:08 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:13:23 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:13:38 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:13:53 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:14:08 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:14:23 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:14:38 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:14:50 | INFO | stdout | INFO:     10.140.24.63:16498 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 16:14:53 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:15:08 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:15:23 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:15:38 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:15:53 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:16:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:16:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:16:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:16:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:17:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:17:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:17:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:17:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:18:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:18:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:18:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:18:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:19:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:19:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:19:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:19:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:20:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:20:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:20:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:20:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:21:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:21:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:21:39 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:21:54 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:22:09 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:22:24 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:22:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:22:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:23:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:23:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:23:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:23:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:24:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:24:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:24:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:24:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:25:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:25:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:25:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:25:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:26:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:26:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:26:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:26:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:27:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:27:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:27:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:27:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:28:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:28:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:28:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:28:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:29:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:29:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:29:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:29:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:30:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:30:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:30:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:30:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:31:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:31:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:31:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:31:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:32:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:32:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:32:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:32:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:33:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:33:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:33:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:33:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:34:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:34:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:34:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:34:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:35:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:35:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:35:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:35:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:36:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:36:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:36:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:36:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:37:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:37:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:37:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:37:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:38:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:38:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:38:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:38:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:39:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:39:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:39:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:39:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:40:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:40:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:40:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:40:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:41:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:41:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:41:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:41:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:42:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:42:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:42:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:42:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:43:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:43:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:43:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:43:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:44:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:44:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:44:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:44:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:45:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:45:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:45:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:45:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:46:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:46:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:46:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:46:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:47:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:47:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:47:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:47:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:48:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:48:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:48:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:48:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:49:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:49:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:49:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:49:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:50:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:50:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:50:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:50:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:51:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:51:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:51:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:51:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:52:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:52:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:52:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:52:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:53:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:53:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:53:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:53:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:54:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:54:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:54:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:54:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:55:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:55:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:55:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:55:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:56:14 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:56:29 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:56:44 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:56:59 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:57:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:57:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:57:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:58:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:58:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:58:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:58:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:59:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:59:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:59:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 16:59:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:00:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:00:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:00:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:00:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:01:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:01:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:01:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:01:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:02:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:02:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:02:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:02:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:03:00 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:03:15 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:03:30 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:03:45 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:04:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:04:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:04:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:04:46 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:05:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:05:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:05:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:05:46 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:06:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:06:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:06:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:06:46 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:07:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:07:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:07:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:07:46 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:08:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:08:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:08:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:08:46 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:09:01 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:09:16 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:09:31 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:09:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:10:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:10:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:10:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:10:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:11:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:11:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:11:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:11:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:12:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:12:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:12:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:12:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:13:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:13:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:13:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:13:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:14:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:14:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:14:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:14:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:15:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:15:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:15:32 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:15:47 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:16:02 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:16:17 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:16:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:16:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:17:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:17:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:17:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:17:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:18:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:18:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:18:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:18:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:19:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:19:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:19:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:19:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:20:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:20:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:20:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:20:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:21:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:21:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:21:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:21:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:22:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:22:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:22:33 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:22:48 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:23:03 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:23:18 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:23:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:23:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:24:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:24:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:24:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:24:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:25:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:25:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:25:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:25:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:26:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:26:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:26:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:26:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:27:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:27:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:27:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:27:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:28:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:28:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:28:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:28:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:29:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:29:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:29:34 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:29:49 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:30:04 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:30:19 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:30:35 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:30:50 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:31:05 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:31:20 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:31:35 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:31:50 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:32:05 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:32:20 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:32:35 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 17:32:50 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+slurmstepd: error: *** JOB 3528950 ON SH-IDC1-10-140-24-109 CANCELLED AT 2024-06-05T17:32:51 ***

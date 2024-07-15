@@ -1,0 +1,120 @@
+2024-07-09 14:32:32 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10062, worker_address='http://10.140.24.69:10062', controller_address='http://10.140.24.69:10050', model_path='/mnt/hwfile/ai4chem/CKPT/wxz/chemvl_2B_ft_7_3_0_merge', model_base=None, model_name='chemvlm_2B', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-07-09 14:32:32 | INFO | model_worker | Loading the model chemvlm_2B on worker 006ffa ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-07-09 14:32:32 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-07-09 14:32:35 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-07-09 14:32:35 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+2024-07-09 14:32:36 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.57s/it]
+2024-07-09 14:32:38 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.42s/it]
+2024-07-09 14:32:38 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.45s/it]
+2024-07-09 14:32:38 | ERROR | stderr | 
+Some weights of InternVLChatModel were not initialized from the model checkpoint at /mnt/hwfile/ai4chem/CKPT/wxz/chemvl_2B_ft_7_3_0_merge and are newly initialized: ['vision_model.encoder.layers.0.norm1.bias', 'vision_model.encoder.layers.0.norm2.bias', 'vision_model.encoder.layers.1.norm1.bias', 'vision_model.encoder.layers.1.norm2.bias', 'vision_model.encoder.layers.10.norm1.bias', 'vision_model.encoder.layers.10.norm2.bias', 'vision_model.encoder.layers.11.norm1.bias', 'vision_model.encoder.layers.11.norm2.bias', 'vision_model.encoder.layers.12.norm1.bias', 'vision_model.encoder.layers.12.norm2.bias', 'vision_model.encoder.layers.13.norm1.bias', 'vision_model.encoder.layers.13.norm2.bias', 'vision_model.encoder.layers.14.norm1.bias', 'vision_model.encoder.layers.14.norm2.bias', 'vision_model.encoder.layers.15.norm1.bias', 'vision_model.encoder.layers.15.norm2.bias', 'vision_model.encoder.layers.16.norm1.bias', 'vision_model.encoder.layers.16.norm2.bias', 'vision_model.encoder.layers.17.norm1.bias', 'vision_model.encoder.layers.17.norm2.bias', 'vision_model.encoder.layers.18.norm1.bias', 'vision_model.encoder.layers.18.norm2.bias', 'vision_model.encoder.layers.19.norm1.bias', 'vision_model.encoder.layers.19.norm2.bias', 'vision_model.encoder.layers.2.norm1.bias', 'vision_model.encoder.layers.2.norm2.bias', 'vision_model.encoder.layers.20.norm1.bias', 'vision_model.encoder.layers.20.norm2.bias', 'vision_model.encoder.layers.21.norm1.bias', 'vision_model.encoder.layers.21.norm2.bias', 'vision_model.encoder.layers.22.norm1.bias', 'vision_model.encoder.layers.22.norm2.bias', 'vision_model.encoder.layers.23.norm1.bias', 'vision_model.encoder.layers.23.norm2.bias', 'vision_model.encoder.layers.3.norm1.bias', 'vision_model.encoder.layers.3.norm2.bias', 'vision_model.encoder.layers.4.norm1.bias', 'vision_model.encoder.layers.4.norm2.bias', 'vision_model.encoder.layers.5.norm1.bias', 'vision_model.encoder.layers.5.norm2.bias', 'vision_model.encoder.layers.6.norm1.bias', 'vision_model.encoder.layers.6.norm2.bias', 'vision_model.encoder.layers.7.norm1.bias', 'vision_model.encoder.layers.7.norm2.bias', 'vision_model.encoder.layers.8.norm1.bias', 'vision_model.encoder.layers.8.norm2.bias', 'vision_model.encoder.layers.9.norm1.bias', 'vision_model.encoder.layers.9.norm2.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2024-07-09 14:32:38 | INFO | model_worker | Register to controller
+2024-07-09 14:32:38 | ERROR | stderr | INFO:     Started server process [47624]
+2024-07-09 14:32:38 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-07-09 14:32:38 | ERROR | stderr | INFO:     Application startup complete.
+2024-07-09 14:32:38 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10062 (Press CTRL+C to quit)
+2024-07-09 14:32:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-07-09 14:33:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-07-09 14:33:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: None. global_counter: 0
+2024-07-09 14:33:26 | INFO | stdout | INFO:     10.140.24.69:61567 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-07-09 14:33:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-07-09 14:33:38 | INFO | stdout | INFO:     10.140.24.69:61639 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-07-09 14:33:38 | INFO | model_worker | max_input_tiles: 12
+2024-07-09 14:33:38 | INFO | model_worker | dynamic_image_size: False
+2024-07-09 14:33:38 | INFO | model_worker | use_thumbnail: False
+2024-07-09 14:33:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-07-09 14:33:38 | INFO | model_worker | Resize images to 448x448
+2024-07-09 14:33:38 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-07-09 14:33:38 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+what is this? ASSISTANT:
+2024-07-09 14:33:38 | INFO | model_worker | num_image_tokens: 256
+2024-07-09 14:33:38 | INFO | model_worker | max_new_tokens: 1024
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token.As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+2024-07-09 14:33:42 | ERROR | stderr | Exception in thread Thread-3 (generate):
+2024-07-09 14:33:42 | ERROR | stderr | Traceback (most recent call last):
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+2024-07-09 14:33:42 | ERROR | stderr |     self.run()
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/threading.py", line 982, in run
+2024-07-09 14:33:42 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+2024-07-09 14:33:42 | ERROR | stderr |     return func(*args, **kwargs)
+2024-07-09 14:33:42 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/model/internvl_chat/modeling_internvl_chat.py", line 383, in generate
+2024-07-09 14:33:42 | ERROR | stderr |     outputs = self.language_model.generate(
+2024-07-09 14:33:42 | ERROR | stderr |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+2024-07-09 14:33:42 | ERROR | stderr |     return func(*args, **kwargs)
+2024-07-09 14:33:42 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/generation/utils.py", line 1914, in generate
+2024-07-09 14:33:42 | ERROR | stderr |     result = self._sample(
+2024-07-09 14:33:42 | ERROR | stderr |              ^^^^^^^^^^^^^
+2024-07-09 14:33:42 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/generation/utils.py", line 2693, in _sample
+2024-07-09 14:33:42 | ERROR | stderr |     next_tokens = torch.multinomial(probs, num_samples=1).squeeze(1)
+2024-07-09 14:33:42 | ERROR | stderr |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:33:42 | ERROR | stderr | RuntimeError: probability tensor contains either `inf`, `nan` or element < 0
+2024-07-09 14:33:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-07-09 14:33:53 | INFO | stdout | Caught Unknown Error
+2024-07-09 14:33:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:34:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:34:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:34:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:34:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:35:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:35:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:35:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:35:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:36:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:36:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:36:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:36:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:37:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:37:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:37:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:37:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:38:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-07-09 14:38:14 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-07-09 14:38:14 | INFO | stdout | INFO:     10.140.24.69:63171 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-07-09 14:38:14 | INFO | model_worker | max_input_tiles: 12
+2024-07-09 14:38:14 | INFO | model_worker | dynamic_image_size: False
+2024-07-09 14:38:14 | INFO | model_worker | use_thumbnail: False
+2024-07-09 14:38:14 | INFO | model_worker | Resize images to 448x448
+2024-07-09 14:38:14 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-07-09 14:38:14 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+what is this? ASSISTANT:
+2024-07-09 14:38:14 | INFO | model_worker | num_image_tokens: 256
+2024-07-09 14:38:14 | INFO | model_worker | max_new_tokens: 1024
+2024-07-09 14:38:14 | ERROR | stderr | Exception in thread Thread-4 (generate):
+2024-07-09 14:38:14 | ERROR | stderr | Traceback (most recent call last):
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+2024-07-09 14:38:14 | ERROR | stderr |     self.run()
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/threading.py", line 982, in run
+2024-07-09 14:38:14 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+2024-07-09 14:38:14 | ERROR | stderr |     return func(*args, **kwargs)
+2024-07-09 14:38:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/model/internvl_chat/modeling_internvl_chat.py", line 383, in generate
+2024-07-09 14:38:14 | ERROR | stderr |     outputs = self.language_model.generate(
+2024-07-09 14:38:14 | ERROR | stderr |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+2024-07-09 14:38:14 | ERROR | stderr |     return func(*args, **kwargs)
+2024-07-09 14:38:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/generation/utils.py", line 1914, in generate
+2024-07-09 14:38:14 | ERROR | stderr |     result = self._sample(
+2024-07-09 14:38:14 | ERROR | stderr |              ^^^^^^^^^^^^^
+2024-07-09 14:38:14 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/generation/utils.py", line 2693, in _sample
+2024-07-09 14:38:14 | ERROR | stderr |     next_tokens = torch.multinomial(probs, num_samples=1).squeeze(1)
+2024-07-09 14:38:14 | ERROR | stderr |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-09 14:38:14 | ERROR | stderr | RuntimeError: probability tensor contains either `inf`, `nan` or element < 0
+2024-07-09 14:38:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-07-09 14:38:29 | INFO | stdout | Caught Unknown Error
+2024-07-09 14:38:29 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-07-09 14:38:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm_2B']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+slurmstepd: error: *** JOB 3675364 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-09T14:38:41 ***
+2024-07-09 14:38:41 | ERROR | stderr | INFO:     Shutting down

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/__init__.py", line 1, in <module>
+    from .model import LlavaLlamaForCausalLM
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/model/__init__.py", line 1, in <module>
+    from .language_model.llava_llama import LlavaLlamaForCausalLM, LlavaConfig
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/model/language_model/llava_llama.py", line 22, in <module>
+    from transformers import AutoConfig, AutoModelForCausalLM, \
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/dependency_versions_check.py", line 57, in <module>
+    require_version_core(deps[pkg])
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/utils/versions.py", line 117, in require_version_core
+    return require_version(requirement, hint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/utils/versions.py", line 111, in require_version
+    _compare_versions(op, got_ver, want_ver, requirement, pkg, hint)
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/transformers/utils/versions.py", line 44, in _compare_versions
+    raise ImportError(
+ImportError: numpy>=1.17,<2.0 is required for a normal functioning of this module, but found numpy==2.0.0.
+Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main

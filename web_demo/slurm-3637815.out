@@ -1,0 +1,30 @@
+2024-07-02 11:57:46 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 11:57:46 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 11:57:46 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 11:58:05 | INFO | stdout | Running on local URL:  http://0.0.0.0:10055
+2024-07-02 11:58:05 | INFO | stdout | 
+2024-07-02 11:58:05 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-07-02 11:58:25 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+2024-07-02 11:58:52 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='l9d6a8xzzbj_11' coro=<Queue.process_events() done, defined at /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py:342> exception=1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'l9d6a8xzzbj'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 346, in process_events
+    client_awake = await self.gather_event_data(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 219, in gather_event_data
+    data, client_awake = await self.get_message(event, timeout=receive_timeout)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/gradio/queueing.py", line 448, in get_message
+    return PredictBody(**data), True
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.11/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PredictBody
+event_id
+  Field required [type=missing, input_value={'data': [], 'event_data'...on_hash': 'l9d6a8xzzbj'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+2024-07-02 11:58:52 | INFO | httpx | HTTP Request: POST http://localhost:10055/reset "HTTP/1.1 200 OK"
+slurmstepd: error: *** JOB 3637815 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-02T12:00:46 ***

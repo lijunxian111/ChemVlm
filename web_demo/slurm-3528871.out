@@ -1,0 +1,128 @@
+2024-06-05 15:26:07 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10052, worker_address='http://10.140.24.109:10052', controller_address='http://10.140.24.69:10050', model_path='/mnt/hwfile/ai4chem/CKPT/chemvl_ft_6_4_0-merge/', model_base=None, model_name='6.5', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-06-05 15:26:08 | INFO | model_worker | Loading the model 6.5 on worker af967b ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-06-05 15:26:08 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-06-05 15:26:13 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/22 [00:00<?, ?it/s]
+2024-06-05 15:26:24 | ERROR | stderr | Loading checkpoint shards:   5%|▍         | 1/22 [00:11<03:55, 11.24s/it]
+2024-06-05 15:26:35 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 2/22 [00:22<03:42, 11.13s/it]
+2024-06-05 15:26:46 | ERROR | stderr | Loading checkpoint shards:  14%|█▎        | 3/22 [00:33<03:31, 11.16s/it]
+2024-06-05 15:26:57 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 4/22 [00:44<03:17, 10.97s/it]
+2024-06-05 15:27:07 | ERROR | stderr | Loading checkpoint shards:  23%|██▎       | 5/22 [00:53<02:58, 10.49s/it]
+2024-06-05 15:27:17 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 6/22 [01:04<02:49, 10.60s/it]
+2024-06-05 15:27:28 | ERROR | stderr | Loading checkpoint shards:  32%|███▏      | 7/22 [01:15<02:38, 10.59s/it]
+2024-06-05 15:27:38 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 8/22 [01:25<02:27, 10.51s/it]
+2024-06-05 15:27:49 | ERROR | stderr | Loading checkpoint shards:  41%|████      | 9/22 [01:35<02:15, 10.44s/it]
+2024-06-05 15:27:59 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 10/22 [01:46<02:05, 10.46s/it]
+2024-06-05 15:28:08 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 11/22 [01:55<01:50, 10.00s/it]
+2024-06-05 15:28:18 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 12/22 [02:05<01:40, 10.04s/it]
+2024-06-05 15:28:29 | ERROR | stderr | Loading checkpoint shards:  59%|█████▉    | 13/22 [02:15<01:31, 10.18s/it]
+2024-06-05 15:28:38 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 14/22 [02:25<01:19,  9.90s/it]
+2024-06-05 15:28:48 | ERROR | stderr | Loading checkpoint shards:  68%|██████▊   | 15/22 [02:35<01:09,  9.95s/it]
+2024-06-05 15:28:58 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 16/22 [02:45<01:00, 10.11s/it]
+2024-06-05 15:29:09 | ERROR | stderr | Loading checkpoint shards:  77%|███████▋  | 17/22 [02:56<00:51, 10.25s/it]
+2024-06-05 15:29:19 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 18/22 [03:06<00:40, 10.16s/it]
+2024-06-05 15:29:30 | ERROR | stderr | Loading checkpoint shards:  86%|████████▋ | 19/22 [03:17<00:31, 10.35s/it]
+2024-06-05 15:29:40 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 20/22 [03:26<00:20, 10.20s/it]
+2024-06-05 15:29:49 | ERROR | stderr | Loading checkpoint shards:  95%|█████████▌| 21/22 [03:36<00:10, 10.06s/it]
+2024-06-05 15:29:54 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [03:41<00:00,  8.56s/it]
+2024-06-05 15:29:54 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [03:41<00:00, 10.08s/it]
+2024-06-05 15:29:54 | ERROR | stderr | 
+2024-06-05 15:29:55 | INFO | model_worker | Register to controller
+2024-06-05 15:29:55 | ERROR | stderr | INFO:     Started server process [94279]
+2024-06-05 15:29:55 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-06-05 15:29:55 | ERROR | stderr | INFO:     Application startup complete.
+2024-06-05 15:29:55 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10052 (Press CTRL+C to quit)
+2024-06-05 15:30:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:30:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:30:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:30:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:31:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:31:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:31:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:31:54 | INFO | stdout | INFO:     10.140.24.69:6747 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:31:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:32:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:32:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:32:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:32:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:33:10 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:33:25 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:33:40 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:33:55 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:34:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:34:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:34:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:34:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:35:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:35:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:35:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:35:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:36:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:36:14 | INFO | stdout | INFO:     10.140.24.69:6909 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:36:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:36:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:36:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:37:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:37:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:37:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:37:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:38:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:38:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:38:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:38:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:39:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:39:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:39:41 | INFO | stdout | INFO:     10.140.24.69:7013 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:39:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:39:56 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:40:11 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:40:26 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:40:41 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:40:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:41:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:41:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:41:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:41:49 | INFO | stdout | INFO:     10.140.24.69:7083 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:41:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:42:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:42:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:42:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:42:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:43:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:43:16 | INFO | stdout | INFO:     10.140.24.69:7145 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:43:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:43:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:43:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:44:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:44:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:44:42 | INFO | stdout | INFO:     10.140.24.69:7203 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:44:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:44:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:45:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:45:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:45:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:45:57 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:46:12 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:46:27 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:46:42 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:46:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:47:07 | INFO | stdout | INFO:     10.140.24.69:7347 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:47:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:47:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:47:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:47:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:48:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:48:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:48:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:48:48 | INFO | stdout | INFO:     10.140.24.69:7393 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-05 15:48:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:49:13 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:49:28 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:49:43 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+2024-06-05 15:49:58 | INFO | model_worker | Send heart beat. Models: ['6.5']. Semaphore: None. global_counter: 0
+slurmstepd: error: *** JOB 3528871 ON SH-IDC1-10-140-24-109 CANCELLED AT 2024-06-05T15:50:13 ***

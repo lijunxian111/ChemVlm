@@ -1,0 +1,72 @@
+2024-05-29 21:22:05 | INFO | model_worker | args: Namespace(host='localhost', port=21002, worker_address='http://localhost:21002', controller_address='http://localhost:21001', model_path='facebook/opt-350m', model_base=None, model_name=None, device='cuda', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-05-29 21:22:05 | INFO | model_worker | Loading the model opt-350m on worker d8abe8 ...
+2024-05-29 21:22:05 | ERROR | stderr | /mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+2024-05-29 21:22:05 | ERROR | stderr |   warnings.warn(
+2024-05-29 21:22:15 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+2024-05-29 21:22:15 | ERROR | stderr |     self._prepare_proxy(conn)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+2024-05-29 21:22:15 | ERROR | stderr |     conn.connect()
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connection.py", line 374, in connect
+2024-05-29 21:22:15 | ERROR | stderr |     self._tunnel()
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 926, in _tunnel
+2024-05-29 21:22:15 | ERROR | stderr |     (version, code, message) = response._read_status()
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 281, in _read_status
+2024-05-29 21:22:15 | ERROR | stderr |     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/socket.py", line 704, in readinto
+2024-05-29 21:22:15 | ERROR | stderr |     return self._sock.recv_into(b)
+2024-05-29 21:22:15 | ERROR | stderr | socket.timeout: timed out
+2024-05-29 21:22:15 | ERROR | stderr | 
+2024-05-29 21:22:15 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-05-29 21:22:15 | ERROR | stderr | 
+2024-05-29 21:22:15 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+2024-05-29 21:22:15 | ERROR | stderr |     resp = conn.urlopen(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+2024-05-29 21:22:15 | ERROR | stderr |     retries = retries.increment(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+2024-05-29 21:22:15 | ERROR | stderr |     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2024-05-29 21:22:15 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/opt-350m/resolve/main/tokenizer_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out')))
+2024-05-29 21:22:15 | ERROR | stderr | 
+2024-05-29 21:22:15 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-05-29 21:22:15 | ERROR | stderr | 
+2024-05-29 21:22:15 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+2024-05-29 21:22:15 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 87, in _run_code
+2024-05-29 21:22:15 | ERROR | stderr |     exec(code, run_globals)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/serve/model_worker.py", line 307, in <module>
+2024-05-29 21:22:15 | ERROR | stderr |     worker = ModelWorker(args.controller_address,
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/serve/model_worker.py", line 67, in __init__
+2024-05-29 21:22:15 | ERROR | stderr |     self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/models/auto/tokenization_auto.py", line 758, in from_pretrained
+2024-05-29 21:22:15 | ERROR | stderr |     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/models/auto/tokenization_auto.py", line 590, in get_tokenizer_config
+2024-05-29 21:22:15 | ERROR | stderr |     resolved_config_file = cached_file(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/hub.py", line 385, in cached_file
+2024-05-29 21:22:15 | ERROR | stderr |     resolved_file = hf_hub_download(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+2024-05-29 21:22:15 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1221, in hf_hub_download
+2024-05-29 21:22:15 | ERROR | stderr |     return _hf_hub_download_to_cache_dir(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1282, in _hf_hub_download_to_cache_dir
+2024-05-29 21:22:15 | ERROR | stderr |     (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1722, in _get_metadata_or_catch_error
+2024-05-29 21:22:15 | ERROR | stderr |     metadata = get_hf_file_metadata(url=url, proxies=proxies, timeout=etag_timeout, headers=headers)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+2024-05-29 21:22:15 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1645, in get_hf_file_metadata
+2024-05-29 21:22:15 | ERROR | stderr |     r = _request_wrapper(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 372, in _request_wrapper
+2024-05-29 21:22:15 | ERROR | stderr |     response = _request_wrapper(
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 395, in _request_wrapper
+2024-05-29 21:22:15 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+2024-05-29 21:22:15 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+2024-05-29 21:22:15 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 66, in send
+2024-05-29 21:22:15 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2024-05-29 21:22:15 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/adapters.py", line 559, in send
+2024-05-29 21:22:15 | ERROR | stderr |     raise ProxyError(e, request=request)
+2024-05-29 21:22:15 | ERROR | stderr | requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/opt-350m/resolve/main/tokenizer_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('timed out')))"), '(Request ID: 0a23ba47-db2c-4a65-8eeb-27efe52f43f4)')

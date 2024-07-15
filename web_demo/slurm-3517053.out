@@ -1,0 +1,982 @@
+2024-05-29 18:07:40 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10013, worker_address='http://10.140.24.108:10013', controller_address='http://10.140.24.69:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-llm_lora', model_base=None, model_name=None, device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-05-29 18:07:40 | INFO | model_worker | Loading the model internvl_chemllm-llm_lora on worker 57e0bb ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-05-29 18:07:41 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
+2024-05-29 18:07:45 | INFO | stdout | trainable params: 72,351,744 || all params: 19,933,612,032 || trainable%: 0.3630
+2024-05-29 18:07:52 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
+2024-05-29 18:07:55 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:02<00:26,  2.62s/it]
+2024-05-29 18:07:58 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:05<00:23,  2.63s/it]
+2024-05-29 18:08:00 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:07<00:20,  2.52s/it]
+2024-05-29 18:08:03 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:10<00:17,  2.50s/it]
+2024-05-29 18:08:05 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [00:12<00:14,  2.49s/it]
+2024-05-29 18:08:07 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 6/11 [00:14<00:12,  2.46s/it]
+2024-05-29 18:08:10 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 7/11 [00:17<00:09,  2.43s/it]
+2024-05-29 18:08:12 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 8/11 [00:19<00:07,  2.41s/it]
+2024-05-29 18:08:15 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 9/11 [00:22<00:04,  2.40s/it]
+2024-05-29 18:08:17 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 10/11 [00:24<00:02,  2.40s/it]
+2024-05-29 18:08:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:25<00:00,  1.98s/it]
+2024-05-29 18:08:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:25<00:00,  2.32s/it]
+2024-05-29 18:08:18 | ERROR | stderr | 
+2024-05-29 18:08:19 | INFO | model_worker | Register to controller
+2024-05-29 18:08:19 | ERROR | stderr | INFO:     Started server process [152237]
+2024-05-29 18:08:19 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-05-29 18:08:19 | ERROR | stderr | INFO:     Application startup complete.
+2024-05-29 18:08:19 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10013 (Press CTRL+C to quit)
+2024-05-29 18:08:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
+2024-05-29 18:08:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
+2024-05-29 18:09:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
+2024-05-29 18:09:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
+2024-05-29 18:09:28 | INFO | stdout | INFO:     10.140.24.69:9564 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 18:09:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: None. global_counter: 0
+2024-05-29 18:09:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-05-29 18:09:37 | INFO | stdout | INFO:     10.140.24.69:9574 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 18:09:37 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 18:09:37 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 18:09:37 | INFO | model_worker | use_thumbnail: False
+2024-05-29 18:09:37 | INFO | model_worker | Resize images to 448x448
+2024-05-29 18:09:37 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 18:09:37 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+What does this image mean ASSISTANT:
+2024-05-29 18:09:37 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 18:09:37 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 18:09:44 | ERROR | stderr | /mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/model/internvl_chat/modeling_internvl_chat.py:198: UserWarning: In ps_version 'v1', the height and width have not been swapped back, which results in a transposed image.
+2024-05-29 18:09:44 | ERROR | stderr |   warnings.warn("In ps_version 'v1', the height and width have not been swapped back, "
+2024-05-29 18:09:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-05-29 18:10:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-05-29 18:10:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-05-29 18:10:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:10:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:10:41 | INFO | stdout | INFO:     10.140.24.69:9596 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 18:10:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:11:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:11:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:11:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:11:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:12:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:12:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:12:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:12:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:13:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:13:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:13:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:13:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:14:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:14:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:14:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:14:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:15:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:15:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:15:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:15:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:16:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:16:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:16:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:16:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:17:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:17:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:17:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:17:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:18:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:18:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:18:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:18:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:19:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:19:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:19:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:19:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:20:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:20:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:20:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:20:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:21:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:21:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:21:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:21:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:22:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:22:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:22:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:22:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:23:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:23:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:23:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:23:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:24:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:24:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:24:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:24:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:25:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:25:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:25:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:25:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:26:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:26:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:26:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:26:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:27:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:27:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:27:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:27:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:28:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:28:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:28:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:28:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:29:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:29:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:29:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:29:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:30:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:30:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:30:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:30:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:31:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:31:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:31:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:31:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:32:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:32:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:32:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:32:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:33:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:33:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:33:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:33:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:34:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:34:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:34:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:34:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:35:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:35:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:35:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:35:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:36:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:36:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:36:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:36:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:37:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:37:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:37:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:37:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:38:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:38:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:38:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:38:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:39:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:39:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:39:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:39:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:40:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:40:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:40:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:40:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:41:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:41:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:41:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:41:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:42:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:42:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:42:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:42:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:43:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:43:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:43:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:43:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:44:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:44:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:44:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:44:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:45:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:45:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:45:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:45:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:46:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:46:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:46:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:46:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:47:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:47:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:47:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:47:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:48:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:48:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:48:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:48:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:49:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:49:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:49:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:49:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:50:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:50:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:50:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:50:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:51:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:51:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:51:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:51:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:52:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:52:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:52:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:52:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:53:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:53:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:53:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:53:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:54:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:54:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:54:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:54:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:55:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:55:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:55:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:55:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:56:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:56:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:56:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:56:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:57:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:57:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:57:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:57:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:58:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:58:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:58:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:58:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:59:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:59:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:59:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 18:59:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:00:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:00:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:00:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:00:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:01:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:01:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:01:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:01:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:02:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:02:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:02:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:02:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:03:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:03:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:03:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:03:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:04:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:04:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:04:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:04:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:05:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:05:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:05:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:05:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:06:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:06:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:06:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:06:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:07:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:07:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:07:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:07:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:08:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:08:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:08:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:08:45 | INFO | stdout | INFO:     10.140.24.69:11016 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:08:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:09:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:09:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:09:29 | INFO | stdout | INFO:     10.140.24.69:11064 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:09:29 | INFO | stdout | INFO:     10.140.24.69:11070 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:09:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:09:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:10:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-05-29 19:10:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:10:17 | INFO | stdout | INFO:     10.140.24.69:11094 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 19:10:17 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 19:10:17 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 19:10:17 | INFO | model_worker | use_thumbnail: False
+2024-05-29 19:10:17 | INFO | model_worker | Resize images to 448x448
+2024-05-29 19:10:17 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 19:10:17 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+仪器的名称是什么？ ASSISTANT:
+2024-05-29 19:10:17 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 19:10:17 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 19:10:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:10:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:10:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:11:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:11:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:11:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:11:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:12:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:12:26 | INFO | stdout | INFO:     10.140.24.69:11136 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:12:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:12:31 | INFO | stdout | INFO:     10.140.24.69:11162 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:12:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:12:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-05-29 19:13:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:13:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:13:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:13:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:13:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:14:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:14:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-05-29 19:14:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:14:30 | INFO | stdout | INFO:     10.140.24.69:11238 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 19:14:30 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 19:14:30 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 19:14:30 | INFO | model_worker | use_thumbnail: False
+2024-05-29 19:14:30 | INFO | model_worker | Resize images to 448x448
+2024-05-29 19:14:30 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 19:14:30 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+请回答图片中的问题 ASSISTANT:
+2024-05-29 19:14:30 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 19:14:30 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 19:14:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:14:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:15:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:15:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:15:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:15:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:16:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:16:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:16:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:16:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:17:06 | INFO | stdout | INFO:     10.140.24.69:11316 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 19:17:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-05-29 19:17:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:17:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:17:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:17:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:18:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:18:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:18:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:18:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:19:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:19:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:19:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:19:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:20:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:20:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:20:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:20:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:21:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:21:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:21:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:22:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:22:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:22:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:22:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:23:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:23:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:23:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:23:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:24:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:24:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:24:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:24:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:25:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:25:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:25:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:25:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:26:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:26:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:26:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:26:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:27:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:27:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:27:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:27:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:28:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:28:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:28:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:28:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:29:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:29:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:29:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:29:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:30:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-05-29 19:30:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:30:08 | INFO | stdout | INFO:     10.140.24.69:11608 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 19:30:08 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 19:30:08 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 19:30:08 | INFO | model_worker | use_thumbnail: False
+2024-05-29 19:30:08 | INFO | model_worker | Resize images to 448x448
+2024-05-29 19:30:08 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 19:30:08 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+"请完成高考化学的单项选择题，请对你的回答给出解释。在氯碱工业中，离子交换膜法电解饱和食盐水示意图如下，下列说法不正确的是：\
+A. 电极$A$为阳极，发生氧化反应生成氯气。B. 离子交换膜为阳离子交换膜。\
+C. 饱和$NaCl$溶液从$a$出进，$NaOH$溶液从$d$处出。\
+D. $OH^{-}$迁移的数量等于导线上通过电子的数量。" ASSISTANT:
+2024-05-29 19:30:08 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 19:30:08 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 19:30:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:30:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:30:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:31:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:31:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:31:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:31:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:32:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:32:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:32:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-05-29 19:32:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:32:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:33:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:33:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:33:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:33:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:34:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:34:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:34:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:34:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:35:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:35:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:35:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:35:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:36:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:36:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:36:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:36:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-05-29 19:36:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:36:47 | INFO | stdout | INFO:     10.140.24.69:12118 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 19:36:47 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 19:36:47 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 19:36:47 | INFO | model_worker | use_thumbnail: False
+2024-05-29 19:36:47 | INFO | model_worker | Resize images to 448x448
+2024-05-29 19:36:47 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 19:36:47 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+"请完成高考化学的单项选择题，请对你的回答给出解释。在氯碱工业中，离子交换膜法电解饱和食盐水示意图如下，下列说法不正确的是：\
+A. 电极$A$为阳极，发生氧化反应生成氯气。B. 离子交换膜为阳离子交换膜。\
+C. 饱和$NaCl$溶液从$a$处进入，$NaOH$溶液从$d$处流出。\
+D. $OH^{-}$迁移的数量等于导线上通过电子的数量。" ASSISTANT:
+2024-05-29 19:36:47 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 19:36:47 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 19:37:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:37:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:37:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:37:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:38:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:38:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:38:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:38:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:39:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:39:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 5
+2024-05-29 19:39:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:39:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:39:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:40:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:40:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:40:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:40:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:41:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:41:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:41:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:41:47 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:42:02 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:42:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:42:32 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:42:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:43:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:43:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:43:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:43:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:44:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:44:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:44:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:44:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:45:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:45:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:45:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:45:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:46:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:46:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:46:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:46:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:47:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:47:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:47:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:47:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:48:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:48:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:48:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:48:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:49:03 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:49:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:49:33 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:49:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:50:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:50:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:50:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:50:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:51:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:51:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:51:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:51:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:52:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:52:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:52:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:52:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:53:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:53:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:53:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:53:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:54:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:54:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:54:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:54:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:55:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:55:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:55:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:55:49 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:56:04 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:56:19 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:56:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:56:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:57:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:57:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:57:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:57:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:58:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:58:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:58:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:58:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:59:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:59:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:59:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 19:59:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:00:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:00:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:00:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:00:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:01:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:01:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:01:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:01:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:02:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:02:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:02:35 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:02:50 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:03:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:03:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:03:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:03:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:03:52 | INFO | stdout | INFO:     10.140.24.69:13224 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:04:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:04:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 5
+2024-05-29 20:04:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 6
+2024-05-29 20:04:23 | INFO | stdout | INFO:     10.140.24.69:13266 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:04:23 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:04:23 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:04:23 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:04:23 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:04:23 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:04:23 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+What does this image mean ASSISTANT:
+2024-05-29 20:04:23 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:04:23 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:04:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 6
+2024-05-29 20:04:48 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 6
+2024-05-29 20:04:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 6
+2024-05-29 20:04:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 7
+2024-05-29 20:04:55 | INFO | stdout | INFO:     10.140.24.69:13280 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:04:55 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:04:55 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:04:55 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:04:55 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:04:55 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:04:55 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+Describe this image in detail ASSISTANT:
+2024-05-29 20:04:55 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:04:55 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:05:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 7
+2024-05-29 20:05:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 7
+2024-05-29 20:05:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 8
+2024-05-29 20:05:16 | INFO | stdout | INFO:     10.140.24.69:13298 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:05:16 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:05:16 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:05:16 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:05:16 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:05:17 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:05:17 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+How many dogs are in the figure, and why? ASSISTANT:
+2024-05-29 20:05:17 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:05:17 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:05:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 8
+2024-05-29 20:05:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 8
+2024-05-29 20:05:34 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 9
+2024-05-29 20:05:34 | INFO | stdout | INFO:     10.140.24.69:13318 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:05:34 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:05:34 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:05:34 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:05:34 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:05:34 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:05:34 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+这道题是什么意思 ASSISTANT:
+2024-05-29 20:05:34 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:05:34 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:05:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 9
+2024-05-29 20:05:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 9
+2024-05-29 20:05:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:06:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:06:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:06:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:06:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:06:57 | INFO | stdout | INFO:     10.140.24.69:13412 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:07:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:07:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:07:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:07:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:08:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:08:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:08:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:08:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:09:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:09:21 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:09:36 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:09:51 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:10:06 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:10:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:10:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:10:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:11:03 | INFO | stdout | INFO:     10.140.24.69:13586 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:11:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:11:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:11:25 | INFO | stdout | INFO:     10.140.24.69:13602 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:11:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:11:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:12:00 | INFO | stdout | INFO:     10.140.24.69:13838 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:12:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:12:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:12:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:12:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:13:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:13:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:13:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:13:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:14:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:14:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:14:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:14:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:15:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:15:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:15:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:15:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:16:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:16:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:16:37 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:16:52 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:17:07 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:17:22 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:17:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:17:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:18:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:18:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:18:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:18:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:19:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:19:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:19:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:19:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:20:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:20:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:20:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:20:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:21:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:21:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:21:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:21:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:22:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:22:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:22:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:22:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:23:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:23:23 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:23:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:23:53 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:24:08 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:24:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:24:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:24:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:25:03 | INFO | stdout | INFO:     10.140.24.69:14418 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:25:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:25:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:25:28 | INFO | stdout | INFO:     10.140.24.69:14446 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:25:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:25:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:26:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:26:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:26:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:26:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:27:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:27:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:27:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:27:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:28:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:28:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:28:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:28:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:29:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:29:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:29:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:29:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:30:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:30:24 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:30:39 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:30:54 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:31:09 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:31:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:31:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:31:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:32:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:32:14 | INFO | stdout | INFO:     10.140.24.69:14646 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:32:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:32:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:32:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:33:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:33:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:33:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:33:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:34:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:34:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:34:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:34:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:35:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:35:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:35:36 | INFO | stdout | INFO:     10.140.24.69:14758 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:35:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:35:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:36:08 | INFO | stdout | INFO:     10.140.24.69:14806 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:36:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 9
+2024-05-29 20:36:17 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 10
+2024-05-29 20:36:17 | INFO | stdout | INFO:     10.140.24.69:14820 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:36:17 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:36:17 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:36:17 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:36:17 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:36:17 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:36:17 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+请描述这张图片 ASSISTANT:
+2024-05-29 20:36:17 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:36:17 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:36:20 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:36:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:36:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:36:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:37:00 | INFO | stdout | INFO:     10.140.24.69:15052 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:37:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:37:25 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:37:40 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:37:55 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:38:10 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:38:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:38:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:38:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:39:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:39:21 | INFO | stdout | INFO:     10.140.24.69:15122 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:39:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:39:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:39:41 | INFO | stdout | INFO:     10.140.24.69:15136 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:39:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:39:57 | INFO | stdout | INFO:     10.140.24.69:15150 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:40:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:40:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:40:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:40:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:41:02 | INFO | stdout | INFO:     10.140.24.69:15196 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:41:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:41:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:41:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:41:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:42:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:42:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:42:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:42:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:43:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:43:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:43:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:43:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:44:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:44:22 | INFO | stdout | INFO:     10.140.24.69:15308 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:44:26 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:44:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:44:56 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:44:59 | INFO | stdout | INFO:     10.140.24.69:15336 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:45:11 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:45:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 10
+2024-05-29 20:45:30 | INFO | stdout | INFO:     10.140.24.69:15370 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:45:38 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 11
+2024-05-29 20:45:38 | INFO | stdout | INFO:     10.140.24.69:15392 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:45:38 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:45:38 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:45:38 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:45:38 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:45:38 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:45:38 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+这道题是什么意思 ASSISTANT:
+2024-05-29 20:45:38 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:45:38 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:45:41 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 11
+2024-05-29 20:45:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 11
+2024-05-29 20:45:55 | INFO | stdout | INFO:     10.140.24.69:15420 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:45:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 11
+2024-05-29 20:46:05 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 12
+2024-05-29 20:46:05 | INFO | stdout | INFO:     10.140.24.69:15436 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:46:05 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:46:05 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:46:05 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:46:05 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:46:05 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:46:05 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+这道题是什么意思 ASSISTANT:
+2024-05-29 20:46:05 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:46:05 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:46:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 12
+2024-05-29 20:46:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 12
+2024-05-29 20:46:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:46:27 | INFO | stdout | INFO:     10.140.24.69:15450 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:46:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:46:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:47:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:47:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:47:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:47:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:48:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:48:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:48:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:48:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:49:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:49:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:49:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:49:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:50:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:50:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:50:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:50:57 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:51:12 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:51:27 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:51:42 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:51:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:52:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:52:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:52:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:52:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:53:01 | INFO | stdout | INFO:     10.140.24.69:15724 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:53:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:53:28 | INFO | stdout | INFO:     10.140.24.69:15744 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:53:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:53:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:53:51 | INFO | stdout | INFO:     10.140.24.69:15758 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:53:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:54:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:54:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:54:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:54:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:55:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:55:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:55:30 | INFO | stdout | INFO:     10.140.24.69:15822 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:55:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:55:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:56:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:56:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:56:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:56:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:57:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:57:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:57:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:57:58 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:58:07 | INFO | stdout | INFO:     10.140.24.69:15930 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:58:13 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 12
+2024-05-29 20:58:18 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 13
+2024-05-29 20:58:18 | INFO | stdout | INFO:     10.140.24.69:15946 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-05-29 20:58:18 | INFO | model_worker | max_input_tiles: 12
+2024-05-29 20:58:18 | INFO | model_worker | dynamic_image_size: False
+2024-05-29 20:58:18 | INFO | model_worker | use_thumbnail: False
+2024-05-29 20:58:18 | INFO | model_worker | Resize images to 448x448
+2024-05-29 20:58:18 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-05-29 20:58:18 | INFO | model_worker | A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions. USER: <img><image></img>
+请描述图片 ASSISTANT:
+2024-05-29 20:58:18 | INFO | model_worker | num_image_tokens: 256
+2024-05-29 20:58:18 | INFO | model_worker | max_new_tokens: 1024
+2024-05-29 20:58:28 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=4, locked=False). global_counter: 13
+2024-05-29 20:58:43 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:58:43 | INFO | stdout | INFO:     10.140.24.69:15960 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 20:58:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:58:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:59:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:59:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:59:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 20:59:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:00:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:00:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:00:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:00:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:01:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:01:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:01:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:01:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:02:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:02:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:02:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:02:53 | INFO | stdout | INFO:     10.140.24.69:16160 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:02:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:03:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:03:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:03:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:03:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:04:14 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:04:27 | INFO | stdout | INFO:     10.140.24.69:16232 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:04:29 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:04:44 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:04:59 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:05:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:05:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:05:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:06:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:06:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:06:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:06:39 | INFO | stdout | INFO:     10.140.24.69:16404 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:06:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:07:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:07:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:07:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:07:32 | INFO | stdout | INFO:     10.140.24.69:16476 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:07:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:08:00 | INFO | stdout | INFO:     10.140.24.69:16508 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:08:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:08:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:08:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:08:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:09:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:09:09 | INFO | stdout | INFO:     10.140.24.69:16942 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:09:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:09:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:09:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:10:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:10:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:10:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:10:36 | INFO | stdout | INFO:     10.140.24.69:16998 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:10:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:11:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:11:12 | INFO | stdout | INFO:     10.140.24.69:17024 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:11:15 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:11:30 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:11:45 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:12:00 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:12:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:12:18 | INFO | stdout | INFO:     10.140.24.69:17066 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-05-29 21:12:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:12:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:13:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:13:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:13:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:13:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:14:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:14:16 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:14:31 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:14:46 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+2024-05-29 21:15:01 | INFO | model_worker | Send heart beat. Models: ['internvl_chemllm-llm_lora']. Semaphore: Semaphore(value=5, locked=False). global_counter: 13
+slurmstepd: error: *** JOB 3517053 ON SH-IDC1-10-140-24-108 CANCELLED AT 2024-05-29T21:15:01 ***

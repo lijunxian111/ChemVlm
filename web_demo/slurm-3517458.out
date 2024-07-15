@@ -1,0 +1,94 @@
+2024-05-29 21:29:56 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10014, worker_address='http://10.140.24.69:10014', controller_address='http://10.140.24.108:10010', model_path='/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-llm_lora', model_base=None, model_name=None, device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-05-29 21:29:56 | INFO | model_worker | Loading the model internvl_chemllm-llm_lora on worker 0cc53c ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v1
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-05-29 21:29:56 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v1
+2024-05-29 21:29:59 | INFO | stdout | trainable params: 72,351,744 || all params: 19,933,612,032 || trainable%: 0.3630
+2024-05-29 21:30:07 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/11 [00:00<?, ?it/s]
+2024-05-29 21:30:09 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 1/11 [00:02<00:21,  2.12s/it]
+2024-05-29 21:30:11 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 2/11 [00:04<00:18,  2.09s/it]
+2024-05-29 21:30:13 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 3/11 [00:06<00:16,  2.05s/it]
+2024-05-29 21:30:15 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 4/11 [00:08<00:14,  2.07s/it]
+2024-05-29 21:30:17 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 5/11 [00:10<00:12,  2.09s/it]
+2024-05-29 21:30:19 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 6/11 [00:12<00:10,  2.05s/it]
+2024-05-29 21:30:21 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 7/11 [00:14<00:08,  2.07s/it]
+2024-05-29 21:30:23 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 8/11 [00:16<00:06,  2.06s/it]
+2024-05-29 21:30:25 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 9/11 [00:18<00:04,  2.06s/it]
+2024-05-29 21:30:27 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 10/11 [00:20<00:02,  2.02s/it]
+2024-05-29 21:30:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:21<00:00,  1.67s/it]
+2024-05-29 21:30:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 11/11 [00:21<00:00,  1.95s/it]
+2024-05-29 21:30:28 | ERROR | stderr | 
+2024-05-29 21:30:29 | INFO | model_worker | Register to controller
+2024-05-29 21:30:29 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+2024-05-29 21:30:29 | ERROR | stderr |     conn = connection.create_connection(
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+2024-05-29 21:30:29 | ERROR | stderr |     raise err
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2024-05-29 21:30:29 | ERROR | stderr |     sock.connect(sa)
+2024-05-29 21:30:29 | ERROR | stderr | ConnectionRefusedError: [Errno 111] Connection refused
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+2024-05-29 21:30:29 | ERROR | stderr |     httplib_response = self._make_request(
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+2024-05-29 21:30:29 | ERROR | stderr |     conn.request(method, url, **httplib_request_kw)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+2024-05-29 21:30:29 | ERROR | stderr |     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 1285, in request
+2024-05-29 21:30:29 | ERROR | stderr |     self._send_request(method, url, body, headers, encode_chunked)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 1331, in _send_request
+2024-05-29 21:30:29 | ERROR | stderr |     self.endheaders(body, encode_chunked=encode_chunked)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 1280, in endheaders
+2024-05-29 21:30:29 | ERROR | stderr |     self._send_output(message_body, encode_chunked=encode_chunked)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 1040, in _send_output
+2024-05-29 21:30:29 | ERROR | stderr |     self.send(msg)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/http/client.py", line 980, in send
+2024-05-29 21:30:29 | ERROR | stderr |     self.connect()
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+2024-05-29 21:30:29 | ERROR | stderr |     conn = self._new_conn()
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+2024-05-29 21:30:29 | ERROR | stderr |     raise NewConnectionError(
+2024-05-29 21:30:29 | ERROR | stderr | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f07c09d5d30>: Failed to establish a new connection: [Errno 111] Connection refused
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+2024-05-29 21:30:29 | ERROR | stderr |     resp = conn.urlopen(
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+2024-05-29 21:30:29 | ERROR | stderr |     retries = retries.increment(
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+2024-05-29 21:30:29 | ERROR | stderr |     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2024-05-29 21:30:29 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.140.24.108', port=10010): Max retries exceeded with url: /register_worker (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f07c09d5d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-05-29 21:30:29 | ERROR | stderr | 
+2024-05-29 21:30:29 | ERROR | stderr | Traceback (most recent call last):
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+2024-05-29 21:30:29 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 87, in _run_code
+2024-05-29 21:30:29 | ERROR | stderr |     exec(code, run_globals)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/serve/model_worker.py", line 310, in <module>
+2024-05-29 21:30:29 | ERROR | stderr |     worker = ModelWorker(args.controller_address,
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/serve/model_worker.py", line 88, in __init__
+2024-05-29 21:30:29 | ERROR | stderr |     self.register_to_controller()
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat/internvl/serve/model_worker.py", line 102, in register_to_controller
+2024-05-29 21:30:29 | ERROR | stderr |     r = requests.post(url, json=data)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/api.py", line 115, in post
+2024-05-29 21:30:29 | ERROR | stderr |     return request("post", url, data=data, json=json, **kwargs)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/api.py", line 59, in request
+2024-05-29 21:30:29 | ERROR | stderr |     return session.request(method=method, url=url, **kwargs)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+2024-05-29 21:30:29 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+2024-05-29 21:30:29 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-05-29 21:30:29 | ERROR | stderr |   File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+2024-05-29 21:30:29 | ERROR | stderr |     raise ConnectionError(e, request=request)
+2024-05-29 21:30:29 | ERROR | stderr | requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.140.24.108', port=10010): Max retries exceeded with url: /register_worker (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f07c09d5d30>: Failed to establish a new connection: [Errno 111] Connection refused'))

@@ -1,0 +1,112 @@
+2024-07-02 12:48:34 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 12:48:34 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:48:34 | INFO | gradio_web_server | Namespace(host='0.0.0.0', port=10055, controller_url='http://10.140.24.69:10050', concurrency_count=10, model_list_mode='reload', share=False, moderate=False, embed=False)
+2024-07-02 12:48:53 | INFO | stdout | Running on local URL:  http://0.0.0.0:10055
+2024-07-02 12:48:53 | INFO | stdout | 
+2024-07-02 12:48:53 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-07-02 12:49:03 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:49:03 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:49:07 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 12:49:08 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:49:08 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:49:08 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:49:08 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:49:08 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:49:08 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:49:08 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 12:49:08 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:49:08 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:50:29 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:50:29 | INFO | gradio_web_server | Models: []
+2024-07-02 12:51:25 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:51:25 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:51:31 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 12:51:31 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:51:31 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:51:31 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:51:31 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:51:31 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:51:31 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:51:32 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 12:51:32 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:51:32 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:55:45 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:55:45 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:55:53 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 2
+2024-07-02 12:55:54 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:55:54 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:55:54 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:55:54 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: 你好 ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': 'List of 0 images: []', 'org_images': 'List of 0 images: []'}
+2024-07-02 12:56:04 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:56:04 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:56:06 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 2
+2024-07-02 12:56:07 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:56:07 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:56:07 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:56:07 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: 你好 ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': 'List of 0 images: []', 'org_images': 'List of 0 images: []'}
+2024-07-02 12:56:35 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:56:35 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:56:38 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 5
+2024-07-02 12:56:40 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:56:40 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:56:40 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:56:40 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': 'List of 0 images: []', 'org_images': 'List of 0 images: []'}
+2024-07-02 12:56:51 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 12:56:51 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 12:56:54 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 12:56:55 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 12:56:55 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 12:56:55 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 12:56:55 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:56:55 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:56:55 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:56:55 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 12:56:55 | INFO | stdout | image_process_mode: Default
+2024-07-02 12:56:55 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:14 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 18:50:14 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 18:50:25 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 18:50:26 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 18:50:26 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 18:50:26 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 18:50:26 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:26 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:26 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:26 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 18:50:26 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:26 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:45 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 18:50:45 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:46 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 18:50:46 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 18:50:46 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 18:50:46 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:46 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:46 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:46 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 18:50:46 | INFO | stdout | image_process_mode: Default
+2024-07-02 18:50:46 | INFO | stdout | image_process_mode: Default
+2024-07-02 22:18:05 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 22:18:05 | INFO | gradio_web_server | Models: ['chemvlm']
+2024-07-02 22:18:12 | INFO | gradio_web_server | add_text. ip: 10.1.96.6. len: 25
+2024-07-02 22:18:15 | INFO | gradio_web_server | http_bot. ip: 10.1.96.6
+2024-07-02 22:18:15 | INFO | gradio_web_server | template: vicuna_v1
+2024-07-02 22:18:15 | INFO | gradio_web_server | model_name: chemvlm, worker_addr: http://10.140.24.69:10063
+2024-07-02 22:18:15 | INFO | stdout | image_process_mode: Default
+2024-07-02 22:18:15 | INFO | stdout | image_process_mode: Default
+2024-07-02 22:18:15 | INFO | stdout | image_process_mode: Default
+2024-07-02 22:18:15 | INFO | gradio_web_server | ==== request ====
+{'model': 'chemvlm', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nWhat does this image mean ASSISTANT:", 'temperature': 0.8, 'top_p': 0.7, 'max_new_tokens': 1024, 'max_input_tiles': 12, 'stop': '</s>', 'images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']", 'org_images': "List of 1 images: ['7baa3d9b13be8c2fa1cf42204df121b5']"}
+2024-07-02 22:18:15 | INFO | stdout | image_process_mode: Default
+2024-07-02 22:18:15 | INFO | stdout | image_process_mode: Default
+2024-07-02 23:11:44 | INFO | gradio_web_server | load_demo. ip: 10.1.96.6
+2024-07-02 23:11:44 | INFO | gradio_web_server | Models: ['chemvlm']
+slurmstepd: error: *** JOB 3638288 ON SH-IDC1-10-140-24-69 CANCELLED AT 2024-07-03T01:41:25 ***

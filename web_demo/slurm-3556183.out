@@ -1,0 +1,418 @@
+2024-06-17 15:21:45 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=10058, worker_address='http://10.140.24.109:10058', controller_address='http://10.140.24.69:10050', model_path='/mnt/hwfile/ai4chem/CKPT/chemvl_ft_6_4_0-merge/', model_base=None, model_name='chemvlm', device='auto', multi_modal=False, limit_model_concurrency=5, stream_interval=1, no_register=False, load_8bit=False, load_4bit=False)
+2024-06-17 15:21:45 | INFO | model_worker | Loading the model chemvlm on worker b7066a ...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | vision_select_layer: -1
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | ps_version: v2
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | min_dynamic_patch: 1
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.configuration_internvl_chat | max_dynamic_patch: 6
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | num_image_token: 256
+2024-06-17 15:21:45 | INFO | internvl.model.internvl_chat.modeling_internvl_chat | ps_version: v2
+2024-06-17 15:21:50 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/22 [00:00<?, ?it/s]
+2024-06-17 15:21:51 | ERROR | stderr | Loading checkpoint shards:   5%|▍         | 1/22 [00:01<00:29,  1.41s/it]
+2024-06-17 15:21:53 | ERROR | stderr | Loading checkpoint shards:   9%|▉         | 2/22 [00:02<00:28,  1.43s/it]
+2024-06-17 15:21:54 | ERROR | stderr | Loading checkpoint shards:  14%|█▎        | 3/22 [00:04<00:28,  1.49s/it]
+2024-06-17 15:21:56 | ERROR | stderr | Loading checkpoint shards:  18%|█▊        | 4/22 [00:05<00:26,  1.45s/it]
+2024-06-17 15:21:57 | ERROR | stderr | Loading checkpoint shards:  23%|██▎       | 5/22 [00:07<00:24,  1.42s/it]
+2024-06-17 15:21:59 | ERROR | stderr | Loading checkpoint shards:  27%|██▋       | 6/22 [00:08<00:22,  1.39s/it]
+2024-06-17 15:22:00 | ERROR | stderr | Loading checkpoint shards:  32%|███▏      | 7/22 [00:09<00:20,  1.35s/it]
+2024-06-17 15:22:01 | ERROR | stderr | Loading checkpoint shards:  36%|███▋      | 8/22 [00:11<00:18,  1.32s/it]
+2024-06-17 15:22:02 | ERROR | stderr | Loading checkpoint shards:  41%|████      | 9/22 [00:12<00:16,  1.31s/it]
+2024-06-17 15:22:04 | ERROR | stderr | Loading checkpoint shards:  45%|████▌     | 10/22 [00:13<00:15,  1.30s/it]
+2024-06-17 15:22:05 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 11/22 [00:14<00:14,  1.28s/it]
+2024-06-17 15:22:06 | ERROR | stderr | Loading checkpoint shards:  55%|█████▍    | 12/22 [00:16<00:12,  1.26s/it]
+2024-06-17 15:22:07 | ERROR | stderr | Loading checkpoint shards:  59%|█████▉    | 13/22 [00:17<00:11,  1.25s/it]
+2024-06-17 15:22:09 | ERROR | stderr | Loading checkpoint shards:  64%|██████▎   | 14/22 [00:18<00:09,  1.24s/it]
+2024-06-17 15:22:10 | ERROR | stderr | Loading checkpoint shards:  68%|██████▊   | 15/22 [00:19<00:08,  1.24s/it]
+2024-06-17 15:22:11 | ERROR | stderr | Loading checkpoint shards:  73%|███████▎  | 16/22 [00:20<00:07,  1.24s/it]
+2024-06-17 15:22:12 | ERROR | stderr | Loading checkpoint shards:  77%|███████▋  | 17/22 [00:22<00:06,  1.24s/it]
+2024-06-17 15:22:13 | ERROR | stderr | Loading checkpoint shards:  82%|████████▏ | 18/22 [00:23<00:04,  1.23s/it]
+2024-06-17 15:22:15 | ERROR | stderr | Loading checkpoint shards:  86%|████████▋ | 19/22 [00:24<00:03,  1.25s/it]
+2024-06-17 15:22:16 | ERROR | stderr | Loading checkpoint shards:  91%|█████████ | 20/22 [00:25<00:02,  1.24s/it]
+2024-06-17 15:22:17 | ERROR | stderr | Loading checkpoint shards:  95%|█████████▌| 21/22 [00:27<00:01,  1.21s/it]
+2024-06-17 15:22:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:27<00:00,  1.06s/it]
+2024-06-17 15:22:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 22/22 [00:27<00:00,  1.26s/it]
+2024-06-17 15:22:18 | ERROR | stderr | 
+2024-06-17 15:22:19 | INFO | model_worker | Register to controller
+2024-06-17 15:22:19 | ERROR | stderr | INFO:     Started server process [249551]
+2024-06-17 15:22:19 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-06-17 15:22:19 | ERROR | stderr | INFO:     Application startup complete.
+2024-06-17 15:22:19 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:10058 (Press CTRL+C to quit)
+2024-06-17 15:22:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-06-17 15:22:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-06-17 15:22:59 | INFO | stdout | INFO:     10.140.24.69:40350 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 15:23:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: None. global_counter: 0
+2024-06-17 15:23:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-06-17 15:23:08 | INFO | stdout | INFO:     10.140.24.69:40414 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-06-17 15:23:08 | INFO | model_worker | max_input_tiles: 12
+2024-06-17 15:23:08 | INFO | model_worker | dynamic_image_size: False
+2024-06-17 15:23:08 | INFO | model_worker | use_thumbnail: False
+2024-06-17 15:23:08 | INFO | model_worker | Resize images to 448x448
+2024-06-17 15:23:08 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-06-17 15:23:08 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+What does this image mean ASSISTANT:
+2024-06-17 15:23:08 | INFO | model_worker | num_image_tokens: 256
+2024-06-17 15:23:08 | INFO | model_worker | max_new_tokens: 1024
+2024-06-17 15:23:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-06-17 15:23:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-06-17 15:23:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 1
+2024-06-17 15:23:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:24:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:24:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:24:25 | INFO | stdout | INFO:     10.140.24.69:40824 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 15:24:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:24:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:25:03 | INFO | stdout | INFO:     10.140.24.69:41032 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 15:25:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:25:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:25:24 | INFO | stdout | INFO:     10.140.24.69:41154 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 15:25:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 1
+2024-06-17 15:25:44 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-06-17 15:25:44 | INFO | stdout | INFO:     10.140.24.69:41286 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-06-17 15:25:44 | INFO | model_worker | max_input_tiles: 12
+2024-06-17 15:25:44 | INFO | model_worker | dynamic_image_size: False
+2024-06-17 15:25:44 | INFO | model_worker | use_thumbnail: False
+2024-06-17 15:25:44 | INFO | model_worker | Resize images to 448x448
+2024-06-17 15:25:44 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-06-17 15:25:44 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+What does this image mean ASSISTANT:
+2024-06-17 15:25:44 | INFO | model_worker | num_image_tokens: 256
+2024-06-17 15:25:44 | INFO | model_worker | max_new_tokens: 1024
+2024-06-17 15:25:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 2
+2024-06-17 15:26:02 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:26:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:26:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:26:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:26:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:27:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:27:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:27:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:27:49 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:28:02 | INFO | stdout | INFO:     10.140.24.69:41976 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 15:28:04 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:28:19 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:28:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:28:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:29:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:29:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:29:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:29:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:30:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:30:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:30:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:30:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:31:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:31:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:31:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:31:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:32:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:32:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:32:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:32:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:33:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:33:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:33:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:33:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:34:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:34:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:34:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:34:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:35:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:35:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:35:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:35:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:36:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:36:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:36:35 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:36:50 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:37:05 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:37:20 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:37:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:37:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:38:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:38:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:38:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:38:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:39:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:39:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:39:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:39:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:40:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:40:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:40:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:40:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:41:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:41:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:41:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:41:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:42:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:42:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:42:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:42:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:43:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:43:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:43:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:43:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:44:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:44:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:44:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:44:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:45:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:45:21 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:45:36 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:45:51 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:46:06 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:46:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:46:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:46:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:47:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:47:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:47:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:47:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:48:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:48:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:48:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:48:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:49:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:49:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:49:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:49:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:50:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:50:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:50:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:50:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:51:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:51:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:51:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:51:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:52:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:52:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:52:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:52:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:53:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:53:22 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:53:37 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:53:52 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:54:07 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:54:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:54:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:54:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:55:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:55:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:55:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:55:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:56:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:56:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:56:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:56:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:57:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:57:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:57:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:57:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:58:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:58:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:58:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:58:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:59:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:59:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:59:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 15:59:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:00:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:00:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:00:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:00:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:01:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:01:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:01:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:01:53 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:02:08 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:02:23 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:02:38 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:02:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:03:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:03:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:03:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:03:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:04:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:04:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:04:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:04:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:05:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:05:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:05:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:05:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:06:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:06:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:06:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:06:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:07:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:07:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:07:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:07:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:08:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:08:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:08:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:08:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:09:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:09:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:09:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:09:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:10:09 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:10:24 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:10:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:10:54 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:11:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:11:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:11:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:11:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:12:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:12:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:12:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:12:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:13:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:13:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:13:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:13:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:14:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:14:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:14:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:14:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:15:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:15:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:15:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:15:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:16:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:16:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:16:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:16:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:17:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:17:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:17:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:17:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:18:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:18:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:18:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:18:55 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:19:10 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:19:23 | INFO | stdout | INFO:     10.140.24.69:57548 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:19:25 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 2
+2024-06-17 16:19:27 | INFO | stdout | INFO:     10.140.24.69:57572 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:19:39 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-06-17 16:19:39 | INFO | stdout | INFO:     10.140.24.69:57632 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-06-17 16:19:39 | INFO | model_worker | max_input_tiles: 12
+2024-06-17 16:19:40 | INFO | model_worker | dynamic_image_size: False
+2024-06-17 16:19:40 | INFO | model_worker | use_thumbnail: False
+2024-06-17 16:19:40 | INFO | model_worker | Resize images to 448x448
+2024-06-17 16:19:40 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-06-17 16:19:40 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+what is this ASSISTANT:
+2024-06-17 16:19:40 | INFO | model_worker | num_image_tokens: 256
+2024-06-17 16:19:40 | INFO | model_worker | max_new_tokens: 1024
+2024-06-17 16:19:40 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 3
+2024-06-17 16:19:47 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:19:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:20:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:20:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:20:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:20:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:21:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:21:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:21:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:21:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:22:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:22:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:22:33 | INFO | stdout | INFO:     10.140.24.69:58508 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:22:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:22:43 | INFO | stdout | INFO:     10.140.24.69:58568 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:22:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:23:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:23:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:23:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:23:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:24:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:24:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:24:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:24:52 | INFO | stdout | INFO:     10.140.24.69:59238 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:24:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:25:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:25:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:25:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:25:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:26:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:26:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:26:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:26:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:27:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:27:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:27:41 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:27:56 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:28:11 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:28:26 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:28:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:28:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:29:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:29:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:29:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:29:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:30:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:30:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 3
+2024-06-17 16:30:28 | INFO | stdout | INFO:     10.140.24.69:61012 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:30:34 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-06-17 16:30:34 | INFO | stdout | INFO:     10.140.24.69:61056 - "POST /worker_generate_stream HTTP/1.1" 200 OK
+2024-06-17 16:30:34 | INFO | model_worker | max_input_tiles: 12
+2024-06-17 16:30:34 | INFO | model_worker | dynamic_image_size: False
+2024-06-17 16:30:34 | INFO | model_worker | use_thumbnail: False
+2024-06-17 16:30:34 | INFO | model_worker | Resize images to 448x448
+2024-06-17 16:30:34 | INFO | model_worker | Split images to torch.Size([1, 3, 448, 448])
+2024-06-17 16:30:34 | INFO | model_worker | A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <img><image></img>
+What does this image mean ASSISTANT:
+2024-06-17 16:30:34 | INFO | model_worker | num_image_tokens: 256
+2024-06-17 16:30:34 | INFO | model_worker | max_new_tokens: 1024
+2024-06-17 16:30:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=4, locked=False). global_counter: 4
+2024-06-17 16:30:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:30:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:31:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:31:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:31:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:31:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:32:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:32:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:32:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:32:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:33:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:33:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:33:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:33:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:34:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:34:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:34:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:34:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:35:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:35:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:35:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:35:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:36:12 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:36:27 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:36:42 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:36:57 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:37:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:37:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:37:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:37:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:38:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:38:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:38:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:38:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:39:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:39:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:39:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:39:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:40:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:40:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:40:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:40:58 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:41:13 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:41:28 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+2024-06-17 16:41:39 | INFO | stdout | INFO:     10.140.24.69:64430 - "POST /worker_get_status HTTP/1.1" 200 OK
+2024-06-17 16:41:43 | INFO | model_worker | Send heart beat. Models: ['chemvlm']. Semaphore: Semaphore(value=5, locked=False). global_counter: 4
+slurmstepd: error: *** JOB 3556183 ON SH-IDC1-10-140-24-109 CANCELLED AT 2024-06-17T16:41:52 ***
+2024-06-17 16:41:52 | ERROR | stderr | INFO:     Shutting down

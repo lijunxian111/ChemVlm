@@ -1,0 +1,95 @@
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1364, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/generation/utils.py", line 28, in <module>
+    from ..integrations.deepspeed import is_deepspeed_zero3_enabled
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/integrations/deepspeed.py", line 49, in <module>
+    from accelerate.utils.deepspeed import HfDeepSpeedConfig as DeepSpeedConfig
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/__init__.py", line 16, in <module>
+    from .accelerator import Accelerator
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/accelerator.py", line 35, in <module>
+    from .checkpointing import load_accelerator_state, load_custom_state, save_accelerator_state, save_custom_state
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/checkpointing.py", line 24, in <module>
+    from .utils import (
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/utils/__init__.py", line 181, in <module>
+    from .bnb import has_4bit_bnb_layers, load_and_quantize_model
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/utils/bnb.py", line 29, in <module>
+    from ..big_modeling import dispatch_model, init_empty_weights
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/big_modeling.py", line 24, in <module>
+    from .hooks import (
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/hooks.py", line 30, in <module>
+    from .utils.other import recursive_getattr
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/utils/other.py", line 29, in <module>
+    from ..commands.config.default import write_basic_config  # noqa: F401
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/commands/config/__init__.py", line 19, in <module>
+    from .config import config_command_parser
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/commands/config/config.py", line 25, in <module>
+    from .sagemaker import get_sagemaker_input
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/accelerate/commands/config/sagemaker.py", line 35, in <module>
+    import boto3  # noqa: F401
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/boto3/__init__.py", line 17, in <module>
+    from boto3.session import Session
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/boto3/session.py", line 25, in <module>
+    from .resources.factory import ResourceFactory
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/boto3/resources/factory.py", line 17, in <module>
+    from ..docs import docstring
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/boto3/docs/__init__.py", line 15, in <module>
+    from botocore.docs import DEPRECATED_SERVICE_NAMES
+ImportError: cannot import name 'DEPRECATED_SERVICE_NAMES' from 'botocore.docs' (/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/botocore/docs/__init__.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1364, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 40, in <module>
+    from ...modeling_utils import PreTrainedModel
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/modeling_utils.py", line 44, in <module>
+    from .generation import GenerationConfig, GenerationMixin
+  File "<frozen importlib._bootstrap>", line 1055, in _handle_fromlist
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1354, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1366, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import transformers.generation.utils because of the following error (look up to see its traceback):
+cannot import name 'DEPRECATED_SERVICE_NAMES' from 'botocore.docs' (/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/botocore/docs/__init__.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 188, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/__init__.py", line 1, in <module>
+    from .model import LlavaLlamaForCausalLM
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/model/__init__.py", line 1, in <module>
+    from .language_model.llava_llama import LlavaLlamaForCausalLM, LlavaConfig
+  File "/mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava/llava/model/language_model/llava_llama.py", line 22, in <module>
+    from transformers import AutoConfig, AutoModelForCausalLM, \
+  File "<frozen importlib._bootstrap>", line 1055, in _handle_fromlist
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1355, in __getattr__
+    value = getattr(module, name)
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1354, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/transformers/utils/import_utils.py", line 1366, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import transformers.models.llama.modeling_llama because of the following error (look up to see its traceback):
+Failed to import transformers.generation.utils because of the following error (look up to see its traceback):
+cannot import name 'DEPRECATED_SERVICE_NAMES' from 'botocore.docs' (/mnt/petrelfs/zhangdi1/miniforge3/envs/internvl/lib/python3.9/site-packages/botocore/docs/__init__.py)
