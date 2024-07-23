@@ -17,6 +17,7 @@ import random
 from tqdm import tqdm
 
 from time import sleep
+import re
 
 
 dashscope.api_key = 'sk-eea7c876461747c5a6eebe0531164767' #qwen API-KEY
@@ -58,79 +59,137 @@ def call_qwen(question:str):
         ))
     return full_content
 
-def test_chemvl_perform_single_choice(data_to_eval: dict):
+def test_chemvl_perform_single_choice(data_to_eval: dict, q_info):
     """
     evaluate single choice
     """
-    prompt_template = "你是一位熟悉化学高考题答案和评分的专家，下面有一个对于选择题的回答:```{}```，请判断这个回答认为的正确选项。注意，你只需要回答一个代表选项的字母"
-    human_question = prompt_template.format(data_to_eval['text'])
-    
-    ans = call_qwen(human_question)
-    print(ans)
-    if ans == data_to_eval['annotation']:
-        return 1
-    else:
-        return 0
+    prompt_template = "你是一位熟悉化学题目答案和评分的专家，下面有一个对于选择题的回答:```{}```，请根据文本和```答案```字样的提示抽取这个回答给出的选项。注意，你只需要回答一个代表选项的字母" #一个or多个字母
+    human_question = prompt_template.format(q_info, data_to_eval['text'])
+    ground_truth = prompt_template.format(q_info, data_to_eval['annotation'])
 
-def test_chemvl_perform_fill_in_blank(data_to_eval: dict):
+    if len(data_to_eval['text'])<3:
+        ans = "".join(re.findall('[A-Z]', data_to_eval['text']))
+    
+    elif "{'answer':" in data_to_eval['text']:
+        ans = "".join(re.findall('[A-Z]', data_to_eval['text']))
+
+    elif "解析" in data_to_eval['text']:
+        remove_index = data_to_eval['text'].find("解析")
+        ans = data_to_eval['text'][0: remove_index-1]
+        ans = "".join(re.findall('[A-Z]', ans))
+    else:
+        ans = call_qwen(human_question)
+
+    if len(data_to_eval['annotation'])==1:
+        std_ans = data_to_eval['annotation']
+    else:
+        std_ans = call_qwen(ground_truth)
+
+    #print(ans)
+    if ans == std_ans:
+        return 1, ans, std_ans
+    else:
+        return 0, ans, std_ans
+
+def test_chemvl_perform_fill_in_blank(data_to_eval: dict, q_info):
     """
     evaluate the fill-in-the-blank problem
     """
-    return 
+    prompt_template = "你是一位熟悉化学题目答案和评分的专家，下面有一个对于填空题的回答:```{}```, 请根据文本和```答案```字样的提示抽取这个回答给出的答案。注意,你只需要回答每个空的正确答案。"
+    judge_score_template = "你是一位熟悉化学题目答案和评分的专家, 下面有一个填空题```{}```和对于填空题的回答```{}```, 请根据标准答案```{}```来逐空给这道题目打分。注意, 这道题目满分为1分, 请按照正确的空的数目按比例给分, 注意各个空用' '或'；'隔开。请只回答一个0-1(包括0,1)之间的数字而不输出任何其他内容。"
+    human_question = prompt_template.format(q_info, data_to_eval['text'])
+    if "解析" in data_to_eval['text']:
+        remove_index = data_to_eval['text'].find("解析")
+        ans = data_to_eval['text'][0: remove_index-1]
+    else:   
+        ans = call_qwen(human_question)
+    #ground_truth = prompt_template.format(q_info, data_to_eval['annotation'])
+    #std_ans = call_qwen(ground_truth)
+    std_ans = data_to_eval['annotation']
+    #print(std_ans)
+    judge_question = judge_score_template.format(q_info, ans, std_ans)
+    
+    score = call_qwen(judge_question)
+    print(score)
+
+    return float(score), ans, std_ans
 
 
-def test_chemvl_perform(ans_paths: list):
+def test_chemvl_perform(question_paths:list, ans_paths: list):
     """
     test our model's performance by qwen-max or gpt-4o
     """
+    template = "请根据题目```{}```判断这道题目的题型, 请回答选择题, 填空题或主观题"
+    ans_list = list()
     total_val_score = 0.
     total_right_score = 0.
-    for answer_path in ans_paths:
+    for q_path, answer_path in tqdm(zip(question_paths, ans_paths), desc="evaluating gaokao"):
         with open(answer_path, 'r') as f:
             data_to_test = f.readlines()
-
+        with open(q_path, 'r') as fp:
+            origin_data = fp.readlines()
         total_q_num = 0.0
         cnt_right_num = 0
         cur_score = 0.0
-        for line in data_to_test:
+        for line, ori_line in zip(data_to_test, origin_data):
             line = json.loads(line)
+            ori_line = json.loads(ori_line)
             res = line['text']
-            std_ans = line['annotation']
-            if len(std_ans) == 1:
-                score = test_chemvl_perform_single_choice(line)
-                cur_score += score
-                total_q_num += 1
+            ori_q = ori_line['conversations'][0]['value']
+            #q = template.format(ori_q)
+            #ans_for_type = call_qwen(q)
+            #sleep(0.5)
+            #if "选择" in ans_for_type:
+            if len(line['annotation'])==1:
+                try:
+                    score, llm_ans, gt_ans = test_chemvl_perform_single_choice(line, ori_q)
+                    cur_score += score
+                    total_q_num += 1
+                    ans_comp = {'generated':llm_ans, 'ground_truth':gt_ans, 'score':score}
+                    print(ans_comp)
+                    ans_list.append(ans_comp)
+                    sleep(0.5)
+                except:
+                    pass
+            elif len(line['annotation'])>1:
+                try:
+                    score, llm_ans, gt_ans = test_chemvl_perform_fill_in_blank(line, ori_q)
+                    cur_score += float(int(score))
+                    total_q_num += 1
+                    ans_comp = {'generated':llm_ans, 'ground_truth':gt_ans, 'score': int(score)}
+                    ans_list.append(ans_comp)
+                    print(ans_comp)
+                    sleep(0.5)
+                except:
+                    pass
             else:
                 pass
-            
-            #human_prompt = f'你是一位化学教师。现在有一个对一道{}的解答：```'+res+'```。请根据标准答案```'+std_ans+'```判断这个解答的得分。如果完全正确，请回答“1分”；如果完全错误，请回答“0分”；如果部分正确，请按照正确的比例给出0-1之间的分数。你回答的格式应该是: ```m分```，其中m是0，1或者0到1之间的小数。'
-            #messages=[
-            #{
-                #"role": "user", 
-                #"content": [
-                    #{"type":"text", "text":human_prompt},
-                #]
-            #}
-            #]
-            #completion = client.chat.completions.create(
-            #model="gpt-4o",
-            #messages=messages
-            #)
-            
-            #print(f'ChatGPT: {answer}')
-            #if "1分" in answer and "0分" not in answer:
-                #cnt_right_num += 1
-            #cur_score += float(answer[:-1])
+                  
         if total_q_num != 0:
             print(cnt_right_num/total_q_num)
             total_val_score += total_q_num
             total_right_score += cur_score
+        f.close()
+        fp.close()
+    
+    
+    writer = open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_exam_SciQA.jsonl', 'w')
+    for item in ans_list:
+        writer.write(json.dumps(item, ensure_ascii=False) + '\n')
+    writer.close()
+    
     
     print(f"总分{total_val_score}, 模型获得{total_right_score}分")
 
 if __name__ == "__main__":
-    gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia.jsonl',
-                             '/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia1.jsonl',
-                             '/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__xinkebiao.jsonl']
-    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__xinkebiao.jsonl']
-    test_chemvl_perform(gaokao_chemvl_results)
+    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia.jsonl',
+                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia1.jsonl',
+                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__xinkebiao.jsonl']
+    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_200CKPT_chemvl_ft_6_19_0_merged_CMMU.jsonl']
+    llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_213_pretrained_InternVL-Chat-V1-5_SciQA.jsonl']
+    origin_data = ['/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl']
+    test_chemvl_perform(origin_data, llm_results)
+    #with open('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl','r') as f:
+        #data = f.readlines()
+    
+    #print(json.loads(data[0]))
