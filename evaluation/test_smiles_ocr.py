@@ -50,6 +50,36 @@ def sim_cal_metric(input_smiles: str, gt_smiles: str):
     tanimoto = DataStructs.FingerprintSimilarity(reference_fp, input_fp)
     return tanimoto
 
+def test_dealed_data(file_path:str,  gt_path:str):
+    """
+    test the dealed data results
+    """
+    tanimoto_list = list()
+    with open(file_path, 'r') as f:
+        data_to_test = f.readlines()
+    with open(gt_path, 'r') as fp:
+        gt = fp.readlines()
+    
+    f.close()
+    fp.close()
+
+    for line, gt_line in tqdm(zip(data_to_test, gt)):
+        line = json.loads(line)
+        gt_line = json.loads(gt_line)
+
+        tanimoto_similarity = sim_cal_metric(line['text'], gt_line['ground_truth'])
+        if tanimoto_similarity is not None:
+            tanimoto_list.append(tanimoto_similarity)
+
+    average_tanimoto = sum(tanimoto_list) / len(tanimoto_list)
+
+    origin_lenth = len(tanimoto_list)
+    tanimoto_one_count = len(
+        [tanimoto for tanimoto in tanimoto_list if tanimoto == 1.0]
+    )
+    tanimoto_to_one = tanimoto_one_count / origin_lenth
+
+    print(f"平均相似度{average_tanimoto}, tanimoto@1.0为{tanimoto_to_one * 100}%")
 
 def call_qwen(question: str):
     """
@@ -192,11 +222,14 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
         prompt = "你是一位精通化学分子图识别和SMILES表达式的专家" + single_data['conversations'][0][
             'value'] + "注意，你的回答格式为: [xxx], 其中xxx是一个SMILES字符串"
         prompt = prompt.replace('\n', '').replace('<image>', '')
-        ans_from_mllm = call_multimodal(model_name, img_path, prompt)
-        ans_from_mllm = extract_bracket_content(ans_from_mllm)[0]
-        ans_from_mllm = ans_from_mllm.replace('[','').replace(']','').replace('.','')
-        print(ans_from_mllm)
-        mllm_smiles_list.append(ans_from_mllm)
+        try:
+            ans_from_mllm = call_multimodal(model_name, img_path, prompt)
+            ans_from_mllm = extract_bracket_content(ans_from_mllm)[0]
+            ans_from_mllm = ans_from_mllm.replace('[','').replace(']','').replace('.','')
+            #print(ans_from_mllm)
+            mllm_smiles_list.append(ans_from_mllm)
+        except:
+            print("No reply")
 
 
     with open(restore_ans_path, 'w', encoding='utf-8') as file:
@@ -210,7 +243,7 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     with open(restore_ans_path, 'r') as f:
         pred = f.readlines()
 
-    for i in tqdm(range(len(gt)), desc=f'Calculating {model_name} performance'):
+    for i in tqdm(range(len(pred)), desc=f'Calculating {model_name} performance'):
         gt_line = json.loads(gt[i])
         pred_line = json.loads(pred[i])
 
@@ -286,5 +319,7 @@ if __name__ == "__main__":
     elif eval_model_type == 'qwen-vl' or 'gpt' in eval_model_type:
         restore_path = f'./{eval_model_type}-ocr.jsonl'
         test_online_MLLMs(eval_model_type, restore_path)
+    elif eval_model_type == 'decimer' or eval_model_type == 'molscribe':
+        test_dealed_data('/mnt/petrelfs/zhangdi1/lijunxian/molscribe_result.jsonl', '/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl')
     else:
         raise ValueError(f"Cannot recognize {eval_model_type}")
