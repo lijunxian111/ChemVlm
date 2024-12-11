@@ -210,7 +210,7 @@ def read_and_convert_jsonl(data_paths: str, new_data_path: str):
         #     conv, images_list = build_mm_conversations(question)
         #     json_dict = {'id': 'mm'+str(q_id), 'images':images_list, 'conversations':conv}
         #     for i in images_list:
-        #         if not os.path.exists('/mnt/hwfile/ai4chem/share/data/'+i):
+        #         if not os.path.exists('./data/'+i):
         #             return
         #     mm_json_list.append(json_dict)
         
@@ -235,10 +235,9 @@ def read_and_convert_jsonl(data_paths: str, new_data_path: str):
 
 
 if __name__ == "__main__":
-    #with open("/root/s3://chemllm/shiti-fengchao/edit/0910D3CFE6C887D221043E1D15D6904B.png",'r') as f:
-        #pass
-    # read_and_convert_jsonl(['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f71c08a4-000000.jsonl','/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f7a32aad-000000.jsonl'],'mm_pure.jsonl')
+    
+    # read_and_convert_jsonl(['./chemexam_repo/part-6629f71c08a4-000000.jsonl','./chemexam_repo/part-6629f7a32aad-000000.jsonl'],'mm_pure.jsonl')
     # read_q_type('mm_pure.jsonl')
-    # read_and_convert_jsonl(['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f71c08a4-000000.jsonl',],'mm_pure.jsonl')
-#'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f7a32aad-000000.jsonl'
-    read_and_convert_jsonl(['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f7a32aad-000000.jsonl',],'mm_pure.jsonl')
+    # read_and_convert_jsonl(['./chemexam_repo/part-6629f71c08a4-000000.jsonl',],'mm_pure.jsonl')
+#'./chemexam_repo/part-6629f7a32aad-000000.jsonl'
+    read_and_convert_jsonl(['./chemexam_repo/part-6629f7a32aad-000000.jsonl',],'mm_pure.jsonl')
