@@ -11,7 +11,7 @@ export LD_LIBRARY_PATH=cuda-11.8/lib64:$LD_LIBRARY_PATH
 
 export CUDA_PATH=cuda-11.8/
 export CUDA_HOME=cuda-11.8/
-export CUDA_ROOT=cuda-11.8/
+export CUDA_ROOT=cuda-11.8/s
 
 
 unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY
