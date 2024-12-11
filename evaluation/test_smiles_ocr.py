@@ -378,8 +378,8 @@ if __name__ == "__main__":
     if "ocr" in task:
         if eval_model_type == 'chemvlm':
             ocr_chemvl_results = [
-                '/mnt/hwfile/ai4chem/hao/internvl_8b_2_5/result_internvl_2_5_8b__smiles_ocr.jsonl']
-            restore_res_path = '../extracted_ocr_internvl2_5_8b.jsonl'
+                '../your_file.jsonl']
+            restore_res_path = '../your_save_path.jsonl'
             if os.path.exists('../eval_results/qwen_ocr_8b_chemvlm.jsonl'):
                 test_one_side(ocr_chemvl_results[0], restore_res_path)
             else:
