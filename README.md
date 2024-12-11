@@ -1,5 +1,14 @@
-This is our official repo for AAAI 2025 paper: "ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area".   
+# This is our official repo for AAAI 2025 paper: "ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area".   
+
+## Model
 Use our model at: https://huggingface.co/AI4Chem  
+
+## Training  
+Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions.  
+
+## Evaluation  
+
+
 If this help you, please kindly cite:
 ```
 @misc{li2024chemvlmexploringpowermultimodal,
