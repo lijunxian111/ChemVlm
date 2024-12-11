@@ -204,7 +204,7 @@ def read_and_convert_jsonl(data_paths: str, new_data_path: str):
         question = json.loads(data_string)
 
         for i in question['img_list']:
-            if not os.path.exists('/mnt/hwfile/ai4chem/share/data/'+question['img_list'][i]['raw_path'].replace('s3://llm-private-datasets/','').replace('s3://','')):
+            if not os.path.exists('./data/'+question['img_list'][i]['raw_path'].replace('s3://llm-private-datasets/','').replace('s3://','')):
                 question['img_list'].pop(i)
                 print('yes')
         
@@ -237,6 +237,6 @@ def read_and_convert_jsonl(data_paths: str, new_data_path: str):
 if __name__ == "__main__":
     #with open("/root/s3://chemllm/shiti-fengchao/edit/0910D3CFE6C887D221043E1D15D6904B.png",'r') as f:
         #pass
-    # read_and_convert_jsonl(['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f71c08a4-000000.jsonl','/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/part-6629f7a32aad-000000.jsonl'],'mm_pure.jsonl')
+    # read_and_convert_jsonl(['./chemexam_repo/part-6629f71c08a4-000000.jsonl','./chemexam_repo/part-6629f7a32aad-000000.jsonl'],'mm_pure.jsonl')
     # read_q_type('mm_pure.jsonl')
-    read_and_convert_jsonl(['/mnt/petrelfs/zhangdi1/lijunxian/datagen/valid_in_q.jsonl.bak'],'mm_pure.jsonl')
+    read_and_convert_jsonl(['./datagen/valid_in_q.jsonl.bak'],'mm_pure.jsonl')
