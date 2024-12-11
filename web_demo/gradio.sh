@@ -16,7 +16,7 @@ export CUDA_ROOT=cuda-11.8/s
 
 unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY
 export all_proxy=""
-cd /mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava
+cd InternVL/internvl_chat_llava
 #python -m llava.serve.gradio_web_server --controller http://0.0.0.0:10050 --model-list-mode reload --port 10058
 
 python -m llava.serve.gradio_web_server --controller http://10.140.24.69:10050 --model-list-mode reload --port 10058
