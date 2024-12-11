@@ -1,4 +1,5 @@
 This is our official repo for AAAI 2025 paper: "ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area".   
+Use our model at: https://huggingface.co/AI4Chem  
 If this help you, please kindly cite:
 ```
 @misc{li2024chemvlmexploringpowermultimodal,
