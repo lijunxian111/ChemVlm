@@ -21,13 +21,16 @@ import re
 
 from time import sleep
 
-dashscope.api_key = 'sk-eea7c876461747c5a6eebe0531164767' #qwen API-KEY
+dashscope.api_key = 'sk-' #qwen API-KEY
 
 
-openai.api_key = 'sk-trNebBQItspLf5gG044a7bA024444e9cAe9dCa9bB76eFdA6'
-#openai.api_key = 'sk-proj-aWWD7RfhrndOFwvwCkSCT3BlbkFJIhYOggcmq0Oqq8pJ1riM'
+openai.api_key = 'sk-'
+#openai.api_key = 'sk-'
 #os.environ["http_proxy"] = "http://localhost:7890"
 #os.environ["https_proxy"] = "http://localhost:7890"
+ 
+def filter_chinese(text):
+    return re.sub(r'[\u4e00-\u9fff]', '', text)
 
 def extract_bracket_content(input_string):
     # Use regular expression to find content within []
@@ -66,8 +69,11 @@ def test_dealed_data(file_path:str,  gt_path:str):
     for line, gt_line in tqdm(zip(data_to_test, gt)):
         line = json.loads(line)
         gt_line = json.loads(gt_line)
-
-        tanimoto_similarity = sim_cal_metric(line['text'], gt_line['ground_truth'])
+        try:
+            ground_truth = gt_line['ground_truth']
+        except:
+            ground_truth = gt_line['annotation']
+        tanimoto_similarity = sim_cal_metric(line['text'], ground_truth)
         if tanimoto_similarity is not None:
             tanimoto_list.append(tanimoto_similarity)
 
@@ -79,7 +85,7 @@ def test_dealed_data(file_path:str,  gt_path:str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
 def call_qwen(question: str):
     """
@@ -170,10 +176,10 @@ def test_internvl():
     """
     tanimoto_list = list()
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl', 'r') as f:
+    with open('../qwen_ocr.jsonl', 'r') as f:
         gt = f.readlines()
     with open(
-            '/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_pretrained_InternVL-Chat-V1-5_smiles_ocr.jsonl',
+            '../chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_pretrained_InternVL-Chat-V1-5_smiles_ocr.jsonl',
             'r') as fp:
         pred = fp.readlines()
 
@@ -193,8 +199,54 @@ def test_internvl():
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
+def test_one_side(path: str, store_path: str):
+    """
+    test raw llava performance
+    """
+    tanimoto_list = list()
+    answers = list()
+
+    with open('../eval_results/qwen_ocr_8b_chemvlm.jsonl', 'r') as f:
+        gt = f.readlines()
+    with open(path,
+            'r') as fp:
+        pred = fp.readlines()
+
+    for i in tqdm(range(len(pred))):
+        gt_line = json.loads(gt[i])
+        pred_line = json.loads(pred[i])
+        human_prompt_gen = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + pred_line['text'] + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­è€Œä¸è¿”å›å…¶ä»–å†…å®¹ã€‚'
+        try:
+            ans_gen = call_multimodal('gpt-4', None, human_prompt_gen)
+            ans_gen = ans_gen.replace('```','')
+            ans_gen = ans_gen.replace(':','')
+            ans_gen = filter_chinese(ans_gen)
+            #ans_gen = pred_line['text']
+            answers.append({'answer': ans_gen, 'ground_truth': gt_line['ground_truth']})
+    
+            tanimoto_similarity = sim_cal_metric(ans_gen, gt_line['ground_truth'])
+            if tanimoto_similarity is not None:
+                tanimoto_list.append(tanimoto_similarity)
+
+        except:
+            pass
+
+    average_tanimoto = sum(tanimoto_list) / len(tanimoto_list)
+
+    origin_lenth = len(tanimoto_list)
+    tanimoto_one_count = len(
+        [tanimoto for tanimoto in tanimoto_list if tanimoto == 1.0]
+    )
+    tanimoto_to_one = tanimoto_one_count / origin_lenth
+
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
+
+    with open(store_path, 'w', encoding='utf-8') as file:
+        for data in answers:
+            file.write(json.dumps(data, ensure_ascii=False) + '\n')
+    file.close()
 
 def test_online_MLLMs(model_name: str, restore_ans_path: str):
     """
@@ -205,22 +257,23 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     gt = []
     pred = []
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl', 'r', encoding='utf-8') as f:
+    with open('../qwen_ocr.jsonl', 'r', encoding='utf-8') as f:
         gt = f.readlines()
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_chem_ocr.jsonl.test.jsonl', 'r', encoding='utf-8') as fp:
+    with open('../datagen/mm_chem_ocr.jsonl.test.jsonl', 'r', encoding='utf-8') as fp:
         data_to_test = fp.readlines()
 
     mllm_smiles_list = list()
+    """
 
     for i in tqdm(range(len(data_to_test)), desc=f'Calling {model_name} to return SMILES'):
         single_data = json.loads(data_to_test[i])
         img_path = single_data['image']
         # img_path = r'E:\ailab\1.png'
-        # img_path = '/mnt/petrelfs/zhangdi1/lijunxian/dog.jpeg'
-        # prompt = "Í¼Æ¬ÉÏÃèÊöÁËÊ²Ã´"
-        prompt = "ÄãÊÇÒ»Î»¾«Í¨»¯Ñ§·Ö×ÓÍ¼Ê¶±ğºÍSMILES±í´ïÊ½µÄ×¨¼Ò" + single_data['conversations'][0][
-            'value'] + "×¢Òâ£¬ÄãµÄ»Ø´ğ¸ñÊ½Îª: [xxx], ÆäÖĞxxxÊÇÒ»¸öSMILES×Ö·û´®"
+        # img_path = '../dog.jpeg'
+        # prompt = "å›¾ç‰‡ä¸Šæè¿°äº†ä»€ä¹ˆ"
+        prompt = "ä½ æ˜¯ä¸€ä½ç²¾é€šåŒ–å­¦åˆ†å­å›¾è¯†åˆ«å’ŒSMILESè¡¨è¾¾å¼çš„ä¸“å®¶" + single_data['conversations'][0][
+            'value'] + "æ³¨æ„ï¼Œä½ çš„å›ç­”æ ¼å¼ä¸º: [xxx], å…¶ä¸­xxxæ˜¯ä¸€ä¸ªSMILESå­—ç¬¦ä¸²"
         prompt = prompt.replace('\n', '').replace('<image>', '')
         try:
             ans_from_mllm = call_multimodal(model_name, img_path, prompt)
@@ -235,18 +288,29 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     with open(restore_ans_path, 'w', encoding='utf-8') as file:
         for data in mllm_smiles_list:
             file.write(json.dumps(data, ensure_ascii=False) + '\n')
-
+    """
     f.close()
     fp.close()
-    file.close()
+    #file.close()
+    
 
+    with open(restore_ans_path, 'r') as f:
+        pred = f.readlines()
+    
+    for index, line in tqdm(enumerate(pred)):
+        line = json.loads(line)
+        mllm_smiles_list.append({'id': str(index), 'text': line['text'].replace("\"",'').replace('\n','')})
+    
+    with open(restore_ans_path, 'w', encoding='utf-8') as file:
+        for data in mllm_smiles_list:
+            file.write(json.dumps(data, ensure_ascii=False) + '\n')
+    f.close()
     with open(restore_ans_path, 'r') as f:
         pred = f.readlines()
 
     for i in tqdm(range(len(pred)), desc=f'Calculating {model_name} performance'):
         gt_line = json.loads(gt[i])
         pred_line = json.loads(pred[i])
-
         tanimoto_similarity = sim_cal_metric(pred_line['text'], gt_line['ground_truth'])
         if tanimoto_similarity is not None:
             tanimoto_list.append(tanimoto_similarity)
@@ -259,7 +323,7 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
 
 def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
@@ -278,8 +342,9 @@ def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
             line = json.loads(line)
             generated_res = line['text']
             ground_truth = line['annotation']
-            human_prompt_gen = f'ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§SMILES±íÊ¾µÄ×¨¼Ò¡£ÇëÌáÈ¡ÏÂÁĞÓï¾äÖĞµÄSMILES£º\n```' + generated_res + '```\n×¢Òâ£¬ÄãÖ»ĞèÒª·µ»ØÒ»¸öSMILESÊ½×Ó¡£'
-            human_prompt_gt = f'ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§SMILES±íÊ¾µÄ×¨¼Ò¡£ÇëÌáÈ¡ÏÂÁĞÓï¾äÖĞµÄSMILES£º\n```' + ground_truth + '```\n×¢Òâ£¬ÄãÖ»ĞèÒª·µ»ØÒ»¸öSMILESÊ½×Ó¡£'
+            
+            human_prompt_gen = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + generated_res + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­ã€‚'
+            human_prompt_gt = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + ground_truth + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­ã€‚'
 
             ans_gen = call_qwen(human_prompt_gen)
             ans_gt = call_qwen(human_prompt_gt)
@@ -301,25 +366,36 @@ def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
     with open(restore_path, 'w', encoding='utf-8') as file:
         for data in gen_and_gt_list:
             file.write(json.dumps(data, ensure_ascii=False) + '\n')
 
 
 if __name__ == "__main__":
-    eval_model_type = 'gpt-4o'  # internvl, chemvlm or qwenvl
-    if eval_model_type == 'chemvlm':
-        ocr_chemvl_results = [
-            '/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_2b_wxz_chemvl_2B_ft_7_3_0_merge_smiles_ocr.jsonl']
-        restore_res_path = '/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr_2b.jsonl'
-        test_chemvl_perform_smiles_ocr(ocr_chemvl_results, restore_res_path)
-    elif eval_model_type == 'internvl':
-        test_internvl()
-    elif eval_model_type == 'qwen-vl' or 'gpt' in eval_model_type:
-        restore_path = f'./{eval_model_type}-ocr.jsonl'
-        test_online_MLLMs(eval_model_type, restore_path)
-    elif eval_model_type == 'decimer' or eval_model_type == 'molscribe':
-        test_dealed_data('/mnt/petrelfs/zhangdi1/lijunxian/molscribe_result.jsonl', '/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl')
+    eval_model_type = 'chemvlm'  # internvl, chemvlm or qwenvl
+    task = 'smiles_ocr'
+    if "ocr" in task:
+        if eval_model_type == 'chemvlm':
+            ocr_chemvl_results = [
+                '/mnt/hwfile/ai4chem/hao/internvl_8b_2_5/result_internvl_2_5_8b__smiles_ocr.jsonl']
+            restore_res_path = '../extracted_ocr_internvl2_5_8b.jsonl'
+            if os.path.exists('../eval_results/qwen_ocr_8b_chemvlm.jsonl'):
+                test_one_side(ocr_chemvl_results[0], restore_res_path)
+            else:
+                test_chemvl_perform_smiles_ocr(ocr_chemvl_redsults, restore_res_path)
+        elif eval_model_type == 'internvl':
+            test_internvl()
+        elif eval_model_type == 'llava' or eval_model_type == 'glm-4v':
+            path = ""
+            test_one_side(path, f'../extracted_ocr_{eval_model_type}.jsonl')
+
+        elif eval_model_type == 'qwen-vl' or 'gpt' in eval_model_type:
+            restore_path = f'./{eval_model_type}-{task}.jsonl'
+            test_online_MLLMs(eval_model_type, restore_path)
+        elif eval_model_type == 'decimer' or eval_model_type == 'molscribe' or eval_model_type == 'yi':
+            test_dealed_data('../yi-vl-plus-smiles_ocr.jsonl', '../qwen_ocr.jsonl')
+        else:
+            raise ValueError(f"Cannot recognize {eval_model_type}")
     else:
-        raise ValueError(f"Cannot recognize {eval_model_type}")
+        test_dealed_data('../eval_results/gpt-4o-orderly_product.jsonl','../eval_results/gpt-4o-orderly_product.jsonl')
