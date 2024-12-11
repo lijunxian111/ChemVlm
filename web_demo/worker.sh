@@ -6,8 +6,8 @@
 #SBATCH --partition=AI4Chem
 ##SBATCH -w SH-IDC1-10-140-24-109
 
-source /mnt/petrelfs/zhangdi1/miniforge3/bin/activate internvl
+
 unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY
 export all_proxy=""
-cd /mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat
-python -m internvl.serve.model_worker --host 0.0.0.0 --controller http://10.140.24.69:10050 --port 10063 --worker http://10.140.24.69:10063 --model-path /mnt/hwfile/ai4chem/CKPT/chemvl_ft_6_19_0_merged --device auto --model-name chemvlm
+cd InternVL/internvl_chat
+python -m internvl.serve.model_worker --host 0.0.0.0 --controller http://10.140.24.69:10050 --port 10063 --worker http://10.140.24.69:10063 --model-path chemvl_ft_6_19_0_merged --device auto --model-name chemvlm
