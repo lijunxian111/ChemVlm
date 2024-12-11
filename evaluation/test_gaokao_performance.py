@@ -1,4 +1,4 @@
-# -*- coding: GBK -*-
+
 import openai
 
 from http import HTTPStatus
@@ -20,7 +20,7 @@ from time import sleep
 import re
 
 
-dashscope.api_key = 'sk-eea7c876461747c5a6eebe0531164767' #qwen API-KEY
+dashscope.api_key = '' #qwen API-KEY
 """
 client = OpenAI(
     api_key="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"
@@ -63,7 +63,7 @@ def test_chemvl_perform_single_choice(data_to_eval: dict, q_info):
     """
     evaluate single choice
     """
-    prompt_template = "ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§ÌâÄ¿´ğ°¸ºÍÆÀ·ÖµÄ×¨¼Ò£¬ÏÂÃæÓĞÒ»¸ö¶ÔÓÚÑ¡ÔñÌâµÄ»Ø´ğ:```{}```£¬Çë¸ù¾İÎÄ±¾ºÍ```´ğ°¸```×ÖÑùµÄÌáÊ¾³éÈ¡Õâ¸ö»Ø´ğ¸ø³öµÄÑ¡Ïî¡£×¢Òâ£¬ÄãÖ»ĞèÒª»Ø´ğÒ»¸ö´ú±íÑ¡ÏîµÄ×ÖÄ¸" #Ò»¸öor¶à¸ö×ÖÄ¸
+    prompt_template = "ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦é¢˜ç›®ç­”æ¡ˆå’Œè¯„åˆ†çš„ä¸“å®¶ï¼Œä¸‹é¢æœ‰ä¸€ä¸ªå¯¹äºé€‰æ‹©é¢˜çš„å›ç­”:```{}```ï¼Œè¯·æ ¹æ®æ–‡æœ¬å’Œ```ç­”æ¡ˆ```å­—æ ·çš„æç¤ºæŠ½å–è¿™ä¸ªå›ç­”ç»™å‡ºçš„é€‰é¡¹ã€‚æ³¨æ„ï¼Œä½ åªéœ€è¦å›ç­”ä¸€ä¸ªä»£è¡¨é€‰é¡¹çš„å­—æ¯" #ä¸€ä¸ªorå¤šä¸ªå­—æ¯
     human_question = prompt_template.format(q_info, data_to_eval['text'])
     ground_truth = prompt_template.format(q_info, data_to_eval['annotation'])
 
@@ -73,8 +73,8 @@ def test_chemvl_perform_single_choice(data_to_eval: dict, q_info):
     elif "{'answer':" in data_to_eval['text']:
         ans = "".join(re.findall('[A-Z]', data_to_eval['text']))
 
-    elif "½âÎö" in data_to_eval['text']:
-        remove_index = data_to_eval['text'].find("½âÎö")
+    elif "è§£æ" in data_to_eval['text']:
+        remove_index = data_to_eval['text'].find("è§£æ")
         ans = data_to_eval['text'][0: remove_index-1]
         ans = "".join(re.findall('[A-Z]', ans))
     else:
@@ -95,11 +95,11 @@ def test_chemvl_perform_fill_in_blank(data_to_eval: dict, q_info):
     """
     evaluate the fill-in-the-blank problem
     """
-    prompt_template = "ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§ÌâÄ¿´ğ°¸ºÍÆÀ·ÖµÄ×¨¼Ò£¬ÏÂÃæÓĞÒ»¸ö¶ÔÓÚÌî¿ÕÌâµÄ»Ø´ğ:```{}```, Çë¸ù¾İÎÄ±¾ºÍ```´ğ°¸```×ÖÑùµÄÌáÊ¾³éÈ¡Õâ¸ö»Ø´ğ¸ø³öµÄ´ğ°¸¡£×¢Òâ,ÄãÖ»ĞèÒª»Ø´ğÃ¿¸ö¿ÕµÄÕıÈ·´ğ°¸¡£"
-    judge_score_template = "ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§ÌâÄ¿´ğ°¸ºÍÆÀ·ÖµÄ×¨¼Ò, ÏÂÃæÓĞÒ»¸öÌî¿ÕÌâ```{}```ºÍ¶ÔÓÚÌî¿ÕÌâµÄ»Ø´ğ```{}```, Çë¸ù¾İ±ê×¼´ğ°¸```{}```À´Öğ¿Õ¸øÕâµÀÌâÄ¿´ò·Ö¡£×¢Òâ, ÕâµÀÌâÄ¿Âú·ÖÎª1·Ö, Çë°´ÕÕÕıÈ·µÄ¿ÕµÄÊıÄ¿°´±ÈÀı¸ø·Ö, ×¢Òâ¸÷¸ö¿ÕÓÃ' '»ò'£»'¸ô¿ª¡£ÇëÖ»»Ø´ğÒ»¸ö0-1(°üÀ¨0,1)Ö®¼äµÄÊı×Ö¶ø²»Êä³öÈÎºÎÆäËûÄÚÈİ¡£"
+    prompt_template = "ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦é¢˜ç›®ç­”æ¡ˆå’Œè¯„åˆ†çš„ä¸“å®¶ï¼Œä¸‹é¢æœ‰ä¸€ä¸ªå¯¹äºå¡«ç©ºé¢˜çš„å›ç­”:```{}```, è¯·æ ¹æ®æ–‡æœ¬å’Œ```ç­”æ¡ˆ```å­—æ ·çš„æç¤ºæŠ½å–è¿™ä¸ªå›ç­”ç»™å‡ºçš„ç­”æ¡ˆã€‚æ³¨æ„,ä½ åªéœ€è¦å›ç­”æ¯ä¸ªç©ºçš„æ­£ç¡®ç­”æ¡ˆã€‚"
+    judge_score_template = "ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦é¢˜ç›®ç­”æ¡ˆå’Œè¯„åˆ†çš„ä¸“å®¶, ä¸‹é¢æœ‰ä¸€ä¸ªå¡«ç©ºé¢˜```{}```å’Œå¯¹äºå¡«ç©ºé¢˜çš„å›ç­”```{}```, è¯·æ ¹æ®æ ‡å‡†ç­”æ¡ˆ```{}```æ¥é€ç©ºç»™è¿™é“é¢˜ç›®æ‰“åˆ†ã€‚æ³¨æ„, è¿™é“é¢˜ç›®æ»¡åˆ†ä¸º1åˆ†, è¯·æŒ‰ç…§æ­£ç¡®çš„ç©ºçš„æ•°ç›®æŒ‰æ¯”ä¾‹ç»™åˆ†, æ³¨æ„å„ä¸ªç©ºç”¨' 'æˆ–'ï¼›'éš”å¼€ã€‚è¯·åªå›ç­”ä¸€ä¸ª0-1(åŒ…æ‹¬0,1)ä¹‹é—´çš„æ•°å­—è€Œä¸è¾“å‡ºä»»ä½•å…¶ä»–å†…å®¹ã€‚"
     human_question = prompt_template.format(q_info, data_to_eval['text'])
-    if "½âÎö" in data_to_eval['text']:
-        remove_index = data_to_eval['text'].find("½âÎö")
+    if "è§£æ" in data_to_eval['text']:
+        remove_index = data_to_eval['text'].find("è§£æ")
         ans = data_to_eval['text'][0: remove_index-1]
     else:   
         ans = call_qwen(human_question)
@@ -119,7 +119,7 @@ def test_chemvl_perform(question_paths:list, ans_paths: list):
     """
     test our model's performance by qwen-max or gpt-4o
     """
-    template = "Çë¸ù¾İÌâÄ¿```{}```ÅĞ¶ÏÕâµÀÌâÄ¿µÄÌâĞÍ, Çë»Ø´ğÑ¡ÔñÌâ, Ìî¿ÕÌâ»òÖ÷¹ÛÌâ"
+    template = "è¯·æ ¹æ®é¢˜ç›®```{}```åˆ¤æ–­è¿™é“é¢˜ç›®çš„é¢˜å‹, è¯·å›ç­”é€‰æ‹©é¢˜, å¡«ç©ºé¢˜æˆ–ä¸»è§‚é¢˜"
     ans_list = list()
     total_val_score = 0.
     total_right_score = 0.
@@ -139,7 +139,7 @@ def test_chemvl_perform(question_paths:list, ans_paths: list):
             #q = template.format(ori_q)
             #ans_for_type = call_qwen(q)
             #sleep(0.5)
-            #if "Ñ¡Ôñ" in ans_for_type:
+            #if "é€‰æ‹©" in ans_for_type:
             if len(line['annotation'])==1:
                 try:
                     score, llm_ans, gt_ans = test_chemvl_perform_single_choice(line, ori_q)
@@ -173,23 +173,16 @@ def test_chemvl_perform(question_paths:list, ans_paths: list):
         fp.close()
     
     
-    writer = open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_exam_SciQA.jsonl', 'w')
+    writer = open('', 'w')#å†™å…¥åœ°å€
     for item in ans_list:
         writer.write(json.dumps(item, ensure_ascii=False) + '\n')
     writer.close()
     
     
-    print(f"×Ü·Ö{total_val_score}, Ä£ĞÍ»ñµÃ{total_right_score}·Ö")
+    print(f"æ€»åˆ†{total_val_score}, æ¨¡å‹è·å¾—{total_right_score}åˆ†")
 
 if __name__ == "__main__":
-    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia.jsonl',
-                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia1.jsonl',
-                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__xinkebiao.jsonl']
-    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_200CKPT_chemvl_ft_6_19_0_merged_CMMU.jsonl']
-    llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_213_pretrained_InternVL-Chat-V1-5_SciQA.jsonl']
-    origin_data = ['/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl']
-    test_chemvl_perform(origin_data, llm_results)
-    #with open('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl','r') as f:
-        #data = f.readlines()
     
-    #print(json.loads(data[0]))
+    llm_results = ['Chemvlm_SciQA.jsonl']
+    origin_data = ['sciqa_test.jsonl']
+    test_chemvl_perform(origin_data, llm_results)
