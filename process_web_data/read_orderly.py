@@ -97,6 +97,58 @@ type_answers = [
 "Based on my analysis, the image displays a {} chemical reaction."
 ]
 
+product_templates = [
+    "We are currently observing a chemical reaction involving reactants as depicted in the provided diagram. {}. Could you please predict the products resulting from this reaction?",
+    "Hey, we’ve got a chemical reaction going on with substances shown in the picture. {}. Can you take a guess at what the products might be?",
+    "The reaction in question involves reactants illustrated in the accompanying figure. {}. Please provide a prediction of the products formed in this chemical process.",
+    "Examine the chemical reaction diagram featuring the reactants. {}. Based on this information, predict the products that will be generated.",
+    "Check out this awesome chemical reaction with the reactants shown in the image! {}. What do you think the products will be? I’m excited to hear your prediction!",
+    "Given the chemical reaction with the reactants illustrated in the diagram, can you analyze and forecast the potential products of this reaction? Note that {}.",
+    "There’s a reaction happening with chemicals shown in the picture. {}. What do you think will come out of this reaction?",
+    "In light of the chemical reaction involving the reactants depicted in the diagram, could you provide an informed prediction regarding the products of this reaction? Note that {}.",
+    "Look at the diagram showing the  reactants in this chemical reaction. {}. Based on what you see, what products do you think will result from this reaction?",
+    "Imagine we’re running a chemical experiment with the reactants shown in the diagram. {}. What do you hypothesize will be the products of this reaction?",
+]
+
+product_answers = [
+    "The products of this chemical reaction are as follows: {}.",
+    "Alright, so the stuff that comes out of this reaction is {}.",
+    "The resultant products of the chemical reaction are: {}.",
+    "The outcome of this chemical reaction is: {}.",
+    "Great news! The products of this reaction are {}! Isn’t that exciting?",
+    "Upon analyzing the reaction, the resulting products are identified as: {}.",
+    "Okay, the end result of this reaction is {}.",
+    "The products of the chemical reaction have been determined to be: {}.",
+    "So, after running the reaction, we find that the products are: {}.", 
+    "If we consider the reaction, the resulting products would be: {}."
+]
+
+reactant_templates = [
+    "We are currently analyzing a chemical reaction where the product is depicted in the provided diagram. {}{}Could you assist in predicting the other reactant involved in this reaction?",
+    "So, we’ve got this reaction with the product shown in the picture. {}{}Can you figure out what the other reactant might be?",
+    "The chemical reaction shown in the diagram has a product represented. {}{}Based on this information, please determine the additional reactant required for this reaction.",
+    "Refer to the diagram displaying the product of the reaction. {}{}Could you predict what the other reactant for this reaction might be?",
+    "Check out the product of this reaction in the image! {}{}Can you guess what the other reactant could be?",
+    "Given the product shown in the reaction diagram, what do you deduce to be the other reactant necessary for completing this chemical process? Note that {}{}",
+    "Here’s a picture of the product from this reaction. {}{}What do you think the other reactant is?",
+    "In the reaction illustrated, the product is clearly shown in the diagram. {}{}Could you identify the other reactant involved in this chemical reaction?",
+    "The diagram presents the product of the reaction. {}{}Based on this, can you predict what the other reactant in the reaction could be?",
+    "Imagine we have a reaction with the product displayed in the image. {}{}What do you think the other reactant might be for this reaction?"
+]
+
+reactant_answers = [
+    "The other reactant in this chemical reaction is {}.",
+    "In this chemical reaction, the additional reactant is {}.",
+    "The second reactant involved in this reaction is {}.",
+    "Another substance required for this chemical reaction is {}.",
+    "The alternative reactant for this reaction is {}.",
+    "The supplementary reactant in this chemical process is {}.",
+    "Thus, the remaining reactant for this reaction is {}.",
+    "The other reactant participating in this chemical reaction is {}.",
+    "For this chemical reaction, the additional reactant is {}.",
+    "Hence, the other chemical reactant involved is {}."
+]
+
 def replace_atomic_number(match):
     atomic_number = match.group(1)
     return atomic_symbols.get(atomic_number, match.group(0))
@@ -109,9 +161,21 @@ def add_image_token(text):
         text = text + '\n<image>'
     return text
 
+def add_multiple_image_token(num, text):
+    a = random.choice('01')
+    if a == '0':
+        text = '<image>\n' * num + text
+    else:
+        text = text + '\n<image>' * num
+    return text
+
 def get_prompt_from_templates(template):
 
     return add_image_token(random.choice(template))
+
+def get_prompt_multiple_image_from_templates(template, num, text):
+
+    return add_multiple_image_token(num, (random.choice(template)).format(text))
 
 def get_ans_from_templates(template, raw_ans):
     if len(raw_ans) == 4:
@@ -149,6 +213,19 @@ def draw_pic(reactants: list, product: list, img_store_path: str):
         img.save(img_store_path)
     return accept_smarts
 
+def draw_pic_for_smiles(smiles:list, img_store_paths: list):
+
+    for index, s in enumerate(smiles):
+        mol = Chem.MolFromSmiles(s)
+
+        # 生成分子图像
+        img = Draw.MolToImage(mol, size=(448,448))
+
+        s_path = os.path.abspath(img_store_paths[index])
+        img.save(s_path)
+    
+    return 
+
 def read_dataset(path: str):
 
     data = ds.load_from_disk(path)
@@ -157,6 +234,8 @@ def read_dataset(path: str):
     pattern = r'\[([^\]]+)\]'  # 匹配以 [ 开头，] 结尾的内容，并且提取其中的内容
     #print(data[268])
     for i in tqdm(range(len(data)), desc='construct reactants and product'):
+        #if i==0:
+            #print(data[i])
         reaction_list = data[i]['reaction'].split('.')
         rea_index = reaction_list[1].rfind(':')
         pro_index = reaction_list[2].rfind(':')
@@ -201,7 +280,7 @@ def gen_caption_dataset(data,  img_store_path: str):
     
     return prompt_list
 
-def gen_type_dataset(data, img_store_path: str):
+def gen_type_dataset(data, img_store_path: str, test_or_not=False):
     """
     参照gen_caption_dataset补全
     步骤：
@@ -210,22 +289,108 @@ def gen_type_dataset(data, img_store_path: str):
     3.生成对话
     """
     prompt_list = list()
+    cnt = 0
+    cnt_neu = 0
+    cnt_subs = 0
     for index, line in tqdm(enumerate(data), desc='gen type'):
         q_id = 'orderly_type' + str(index)
         prompt = get_prompt_from_templates(type_templates)
         if "Unclear" in line['reaction_type']:
+            cnt += 1
             continue
         else:
 
             smarts = draw_pic(line['reactants'], line['product'], img_store_path + f"{index}.png")
             raw_answers = line['reaction_type']
-            ans_prompt = get_ans_from_templates(type_answers, raw_answers)
+            if "Nucleophilic" in raw_answers:
+                cnt_neu += 1
+                if cnt_neu > 5000:
+                    continue
+            if "Nucleophilic" not in raw_answers and "Substitution" in raw_answers:
+                cnt_subs += 1
+                if cnt_subs > 5000:
+                    continue
+
+            if test_or_not == True:
+                ans_prompt = raw_answers
+            else:
+                ans_prompt = get_ans_from_templates(type_answers, raw_answers)
+
 
             imgs = []
             imgs.append(img_store_path + f"{index}.png")
             conversations = {'id': q_id, 'images': imgs, 'conversations':[{'from':'human', 'value': prompt}, {'from':'gpt', 'value': ans_prompt}]}
             prompt_list.append(conversations)
+
+    print(f"Unclear Ones: {cnt}")
     return prompt_list
+
+def gen_product_prediction_dataset(data, img_store_path: str, test_or_not=False):
+    prompt_list = list()
+    for index, line in tqdm(enumerate(data), desc='gen product prediction'):
+        q_id = 'orderly_product' + str(index)
+        prompt = get_prompt_multiple_image_from_templates(product_templates, len(line['reactants']), line['condition']+'. ')
+        path_list = [img_store_path + f"pro_{index}_{i}.png" for i in range(len(line['reactants']))]
+        
+        draw_pic_for_smiles(line['reactants'], path_list)
+        #smarts = draw_pic(line['reactants'], line['product'], img_store_path + f"{index}.png") #画图并且返回代表反应的SMARTS，一个脚本只需要调用一次
+        #raw_answers = line['reactants'] + line['product'] + [smarts]
+        if test_or_not == True:
+            ans_prompt = line['product'][0]
+        else:
+            ans_prompt = get_ans_from_templates(product_answers, line['product'][0])
+        #q_type = line['question_type']
+        
+        conversations = {'id': q_id, 'images': path_list, 'conversations':[{'from':'human', 'value': prompt}, {'from':'gpt', 'value': ans_prompt}]}
+        
+
+        prompt_list.append(conversations)
+
+    return prompt_list
+
+def gen_reactant_prediction_dataset(data, img_store_path: str, test_or_not=False):
+    prompt_list = list()
+    for index, line in tqdm(enumerate(data), desc='gen reactant prediction'):
+        q_id = 'orderly_reactant' + str(index)
+        prompt = '<image>\n'+ random.choice(reactant_templates)
+        if len(line['reactants']) == 1:
+            prompt = prompt.format('', line['condition']+'. ')
+            prompt = prompt.replace('the other', 'the')
+
+        else:
+            prompt = prompt.format('One reactant is also in the image\n<image>\n', line['condition']+'. ')
+
+        path_list = [img_store_path + f"rea_{index}_{i}.png" for i in range(len(line['reactants']))]
+        
+        smiles_list = []
+        smiles_list.append(line['product'][0])
+        if len(line['reactants'])==2:
+            chosen_smiles = random.choice(line['reactants'])
+            smiles_list.append(chosen_smiles)
+
+        new_rea_lst = line['reactants']
+        if len(line['reactants'])==2:
+            new_rea_lst.remove(chosen_smiles)
+        draw_pic_for_smiles(smiles_list, path_list)
+        #smarts = draw_pic(line['reactants'], line['product'], img_store_path + f"{index}.png") #画图并且返回代表反应的SMARTS，一个脚本只需要调用一次
+        #raw_answers = line['reactants'] + line['product'] + [smarts]
+        if test_or_not == True:
+            ans_prompt = new_rea_lst[0]
+        else:
+            ans_prompt = get_ans_from_templates(reactant_answers, new_rea_lst[0])
+        #q_type = line['question_type']
+        
+        conversations = {'id': q_id, 'images': path_list, 'conversations':[{'from':'human', 'value': prompt}, {'from':'gpt', 'value': ans_prompt}]}
+
+
+        prompt_list.append(conversations)
+
+    return prompt_list
+
+def remove_elements(list1, list2):
+      # 将 list2 转换为集合
+    return [item for item in list1 if item not in list2]
+
 
 def write_total_data(prompt_list: list, file_path: str):
     writer = open(file_path, 'w')
@@ -238,11 +403,41 @@ def write_total_data(prompt_list: list, file_path: str):
 
 
 if __name__ == "__main__":
-    mode = ["train", "test"]
-    for m in mode:
-        raw_data = read_dataset(f'/orderly_data/orderly_{m}_final')
-        caption_list = gen_caption_dataset(raw_data, f'/orderly_data/{m}/')
-        rea_type_list = gen_type_dataset(raw_data, f'/orderly_data/{m}/')
-        total_list = caption_list + rea_type_list
-        write_total_data(total_list, f'/datagen/orderly_{m}.jsonl')
+    
+    mode = "test" #["train", "test"]
+
+    raw_data = read_dataset(f'/mnt/hwfile/ai4chem/share/orderly_data/orderly_{mode}_final')
+    random.shuffle(raw_data)
+    if mode == "train":
+        fill_in_data_rea = raw_data[0:50000] #填空型数据
+        #des_data = remove_elements(raw_data, fill_in_data_rea) #描述型数据
+        fill_in_data_pro = raw_data[50001:100000]
+        des_data = raw_data[100001:200000]
+        type_data = raw_data[100001:]
+        test_or_not = False
+    else:
+        fill_in_data_rea = raw_data[0:5000] #填空型数据
+        #des_data = remove_elements(raw_data, fill_in_data_rea) #描述型数据
+        fill_in_data_pro = raw_data[5001:10000]
+        type_data = raw_data
+        des_data = raw_data[10001:]
+        test_or_not = True
+    #des_data = raw_data
+    
+    
+    product_prediction_list = gen_product_prediction_dataset(fill_in_data_pro, f'/mnt/hwfile/ai4chem/share/orderly_data/{mode}/', test_or_not)
+    reactant_prediction_list = gen_reactant_prediction_dataset(fill_in_data_rea, f'/mnt/hwfile/ai4chem/share/orderly_data/{mode}/', test_or_not)
+
+    caption_list = gen_caption_dataset(des_data, f'/mnt/hwfile/ai4chem/share/orderly_data/{mode}/')
+    rea_type_list = gen_type_dataset(type_data, f'/mnt/hwfile/ai4chem/share/orderly_data/{mode}/', test_or_not)
+
+    total_list = reactant_prediction_list + product_prediction_list + caption_list + rea_type_list
+    
+
+    write_total_data(total_list, f'/mnt/petrelfs/zhangdi1/lijunxian/datagen/orderly_{mode}.jsonl')
+
+    
+    
+
+    
 
