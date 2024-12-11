@@ -22,12 +22,8 @@ from typing import Optional
 from test_res_openai import call_multimodal
 
 
-dashscope.api_key = 'sk-eea7c876461747c5a6eebe0531164767' #qwen API-KEY
-"""
-client = OpenAI(
-    api_key="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"
-)
-"""
+dashscope.api_key = 'sk-' #qwen API-KEY
+
  
 # Function to encode the image
 def encode_image(image_path):
@@ -227,7 +223,7 @@ def test_chemvl_perform(model_name, question_paths:list, ans_paths: list, gt_pat
     
     print(total_val_score)
     print(total_right_score)
-    writer = open(f'/mnt/petrelfs/zhangdi1/lijunxian/eval_results/{model_name}_{task}.jsonl', 'w')
+    writer = open(f'../eval_results/{model_name}_{task}.jsonl', 'w')
     for item in ans_list:
         writer.write(json.dumps(item, ensure_ascii=False) + '\n')
     writer.close()
@@ -236,32 +232,16 @@ def test_chemvl_perform(model_name, question_paths:list, ans_paths: list, gt_pat
     print(f"总分{total_val_score}, 模型获得{total_right_score}分")
 
 if __name__ == "__main__":
-    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia.jsonl',
-                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__jia1.jsonl',
-                             #'/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/gaokao_chemvl_ft_6_4_0-merge__xinkebiao.jsonl']
-    #gaokao_chemvl_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_200CKPT_chemvl_ft_6_19_0_merged_CMMU.jsonl']
-    #llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/exam_213_pretrained_InternVL-Chat-V1-5_SciQA.jsonl']
-    #origin_data = ['/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl']
     model_name = "chemvlm26B-latest"
     task = "cmmu"
     
     
-    llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/eval_results/result_chemvlm26B_1120__CMMU.jsonl']
-    origin_data = ['/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_no_multiple.jsonl']
-
-    """
-    llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/eval_results/exam_pretrained_InternVL-Chat-V1-5_CMMU_pol.jsonl']
-    origin_data = ['/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_politics.jsonl']
-    """
-    #gt_path = ['/mnt/petrelfs/zhangdi1/lijunxian/eval_results/chemvlm-new-26B_mmcr.jsonl']
-    store_path = f'/mnt/petrelfs/zhangdi1/lijunxian/eval_results/{model_name}_{task}.jsonl'
-    #llm_results = ['/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/caption_chemvl_ft_8_01_0_checkpoint-22_Chembench_mol2cap.jsonl']
-    #origin_data = ['']
+    llm_results = ['../eval_results/result_chemvlm26B_1120__CMMU.jsonl']
+    origin_data = ['../datagen/CMMU_test_no_multiple.jsonl']
+    
+    #gt_path = ['../eval_results/chemvlm-new-26B_mmcr.jsonl']
+    store_path = f'../eval_results/{model_name}_{task}.jsonl'
     
     #test_chemvl_perform(model_name, origin_data, llm_results, gt_path, task)
     test_chemvl_perform(model_name, origin_data, llm_results, None, task)
     #test_chemvl_perform(model_name, origin_data, llm_results, None)
-    #with open('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl','r') as f:
-        #data = f.readlines()
-    
-    #print(json.loads(data[0]))
