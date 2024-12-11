@@ -4,35 +4,260 @@ import json
 import os
 import random
 
+import re
+
 import torch
+
+import sys
+sys.path.append('/mnt/hwfile/ai4chem/hao/Chemvlm_work/InternVL/internvl_chat/')
+
 from internvl.model.internvl_chat import InternVLChatModel
-from internvl.train.dataset import (ConcatDataset, TCSLoader,
+from internvl.train.dataset_old import (ConcatDataset, TCSLoader,
                                     WeightedConcatDataset, build_transform,
                                     dynamic_preprocess,
                                     find_closest_aspect_ratio, preprocess,
-                                    preprocess_internlm_question, preprocess_mpt)
+                                    preprocess_internlm_question, 
+                                    preprocess_mpt)
 from PIL import Image
 from tqdm import tqdm
+import transformers
 from transformers import AutoTokenizer
 from copy import deepcopy
+from typing import Dict
 
+"""
 ds_collections = {
     'smiles_ocr':{
         'root': '',
         'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_chem_ocr.jsonl.test.jsonl',
-        'prompt': "请根据指令回答一个SMILES化学分子式。注意, 请只回答SMILES化学分子式而不输出其他内容",
+        'prompt': "请根据指令回答一个SMILES化学分子式, 请只回答SMILES化学分子式而不输出其他内容",
         'max_new_tokens': 1000,
         'min_new_tokens': 1,
     },
     'mm_gaokao_test_past': {
         'root': '/mnt/hwfile/ai4chem/share/data',
         'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl',
-        'prompt': "请判断这道是什么题目, 选择题请回答A, B, C或D; 填空题请按顺序依次填空; 主观题请回答问题并给出详细步骤",
+        #'prompt': "请判断这道是什么题目并回答, 选择题请只回答A, B, C或D; 填空题请按顺序依次填空,并只回答填入的内容; 主观题请回答问题并给出详细步骤",
+        'prompt': "请正确回答这道题目, 选择题请只回答A, B, C或D; 填空题请按顺序依次填空,并只回答填入的内容",
         'max_new_tokens': 1000,
         'min_new_tokens': 1,
+    },
+    'CMMU':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_no_multiple.jsonl',
+        'prompt': "请正确回答这道题目, 选择题请只回答A, B, C或D; 填空题请按顺序依次填空,并只回答填入的内容",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'SciQA':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl',
+        'prompt': "Please answer A, B, C or D according to the question. Your answer should follow the format: ```{'answer': []}```. '[]' means a capital letter, A, B, C or D. Remember, you shouldn't return any other words.",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'chirality': {
+       'root': '',
+       'question': '/mnt/hwfile/ai4chem/hao/data_processing/chirality_mol_folder/combined_mol_data_easy_test.jsonl',
+       'prompt': "Your answer should only contain a yes or no and a number. For example,yes,2 or no,0.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    }
+}
+"""
+
+
+ds_collections = {
+    'smiles_ocr':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_chem_ocr.jsonl.test.jsonl',
+        'prompt': "\n请根据指令回答一个SMILES化学表达式, 请只回答SMILES化学表达式而不输出其他内容",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'mm_gaokao_test_past': {
+        'root': '/mnt/hwfile/ai4chem/share/data/',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl',
+        #'prompt': "请判断这道是什么题目并回答, 选择题请只回答A, B, C或D; 填空题请按顺序依次填空,并只回答填入的内容; 主观题请回答问题并给出详细步骤",
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空,并只回答填入的内容",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_no_multiple.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_bio':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_biology.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_math':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_math.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_his':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_history.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_phy':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_physics.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_geo':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_geography.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'CMMU_pol':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_politics.jsonl',
+        'prompt': "\n请正确回答这道题目, 选择题请只回答一个字母A, B, C或D; 填空题请按顺序依次填空, 并只回答填入的内容",
+        #'prompt': "这是一道多项选择题。请只回答你认为的多个正确选项, 下面是一个示例, ```烧杯中盛有$${CuCl_{2}}$$和$${HCl}$$的混合溶液$${100g}$$，向其中滴加$${10\\%}$$的$${NaOH}$$溶液，烧杯中溶液的质量与滴加溶液的质量关系如图所示.下列说法正确的是(　　)A.$${ab}$$段反应产生蓝色沉淀 B.$${bc}$$段溶液增加$${70.2g}$$ C.c点对应的溶质质量分数为$${4.9\\%}$$ D.d点溶液显碱性。请注意有多个答案是正确的```。对这个示例,你的回答应该是'BD'",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'SciQA':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl',
+        'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'SciQA_all':{
+        'root': '',
+        'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/sciqa_test_all.jsonl',
+        'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+        'max_new_tokens': 1000,
+        'min_new_tokens': 1,
+    },
+    'Chembench_mol2cap': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_mol2caption.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_property': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_property.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_name_conv': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_name_conv.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_retro': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_retro.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_temperature': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_temperature.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_solvent': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_solvent.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chembench_yield': {
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chembench_yield.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 1000,
+       'min_new_tokens': 1,
+    },
+    'Chebi_caption':{
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/cheBI_caption_eng_test.jsonl',
+       'prompt': "Please follow the question and give your answer. Answer a few sentences in English. Here is one example answer: \n'''It seems to me the molecule is an {} in which {}. It has a role as an {}. It is an {}, {}, {}. It derives from a {}.'''\n. Follow this format.",
+       'max_new_tokens': 200,
+       'min_new_tokens': 1,
+    },
+    'orderly_type':{
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/orderly_test_type.jsonl',
+       'prompt': "Please follow the question and give your answer. Choose one from '''{}'''. Remember that only return several words of the reaction type and do not return explanations.",
+       'max_new_tokens': 200,
+       'min_new_tokens': 1,
+    },
+    'pistachio_type_sample':{
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/pistachio_mm_test_1000.jsonl',
+       'prompt': "Please follow the question and give your answer. Choose one from '''{}'''. Remember that only return the reaction type and do not return any other words",
+       'max_new_tokens': 200,
+       'min_new_tokens': 1,
+    },
+    'math_verse':{
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/math_verse_test.jsonl',
+       'prompt': "Your answer format should be ```{Answer: }```",
+       'max_new_tokens': 100,
+       'min_new_tokens': 1,
+    },
+    'mmtbench':{
+       'root': '',
+       'question': '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mmtbench_val.jsonl',
+       'prompt': "Please answer A, B, C or D according to the question. You should only answer a capital letter.",
+       'max_new_tokens': 100,
+       'min_new_tokens': 1,
     }
 }
 
+"""
+with open('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/gpt-4o-orderly_type.jsonl', 'r', encoding='utf8') as f:
+    type_data = f.readlines()
+
+f.close()
+all_types = [json.loads(item)['annotation'] for item in type_data]
+all_types.remove('sub')
+all_types = json.dumps(list(set(all_types)))
+ds_collections['orderly_type']['prompt'] = ds_collections['orderly_type']['prompt'].format(all_types)
+"""
+
+with open('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/gpt-4o-pistachio_type_sample.jsonl', 'r', encoding='utf8') as f:
+    type_data = f.readlines()
+
+f.close()
+all_types = [json.loads(item)['annotation'] for item in type_data]
+#all_types.remove('sub')
+all_types = json.dumps(list(set(all_types)))
+ds_collections['pistachio_type_sample']['prompt'] = ds_collections['pistachio_type_sample']['prompt'].format(all_types)
 
 class GaoKaoDataset(torch.utils.data.Dataset):
 
@@ -64,7 +289,7 @@ class GaoKaoDataset(torch.utils.data.Dataset):
         if 'image' in data_item:
             image_path_list = [data_item['image']]
         elif 'images' in data_item:
-            image_path_list = data_item['images']
+            image_path_list = [item.replace('CMMUval','CMMU/val') for item in data_item['images']]
         else:
             image_path_list = []
         
@@ -98,7 +323,7 @@ class GaoKaoDataset(torch.utils.data.Dataset):
         # question = question + self.prompt
         # print(pixel_values)
         # print(data_item['conversations'])
-        data_item['conversations'][0]['value'] = data_item['conversations'][0]['value'] + self.prompt
+        data_item['conversations'][0]['value'] = self.prompt + data_item['conversations'][0]['value']
         ret = self.preprocess_function(args.conv_style, deepcopy(data_item['conversations']),
                                 tokenizer, model.num_image_token,
                                 group_by_length=False)
@@ -122,6 +347,9 @@ def evaluate_chat_model():
 
         outputs = []
         for _, (question_id, input_ids, attention_mask, pixel_values, annotation) in tqdm(enumerate(dataset)):
+            #if "caption" not in question_id:
+                #continue
+            
             if pixel_values is not None:
                 pixel_values = pixel_values.to(torch.bfloat16).cuda()
             generation_config = dict(
@@ -142,11 +370,14 @@ def evaluate_chat_model():
             #print(generation_output)
             response = tokenizer.batch_decode(generation_output, skip_special_tokens=True)[0]
             response = response.split('<|im_end|>')[0].strip()  # for InternLM2
+
+            #if re.search(r'[\u4e00-\u9fff]', response) is not None:
+                #continue
             # history.append((question, response))
             print('question_id: ', question_id)
             print('response: ', response)
             print('annotation: ', annotation)
-`           `
+
             outputs.append({
                 'question_id': question_id,
                 'text': response,
@@ -156,7 +387,7 @@ def evaluate_chat_model():
             })
 
         print(f'Evaluating {ds_name} ...')
-        results_file = 'gaokao_1k_' + model_id + '_' + ds_name +'.jsonl'
+        results_file = args.task + '_' + model_id + '_' + ds_name +'.jsonl'
         results_file = os.path.join(args.out_dir, results_file)
         writer = open(results_file, 'w')
         for item in outputs:
@@ -169,14 +400,15 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     #parser.add_argument('--checkpoint', type=str, default='/mnt/petrelfs/zhangdi1/lijunxian/InternVL/pretrained/InternVL-Chat-V1-5')
-    parser.add_argument('--checkpoint', type=str, default='/mnt/hwfile/ai4chem/CKPT/wxz/chemvl_2B_ft_7_3_0_merge')
-    parser.add_argument('--datasets', type=str, default='smiles_ocr')
+    parser.add_argument('--checkpoint', type=str, default='/mnt/hwfile/ai4chem/share/InternVL2-26B')
+    parser.add_argument('--datasets', type=str, default='pistachio_type_sample')
     parser.add_argument('--batch-size', type=int, default=1)
     parser.add_argument('--conv-style', type=str, default='internlm2-chat')
     parser.add_argument('--num-workers', type=int, default=1)
     parser.add_argument('--num-beams', type=int, default=5)
     parser.add_argument('--temperature', type=float, default=0.0)
-    parser.add_argument('--out-dir', type=str, default='/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results')
+    parser.add_argument('--task', type=str, default='reaction')
+    parser.add_argument('--out-dir', type=str, default='/mnt/petrelfs/zhangdi1/lijunxian/eval_results')
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--dynamic', action='store_true')
     parser.add_argument('--max-num', type=int, default=6)
