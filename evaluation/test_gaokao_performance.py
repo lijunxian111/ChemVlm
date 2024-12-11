@@ -20,12 +20,7 @@ from time import sleep
 import re
 
 
-dashscope.api_key = '' #qwen API-KEY
-"""
-client = OpenAI(
-    api_key="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"
-)
-"""
+dashscope.api_key = ''
  
 # Function to encode the image
 def encode_image(image_path):
