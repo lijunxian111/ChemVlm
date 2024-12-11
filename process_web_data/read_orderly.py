@@ -20,7 +20,7 @@ from rdkit.Chem import rdChemReactions
 
 """
 Please give me ten different expressions of template 
-¡°In my opinion, analyzing the chemical reaction in the image, we can see the reactants are {} and {}. The product is {}. 
+â€œIn my opinion, analyzing the chemical reaction in the image, we can see the reactants are {} and {}. The product is {}. 
 When represented with SMARTS, it should be {}."
 Use as many different words, expressions and type of sentences as you can.
 """
@@ -129,7 +129,7 @@ def draw_pic(reactants: list, product: list, img_store_path: str):
     reactants_smarts = [Chem.MolToSmarts(Chem.MolFromSmiles(rea.replace(' ',''))) for rea in reactants]
     product_smarts = [Chem.MolToSmarts(Chem.MolFromSmiles(pro.replace(' ',''))) for pro in product]
     
-    # ´´½¨·´Ó¦Í¼
+    # åˆ›å»ºååº”å›¾
     rea_smarts = ".".join(reactants_smarts)
     total_smarts = rea_smarts + ">>" + product_smarts[0]
     
@@ -138,11 +138,11 @@ def draw_pic(reactants: list, product: list, img_store_path: str):
     #accept_smarts = smarts = re.sub(r'\[#(\d+)\]', replace_atomic_number, total_smarts)
     accept_smarts = ".".join([rea.replace(' ','') for rea in reactants]) + ">>" + product[0].replace(' ','')
     #print(accept_smarts)
-    # »æÖÆ·´Ó¦
+    # ç»˜åˆ¶ååº”
     img = Draw.ReactionToImage(reaction)
     
-    img_store_path = os.path.abspath(img_store_path) #¹æ·¶path
-    # ±£´æ·´Ó¦Í¼
+    img_store_path = os.path.abspath(img_store_path) #è§„èŒƒpath
+    # ä¿å­˜ååº”å›¾
     if os.path.exists(img_store_path):
         pass
     else:
@@ -154,7 +154,7 @@ def read_dataset(path: str):
     data = ds.load_from_disk(path)
     df = data.to_pandas()
     data = df.to_dict('records')
-    pattern = r'\[([^\]]+)\]'  # Æ¥ÅäÒÔ [ ¿ªÍ·£¬] ½áÎ²µÄÄÚÈİ£¬²¢ÇÒÌáÈ¡ÆäÖĞµÄÄÚÈİ
+    pattern = r'\[([^\]]+)\]'  # åŒ¹é…ä»¥ [ å¼€å¤´ï¼Œ] ç»“å°¾çš„å†…å®¹ï¼Œå¹¶ä¸”æå–å…¶ä¸­çš„å†…å®¹
     #print(data[268])
     for i in tqdm(range(len(data)), desc='construct reactants and product'):
         reaction_list = data[i]['reaction'].split('.')
@@ -182,7 +182,7 @@ def gen_caption_dataset(data,  img_store_path: str):
         q_id = 'orderly_caption' + str(index)
         prompt = get_prompt_from_templates(caption_templates)
         
-        smarts = draw_pic(line['reactants'], line['product'], img_store_path + f"{index}.png") #»­Í¼²¢ÇÒ·µ»Ø´ú±í·´Ó¦µÄSMARTS£¬Ò»¸ö½Å±¾Ö»ĞèÒªµ÷ÓÃÒ»´Î
+        smarts = draw_pic(line['reactants'], line['product'], img_store_path + f"{index}.png") #ç”»å›¾å¹¶ä¸”è¿”å›ä»£è¡¨ååº”çš„SMARTSï¼Œä¸€ä¸ªè„šæœ¬åªéœ€è¦è°ƒç”¨ä¸€æ¬¡
         raw_answers = line['reactants'] + line['product'] + [smarts]
         ans_prompt = get_ans_from_templates(caption_answers, raw_answers)
         #q_type = line['question_type']
@@ -190,8 +190,8 @@ def gen_caption_dataset(data,  img_store_path: str):
         imgs = []
      
         #image_np = cv2.imread(img_store_path + f"{index}.png")
-        #½«numpy¾ØÕó±£´æÎªjpg¸ñÊ½µÄÍ¼Æ¬ÎÄ¼ş
-        #cv2.imwrite(img_store_path + f"{index}.png", image_np) Ö»ĞèÒªĞ´ÈëÒ»´Î¼´¿É
+        #å°†numpyçŸ©é˜µä¿å­˜ä¸ºjpgæ ¼å¼çš„å›¾ç‰‡æ–‡ä»¶
+        #cv2.imwrite(img_store_path + f"{index}.png", image_np) åªéœ€è¦å†™å…¥ä¸€æ¬¡å³å¯
         imgs.append(img_store_path + f"{index}.png")
         
         conversations = {'id': q_id, 'images': imgs, 'conversations':[{'from':'human', 'value': prompt}, {'from':'gpt', 'value': ans_prompt}]}
@@ -203,11 +203,11 @@ def gen_caption_dataset(data,  img_store_path: str):
 
 def gen_type_dataset(data, img_store_path: str):
     """
-    ²ÎÕÕgen_caption_dataset²¹È«
-    ²½Öè£º
-    1. ×Ô¼ºÉú³ÉÎÊ´ğÄ£°æ,ÍøÒ³°ægpt-3.5
-    2. Éú³ÉÎÊ´ğ¾ä×Ó
-    3.Éú³É¶Ô»°
+    å‚ç…§gen_caption_datasetè¡¥å…¨
+    æ­¥éª¤ï¼š
+    1. è‡ªå·±ç”Ÿæˆé—®ç­”æ¨¡ç‰ˆ,ç½‘é¡µç‰ˆgpt-3.5
+    2. ç”Ÿæˆé—®ç­”å¥å­
+    3.ç”Ÿæˆå¯¹è¯
     """
     prompt_list = list()
     for index, line in tqdm(enumerate(data), desc='gen type'):
@@ -240,9 +240,9 @@ def write_total_data(prompt_list: list, file_path: str):
 if __name__ == "__main__":
     mode = ["train", "test"]
     for m in mode:
-        raw_data = read_dataset(f'/mnt/hwfile/ai4chem/share/orderly_data/orderly_{m}_final')
-        caption_list = gen_caption_dataset(raw_data, f'/mnt/hwfile/ai4chem/share/orderly_data/{m}/')
-        rea_type_list = gen_type_dataset(raw_data, f'/mnt/hwfile/ai4chem/share/orderly_data/{m}/')
+        raw_data = read_dataset(f'/orderly_data/orderly_{m}_final')
+        caption_list = gen_caption_dataset(raw_data, f'/orderly_data/{m}/')
+        rea_type_list = gen_type_dataset(raw_data, f'/orderly_data/{m}/')
         total_list = caption_list + rea_type_list
-        write_total_data(total_list, f'/mnt/petrelfs/zhangdi1/lijunxian/datagen/orderly_{m}.jsonl')
+        write_total_data(total_list, f'/datagen/orderly_{m}.jsonl')
 
