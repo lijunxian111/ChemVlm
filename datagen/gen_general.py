@@ -1,11 +1,11 @@
 import json
 import random
 
-base_path = '/mnt/hwfile/ai4chem/share/general_mm_data/llava/share_data_sft/playground/data/'
+base_path = './general_mm_data/llava/share_data_sft/playground/data/'
 
 with open('./general_mm_pure.jsonl', 'w') as fm:
     with open('./general_text_pure.jsonl', 'w') as ft:
-        with open('/mnt/hwfile/ai4chem/share/general_mm_data/llava/llava_v1_5_mix665k.jsonl') as f:
+        with open('。/general_mm_data/llava/llava_v1_5_mix665k.jsonl') as f:
             lines = f.readlines()
             for line_txt in lines:
                 line = json.loads(line_txt)
