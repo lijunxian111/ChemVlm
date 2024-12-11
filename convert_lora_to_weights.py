@@ -31,11 +31,11 @@ import accelerate
 import pdb
 
 if __name__ == "__main__":
-    model = InternVLChatModel.from_pretrained('/mnt/hwfile/ai4chem/CKPT/chemvl_pt_6_1_0/checkpoint-200/')
+    model = InternVLChatModel.from_pretrained('YOUR MODEL PATH')
     print("Loading lora")
-    #model = PeftModel.from_pretrained(model, '/mnt/hwfile/ai4chem/share/multimodal-exam/internvl_chemllm-projector_lr_1e-3')
+    #model = PeftModel.from_pretrained(model, 'PROJECTOR')
     # pdb.set_trace()
     # model.language_model = model.language_model.merge_and_unload()
     model.vision_model = model.vision_model.merge_and_unload()
-    model.save_pretrained('/mnt/hwfile/ai4chem/CKPT/chemvl_pt_6_1_0/checkpoint-200-merge/')
+    model.save_pretrained('YOUR MERGED MODEL PATH')
     # print("Lora model is loaded")
