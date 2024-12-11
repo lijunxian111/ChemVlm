@@ -143,8 +143,8 @@ def call_multimodal(model_name, image_path, text):
         return response.output.choices[0].message.content
     elif "gpt" in model_name:
 
-        client = OpenAI(api_key='sk-trNebBQItspLf5gG044a7bA024444e9cAe9dCa9bB76eFdA6', base_url="https://api.claudeshop.top/v1")
-        #client = OpenAI(api_key='sk-proj-aWWD7RfhrndOFwvwCkSCT3BlbkFJIhYOggcmq0Oqq8pJ1riM')
+        client = OpenAI(api_key='sk-', base_url="https://")
+        #client = OpenAI(api_key='sk-')
         messages = [{"role": "user", "content": [{"type": "text", "text": text}]}]
 
         if image_path is not None:
@@ -179,7 +179,7 @@ def test_internvl():
     with open('../qwen_ocr.jsonl', 'r') as f:
         gt = f.readlines()
     with open(
-            '../chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_pretrained_InternVL-Chat-V1-5_smiles_ocr.jsonl',
+            '../your_path.jsonl',
             'r') as fp:
         pred = fp.readlines()
 
