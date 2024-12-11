@@ -7,13 +7,13 @@
 ##SBATCH --partition=AI4Phys
 ##SBATCH -w SH-IDC1-10-140-24-63
 
-export LD_LIBRARY_PATH=/mnt/petrelfs/share/cuda-11.8/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=cuda-11.8/lib64:$LD_LIBRARY_PATH
 
-export CUDA_PATH=/mnt/petrelfs/share/cuda-11.8/
-export CUDA_HOME=/mnt/petrelfs/share/cuda-11.8/
-export CUDA_ROOT=/mnt/petrelfs/share/cuda-11.8/s
+export CUDA_PATH=cuda-11.8/
+export CUDA_HOME=cuda-11.8/
+export CUDA_ROOT=cuda-11.8/s
 
-source /mnt/petrelfs/zhangdi1/miniforge3/bin/activate internvl_new
+
 unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY
 export all_proxy=""
 cd /mnt/petrelfs/zhangdi1/lijunxian/InternVL/internvl_chat_llava
