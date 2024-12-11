@@ -60,4 +60,4 @@ def cal_sim_all_items(path_1, path_2):
 
 if __name__ == "__main__":
 
-    cal_sim_all_items('/mnt/petrelfs/zhangdi1/lijunxian/SciQA/sciqa_test.jsonl', '/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl')
+    cal_sim_all_items('SciQA/sciqa_test.jsonl', 'datagen/mm_pure_fix.jsonl.test.jsonl')
