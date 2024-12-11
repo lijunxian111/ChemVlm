@@ -17,7 +17,7 @@ def read_data(path: str):
     choices = [len(eval(df['choices'].values[i])) for i in range(len(df['choices'].values))]
     print(set(choices))
     print(np.unique(df['label'].values))
-    data = df.to_dict('records') #×ª»»Îª×ÖµäÁĞ±íµÄ¹Ø¼ü¾ä£¡£¡£¡
+    data = df.to_dict('records') #è½¬æ¢ä¸ºå­—å…¸åˆ—è¡¨çš„å…³é”®å¥ï¼ï¼ï¼
 
     return data
 
@@ -31,7 +31,7 @@ def convert_bytes_to_images(data, store_path: str, file_path: str):
     for index, line in tqdm(enumerate(data)):
         q_id = f"chemqa_{index}"
         question = line['question']
-        options = eval(line['choices'])  #·Ç³£ÖØÒª
+        options = eval(line['choices'])  #éå¸¸é‡è¦
         ans = line['label']
         ans = dict_choices[ans]
         desc = line['description']
@@ -55,9 +55,9 @@ def convert_bytes_to_images(data, store_path: str, file_path: str):
                 #if f"image {i}" in question or f"image {i}" in options:
             #print(line['image'])
             image_bytes = line['image']['bytes']
-            # ½«bytesÊı¾İ×ª»»Îªnumpy¾ØÕó
+            # å°†bytesæ•°æ®è½¬æ¢ä¸ºnumpyçŸ©é˜µ
             image_np = cv2.imdecode(np.frombuffer(image_bytes, dtype=np.uint8), cv2.IMREAD_COLOR)
-            #½«numpy¾ØÕó±£´æÎªjpg¸ñÊ½µÄÍ¼Æ¬ÎÄ¼ş
+            #å°†numpyçŸ©é˜µä¿å­˜ä¸ºjpgæ ¼å¼çš„å›¾ç‰‡æ–‡ä»¶
             cv2.imwrite(store_path + f"{index}.jpg", image_np)
             imgs.append(store_path + f"{index}.jpg")
         
@@ -69,9 +69,9 @@ def convert_bytes_to_images(data, store_path: str, file_path: str):
         question_list.append(conversations)
         #image_bytes = img['bytes']
         #image_bytes = img
-        # ½«bytesÊı¾İ×ª»»Îªnumpy¾ØÕó
+        # å°†bytesæ•°æ®è½¬æ¢ä¸ºnumpyçŸ©é˜µ
         #image_np = cv2.imdecode(np.frombuffer(image_bytes, dtype=np.uint8), cv2.IMREAD_COLOR)
-        # ½«numpy¾ØÕó±£´æÎªjpg¸ñÊ½µÄÍ¼Æ¬ÎÄ¼ş
+        # å°†numpyçŸ©é˜µä¿å­˜ä¸ºjpgæ ¼å¼çš„å›¾ç‰‡æ–‡ä»¶
         #cv2.imwrite(store_path + f"{index}.jpg", image_np)
 
     writer = open(file_path, 'w')
@@ -87,9 +87,9 @@ def convert_bytes_to_images(data, store_path: str, file_path: str):
 if __name__ == "__main__":
     #print('A'+1)
     """
-    raw_data_1 = read_data('/mnt/petrelfs/zhangdi1/ChemQA/data/train-00000-of-00002.parquet')
-    raw_data_2 = read_data('/mnt/petrelfs/zhangdi1/ChemQA/data/train-00001-of-00002.parquet')
+    raw_data_1 = read_data('ChemQA/data/train-00000-of-00002.parquet')
+    raw_data_2 = read_data('ChemQA/data/train-00001-of-00002.parquet')
     raw_data = raw_data_1 + raw_data_2
     """
-    raw_data = read_data('/mnt/petrelfs/zhangdi1/ChemQA/data/valid-00000-of-00001.parquet')
-    convert_bytes_to_images(raw_data, '/mnt/hwfile/ai4chem/share/chemqa/val/', '/mnt/petrelfs/zhangdi1/lijunxian/datagen/chemqa_val.jsonl')
+    raw_data = read_data('ChemQA/data/valid-00000-of-00001.parquet')
+    convert_bytes_to_images(raw_data, chemqa/val/', 'datagen/chemqa_val.jsonl')
