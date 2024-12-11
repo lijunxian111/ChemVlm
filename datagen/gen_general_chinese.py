@@ -1,10 +1,10 @@
 import json
 import random
 
-base_path = '/mnt/hwfile/ai4chem/share/general_chinese_mm/images/'
+base_path = './general_chinese_mm/images/'
 
 with open('./general_mm_pure_chinese.jsonl', 'w') as fm:
-    with open('/mnt/hwfile/ai4chem/share/general_chinese_mm/instruction_tuning.jsonl') as f:
+    with open('./general_chinese_mm/instruction_tuning.jsonl') as f:
         lines = f.readlines()
         for line_txt in lines:
             line = json.loads(line_txt)
