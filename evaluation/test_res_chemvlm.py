@@ -9,7 +9,7 @@ import re
 import torch
 
 import sys
-sys.path.append('/InternVL/internvl_chat/')
+sys.path.append('../InternVL/internvl_chat/')
 
 from internvl.model.internvl_chat import InternVLChatModel
 from internvl.train.dataset_old import (ConcatDataset, TCSLoader,
