@@ -15,7 +15,7 @@ The architecture of our model is as follows.
 
 ## Training
 
-Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions.
+Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions. 
 
 ## Evaluation  
 You can find the results generation files in the ```evaluation``` folder.  
