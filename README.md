@@ -18,8 +18,14 @@ The architecture of our model is as follows.
 Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions. Note that you should first run 'merge_vit_and_llm.py' to get the initial ChemVLM model checkpoint without training.
 
 ## Evaluation  
+Our proposed benchmarks are in the ```datagen``` folder:  
+```
+MMChemOCR: datagen/mm_chem_ocr.jsonl.test.jsonl
+MMCR-bench: datagen/mm_pure_fix.jsonl
+MMChemBench:  
+```
 You can find the results generation files in the ```evaluation``` folder.  
-For SMILES ocr task(MMChemOCR), see evaluation/test_smiles_ocr.py;  
+For SMILES ocr task(MMChemOCR), see both evaluation/test_chemvlm_res.py and evaluation/test_smiles_ocr.py;    
 for other tasks, see evaluation/test_chemvlm_res.py.(Some other tasks we add after paper submission is also here.)
 
 If this help you, please kindly cite:
