@@ -22,8 +22,8 @@ Our proposed benchmarks are in the ```datagen``` folder:
 ```
 MMChemOCR: datagen/mm_chem_ocr.jsonl.test.jsonl
 MMCR-bench: datagen/mm_pure_fix.jsonl
-MMChemBench(mol-caption):  datagen/  
-MMChemBench(property-prediction: datagen/  
+MMChemBench(mol-caption):  datagen/chembench_mol2caption.jsonl
+MMChemBench(property-prediction: datagen/chembench_property.jsonl 
 ```
 You can find the results generation files in the ```evaluation``` folder.  
 For SMILES ocr task(MMChemOCR), see both evaluation/test_chemvlm_res.py and evaluation/test_smiles_ocr.py;    
