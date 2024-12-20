@@ -33,7 +33,7 @@ Steps:
 1. Create an 'image' folder under the root dir. 
 2. Download the image files <a href=''>here</a> and put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)
 3. Use test_chemvlm_res.py to generate answers to questions.  
-4. For SMILES ocr task, use test_smiles_ocr.py for exact scores of answers. For MMCR tasks, use GPT series as a judge to calculate scores. For MMChemBench, you can read scores easily since they are multiple choice problems.  
+4. For SMILES ocr task, use test_smiles_ocr.py for exact scores of answers. For MMCR tasks, use GPT series as a judge to calculate scores. For MMChemBench, you can read scores easily through read_multiple_choice_scores.py since they are multiple choice problems.  
 
 ## Reference  
 If this help you, please kindly cite:
