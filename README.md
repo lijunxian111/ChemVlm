@@ -31,7 +31,7 @@ for other tasks, see evaluation/test_chemvlm_res.py.(Some other tasks we add aft
 
 Steps:  
 1. Create an 'image' folder under the root dir.
-2. Download the image files here and put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)  
+2. Download the image files <a href='https://drive.google.com/drive/folders/1zCFMTtK58SofvF5ygU21AAKcOx9L7alC?usp=drive_link'>here</a> and put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)  
 
 ## Reference  
 If this help you, please kindly cite:
