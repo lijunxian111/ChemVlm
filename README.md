@@ -30,8 +30,8 @@ For SMILES ocr task(MMChemOCR), see both evaluation/test_chemvlm_res.py and eval
 for other tasks, see evaluation/test_chemvlm_res.py.(Some other tasks we add after paper submission is also here.)
 
 Steps:  
-1. Create an 'image' folder under the root dir.
-2. Download the image files <a href='https://drive.google.com/drive/folders/1zCFMTtK58SofvF5ygU21AAKcOx9L7alC?usp=drive_link'>here</a> and put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)
+1. Create an 'image' folder under the root dir. 
+2. Download the image files <a href=''>here</a> and put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)
 3. Use test_chemvlm_res.py to generate answers to questions.  
 4. For SMILES ocr task, use test_smiles_ocr.py for exact scores of answers. For MMCR tasks, use GPT series as a judge to calculate scores. For MMChemBench, you can read scores easily since they are multiple choice problems.  
 
