@@ -15,7 +15,11 @@ The architecture of our model is as follows.
 
 ## Training
 
-Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions. Note that you should first run 'merge_vit_and_llm.py' to get the initial ChemVLM model checkpoint without training.
+Our training refers to the InternVL-v1.5 repo. You can find it at https://internvl.readthedocs.io/en/latest/internvl1.5/finetune.html. Create a folder named 'InternVL' under root directory and follow their instructions. Note that you should first run:  
+```
+CUDA_VISEBLE_DEVICES=xxx python merge_vit_and_llm.py
+```
+to get the initial ChemVLM model checkpoint without training.  
 
 ## Evaluation  
 Our proposed benchmarks are in the ```datagen``` folder:  
