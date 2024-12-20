@@ -29,6 +29,10 @@ You can find the results generation files in the ```evaluation``` folder.
 For SMILES ocr task(MMChemOCR), see both evaluation/test_chemvlm_res.py and evaluation/test_smiles_ocr.py;    
 for other tasks, see evaluation/test_chemvlm_res.py.(Some other tasks we add after paper submission is also here.)
 
+Steps:  
+1. Create an 'image' folder under the root dir.
+2. Download the image files here and put them under the image folder. Like this: 'image/chem_ocr/...'  
+
 If this help you, please kindly cite:
 
 ```
