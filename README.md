@@ -8,7 +8,7 @@ Large Language Models (LLMs) have achieved remarkable success and have been appl
 ## Model
 
 Use our model at: https://huggingface.co/AI4Chem.    
-Our best model is at: AI4Chem/ChemVLM-26B-1-2.  
+Our best model is at: [AI4Chem/ChemVLM-26B-1-2](https://huggingface.co/AI4Chem/ChemVLM-26B-1-2).  
 
 The architecture of our model is as follows.
 
