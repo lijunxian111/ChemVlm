@@ -42,8 +42,8 @@ for other tasks, see evaluation/test_chemvlm_res.py.(Some other tasks we add aft
 
 Steps:  
 1. Create an 'image' folder under the root dir. 
-2. Get the image files by:
-Download MMChemOCR <a href='https://drive.google.com/file/d/12KT8rEp16tC43KTbnX9cmX_O4cSmSzYQ/view?usp=drive_link'>here</a>.
+2. Get the image files by:  
+Download MMChemOCR <a href='https://drive.google.com/file/d/12KT8rEp16tC43KTbnX9cmX_O4cSmSzYQ/view?usp=drive_link'>here</a>.  
 Download MMChemBench <a href='https://drive.google.com/file/d/1Kw-T5ltPL7ewEYlf7XhI-Zuwah-sqvil/view?usp=drive_link'>mol2caption</a>, <a href='https://drive.google.com/file/d/1yQl26RMQON3ArvxUN1euKIrl1FH8PqH3/view?usp=drive_link'>property</a>.  
 Dropping a letter <a href='mailto:zhoudongzhan@pjlab.org.cn'>here</a> for MMCR-bench.   
 Put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to keep the initial name of the folder!('mm_pure_fix' refers to MMCR-bench)   
