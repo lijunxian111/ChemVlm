@@ -87,7 +87,7 @@ def test_dealed_data(file_path:str,  gt_path:str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
 def call_qwen(question: str):
     """
@@ -145,8 +145,8 @@ def call_multimodal(model_name, image_path, text):
         return response.output.choices[0].message.content
     elif "gpt" in model_name:
 
-        client = OpenAI(api_key='sk-trNebBQItspLf5gG044a7bA024444e9cAe9dCa9bB76eFdA6', base_url="https://api.claudeshop.top/v1")
-        #client = OpenAI(api_key='sk-proj-aWWD7RfhrndOFwvwCkSCT3BlbkFJIhYOggcmq0Oqq8pJ1riM')
+        client = OpenAI(api_key='sk-', base_url="https://api.claudeshop.top/v1")
+        #client = OpenAI(api_key='sk-')
         messages = [{"role": "user", "content": [{"type": "text", "text": text}]}]
 
         if image_path is not None:
@@ -178,10 +178,10 @@ def test_internvl():
     """
     tanimoto_list = list()
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl', 'r') as f:
+    with open('../../qwen_ocr.jsonl', 'r') as f:
         gt = f.readlines()
     with open(
-            '/mnt/petrelfs/zhangdi1/lijunxian/chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_pretrained_InternVL-Chat-V1-5_smiles_ocr.jsonl',
+            '../../chemexam_repo/ChemLLM_Multimodal_Exam/results/smiles_ocr_pretrained_InternVL-Chat-V1-5_smiles_ocr.jsonl',
             'r') as fp:
         pred = fp.readlines()
 
@@ -201,7 +201,7 @@ def test_internvl():
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
 def test_one_side(path: str, store_path: str):
     """
@@ -210,7 +210,7 @@ def test_one_side(path: str, store_path: str):
     tanimoto_list = list()
     answers = list()
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/qwen_ocr_8b_chemvlm.jsonl', 'r') as f:
+    with open('../../eval_results/qwen_ocr_8b_chemvlm.jsonl', 'r') as f:
         gt = f.readlines()
     with open(path,
             'r') as fp:
@@ -219,7 +219,7 @@ def test_one_side(path: str, store_path: str):
     for i in tqdm(range(len(pred))):
         gt_line = json.loads(gt[i])
         pred_line = json.loads(pred[i])
-        human_prompt_gen = f'ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§SMILES±íÊ¾µÄ×¨¼Ò¡£ÇëÌáÈ¡ÏÂÁĞÓï¾äÖĞµÄSMILES£º\n```' + pred_line['text'] + '```\n×¢Òâ£¬ÄãÖ»ĞèÒª·µ»ØÒ»¸öSMILESÊ½×Ó¶ø²»·µ»ØÆäËûÄÚÈİ¡£'
+        human_prompt_gen = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + pred_line['text'] + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­è€Œä¸è¿”å›å…¶ä»–å†…å®¹ã€‚'
         try:
             ans_gen = call_multimodal('gpt-4', None, human_prompt_gen)
             ans_gen = ans_gen.replace('```','')
@@ -243,7 +243,7 @@ def test_one_side(path: str, store_path: str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
     with open(store_path, 'w', encoding='utf-8') as file:
         for data in answers:
@@ -259,10 +259,10 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     gt = []
     pred = []
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl', 'r', encoding='utf-8') as f:
+    with open('../../qwen_ocr.jsonl', 'r', encoding='utf-8') as f:
         gt = f.readlines()
 
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_chem_ocr.jsonl.test.jsonl', 'r', encoding='utf-8') as fp:
+    with open('../../datagen/mm_chem_ocr.jsonl.test.jsonl', 'r', encoding='utf-8') as fp:
         data_to_test = fp.readlines()
 
     mllm_smiles_list = list()
@@ -272,10 +272,10 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
         single_data = json.loads(data_to_test[i])
         img_path = single_data['image']
         # img_path = r'E:\ailab\1.png'
-        # img_path = '/mnt/petrelfs/zhangdi1/lijunxian/dog.jpeg'
-        # prompt = "Í¼Æ¬ÉÏÃèÊöÁËÊ²Ã´"
-        prompt = "ÄãÊÇÒ»Î»¾«Í¨»¯Ñ§·Ö×ÓÍ¼Ê¶±ğºÍSMILES±í´ïÊ½µÄ×¨¼Ò" + single_data['conversations'][0][
-            'value'] + "×¢Òâ£¬ÄãµÄ»Ø´ğ¸ñÊ½Îª: [xxx], ÆäÖĞxxxÊÇÒ»¸öSMILES×Ö·û´®"
+        # img_path = '../../dog.jpeg'
+        # prompt = "å›¾ç‰‡ä¸Šæè¿°äº†ä»€ä¹ˆ"
+        prompt = "ä½ æ˜¯ä¸€ä½ç²¾é€šåŒ–å­¦åˆ†å­å›¾è¯†åˆ«å’ŒSMILESè¡¨è¾¾å¼çš„ä¸“å®¶" + single_data['conversations'][0][
+            'value'] + "æ³¨æ„ï¼Œä½ çš„å›ç­”æ ¼å¼ä¸º: [xxx], å…¶ä¸­xxxæ˜¯ä¸€ä¸ªSMILESå­—ç¬¦ä¸²"
         prompt = prompt.replace('\n', '').replace('<image>', '')
         try:
             ans_from_mllm = call_multimodal(model_name, img_path, prompt)
@@ -325,7 +325,7 @@ def test_online_MLLMs(model_name: str, restore_ans_path: str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
 
 
 def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
@@ -345,8 +345,8 @@ def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
             generated_res = line['text']
             ground_truth = line['annotation']
             
-            human_prompt_gen = f'ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§SMILES±íÊ¾µÄ×¨¼Ò¡£ÇëÌáÈ¡ÏÂÁĞÓï¾äÖĞµÄSMILES£º\n```' + generated_res + '```\n×¢Òâ£¬ÄãÖ»ĞèÒª·µ»ØÒ»¸öSMILESÊ½×Ó¡£'
-            human_prompt_gt = f'ÄãÊÇÒ»Î»ÊìÏ¤»¯Ñ§SMILES±íÊ¾µÄ×¨¼Ò¡£ÇëÌáÈ¡ÏÂÁĞÓï¾äÖĞµÄSMILES£º\n```' + ground_truth + '```\n×¢Òâ£¬ÄãÖ»ĞèÒª·µ»ØÒ»¸öSMILESÊ½×Ó¡£'
+            human_prompt_gen = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + generated_res + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­ã€‚'
+            human_prompt_gt = f'ä½ æ˜¯ä¸€ä½ç†Ÿæ‚‰åŒ–å­¦SMILESè¡¨ç¤ºçš„ä¸“å®¶ã€‚è¯·æå–ä¸‹åˆ—è¯­å¥ä¸­çš„SMILESï¼š\n```' + ground_truth + '```\næ³¨æ„ï¼Œä½ åªéœ€è¦è¿”å›ä¸€ä¸ªSMILESå¼å­ã€‚'
 
             ans_gen = call_qwen(human_prompt_gen)
             ans_gt = call_qwen(human_prompt_gt)
@@ -368,7 +368,7 @@ def test_chemvl_perform_smiles_ocr(ans_paths: list, restore_path: str):
     )
     tanimoto_to_one = tanimoto_one_count / origin_lenth
 
-    print(f"Æ½¾ùÏàËÆ¶È{average_tanimoto}, tanimoto@1.0Îª{tanimoto_to_one * 100}%")
+    print(f"å¹³å‡ç›¸ä¼¼åº¦{average_tanimoto}, tanimoto@1.0ä¸º{tanimoto_to_one * 100}%")
     with open(restore_path, 'w', encoding='utf-8') as file:
         for data in gen_and_gt_list:
             file.write(json.dumps(data, ensure_ascii=False) + '\n')
@@ -380,9 +380,9 @@ if __name__ == "__main__":
     if "ocr" in task:
         if eval_model_type == 'chemvlm':
             ocr_chemvl_results = [
-                '/mnt/hwfile/ai4chem/hao/internvl_8b_2_5/result_internvl_2_5_8b__smiles_ocr.jsonl']
-            restore_res_path = '/mnt/petrelfs/zhangdi1/lijunxian/extracted_ocr_internvl2_5_8b.jsonl'
-            if os.path.exists('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/qwen_ocr_8b_chemvlm.jsonl'):
+                '']
+            restore_res_path = ''
+            if os.path.exists('../../eval_results/qwen_ocr_8b_chemvlm.jsonl'):
                 test_one_side(ocr_chemvl_results[0], restore_res_path)
             else:
                 test_chemvl_perform_smiles_ocr(ocr_chemvl_redsults, restore_res_path)
@@ -390,14 +390,14 @@ if __name__ == "__main__":
             test_internvl()
         elif eval_model_type == 'llava' or eval_model_type == 'glm-4v':
             path = ""
-            test_one_side(path, f'/mnt/petrelfs/zhangdi1/lijunxian/extracted_ocr_{eval_model_type}.jsonl')
+            test_one_side(path, f'../../extracted_ocr_{eval_model_type}.jsonl')
 
         elif eval_model_type == 'qwen-vl' or 'gpt' in eval_model_type:
             restore_path = f'./{eval_model_type}-{task}.jsonl'
             test_online_MLLMs(eval_model_type, restore_path)
         elif eval_model_type == 'decimer' or eval_model_type == 'molscribe' or eval_model_type == 'yi':
-            test_dealed_data('/mnt/petrelfs/zhangdi1/lijunxian/yi-vl-plus-smiles_ocr.jsonl', '/mnt/petrelfs/zhangdi1/lijunxian/qwen_ocr.jsonl')
+            test_dealed_data('../../yi-vl-plus-smiles_ocr.jsonl', '../../qwen_ocr.jsonl')
         else:
             raise ValueError(f"Cannot recognize {eval_model_type}")
     else:
-        test_dealed_data('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/gpt-4o-orderly_product.jsonl','/mnt/petrelfs/zhangdi1/lijunxian/eval_results/gpt-4o-orderly_product.jsonl')
+        test_dealed_data('../../eval_results/gpt-4o-orderly_product.jsonl','../../eval_results/gpt-4o-orderly_product.jsonl')
