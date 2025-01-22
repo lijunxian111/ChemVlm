@@ -64,12 +64,4 @@ If this help you, please kindly cite:
       url={https://arxiv.org/abs/2408.07246}, 
 }
 
-@inproceedings{
-li2024chemvlmexploringpowermultimodal,
-title={ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area},
-author={Junxian Li and Di Zhang and Xunzhi Wang and Zeying Hao and Jingdi Lei and Qian Tan and Cai Zhou and Wei Liu and Yaotian Yang and Xinrui Xiong and Weiyun Wang and Zhe Chen and Wenhai Wang and Wei Li and Shufei Zhang and Mao Su and Wanli Ouyang and Yuqiang Li and Dongzhan Zhou},
-booktitle={The 39th Annual AAAI Conference on Artificial Intelligence},
-year={2024},
-url={https://openreview.net/forum?id=UC4oVmxTaI}
-}
 ```
