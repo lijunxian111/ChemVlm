@@ -132,7 +132,7 @@ def get_visualization(path: str):
     print(line_0['conversations'][1]['value'])
     img = '/mnt/hwfile/ai4chem/share/data/' + line_0['images'][0]
     pic = Image.open(img)
-    pic.save('/mnt/petrelfs/zhangdi1/lijunxian/sample2.png')
+    pic.save('../../sample2.png')
 
     print(q)
 
@@ -203,7 +203,7 @@ def read_lines(path: str):
 
 if __name__ == "__main__":
     """
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/qwen-vl_dpo-mmstar.jsonl', 'r') as f:
+    with open('../../eval_results/qwen-vl_dpo-mmstar.jsonl', 'r') as f:
         data = f.readlines()
     new_data = []
     for line in data:
@@ -212,7 +212,7 @@ if __name__ == "__main__":
             pass
         else:
             new_data.append(line)
-    with open('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/qwen-vl_dpo-mmstar.jsonl', 'w') as writer:
+    with open('../../eval_results/qwen-vl_dpo-mmstar.jsonl', 'w') as writer:
         for line in new_data:
             writer.write(json.dumps(line, ensure_ascii=False)+'\n')
     
@@ -221,15 +221,15 @@ if __name__ == "__main__":
     """
     
     #print(json.loads(data[988]))
-    #read_lines_2('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/qwen-vl_mmstar-dpo-critic.jsonl')
+    #read_lines_2('../../eval_results/qwen-vl_mmstar-dpo-critic.jsonl')
     #smiles_to_image('CCOC(=O)C','sample.png')
     
     #print(len(data))
-    #cal_choice_scores('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/result_chemvlm26B_1120__SciQA.jsonl')
-    #read_lines('/mnt/petrelfs/zhangdi1/lijunxian/datagen/CMMU_test_no_multiple.jsonl')
-    #get_visualization('/mnt/petrelfs/zhangdi1/lijunxian/datagen/mm_pure_fix.jsonl.test.jsonl')
-    #read_lines('/mnt/petrelfs/zhangdi1/lijunxian/datagen/orderly_train.jsonl')
-    #call_bleu_scores('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/result_chemvlm26B_1110__Chebi_caption.jsonl','/mnt/hwfile/ai4chem/share/InternVL2-26B')
-    #get_pure_eng_text('/mnt/petrelfs/zhangdi1/lijunxian/datagen/cheBI_test.jsonl','/mnt/petrelfs/zhangdi1/lijunxian/datagen/cheBI_caption_eng_test.jsonl')
-    #call_bleu_scores('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/result_chemvlm26B_1110__Chebi_caption.jsonl','google-bert/bert-base-uncased')
-    get_type_scores('/mnt/petrelfs/zhangdi1/lijunxian/eval_results/reaction_share_InternVL2-26B_pistachio_type_sample.jsonl')
+    #cal_choice_scores('../../eval_results/result_chemvlm26B_1120__SciQA.jsonl')
+    #read_lines('../../datagen/CMMU_test_no_multiple.jsonl')
+    #get_visualization('../../datagen/mm_pure_fix.jsonl.test.jsonl')
+    #read_lines('../../datagen/orderly_train.jsonl')
+    #call_bleu_scores('../../eval_results/result_chemvlm26B_1110__Chebi_caption.jsonl','/mnt/hwfile/ai4chem/share/InternVL2-26B')
+    #get_pure_eng_text('../../datagen/cheBI_test.jsonl','../../datagen/cheBI_caption_eng_test.jsonl')
+    #call_bleu_scores('../../eval_results/result_chemvlm26B_1110__Chebi_caption.jsonl','google-bert/bert-base-uncased')
+    get_type_scores('../../eval_results/reaction_share_InternVL2-26B_pistachio_type_sample.jsonl')
