@@ -22,10 +22,10 @@ from typing import Optional
 from test_res_openai import call_multimodal
 
 
-dashscope.api_key = 'sk-eea7c876461747c5a6eebe0531164767' #qwen API-KEY
+dashscope.api_key = 'sk-' #qwen API-KEY
 """
 client = OpenAI(
-    api_key="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"
+    api_key="sk-"
 )
 """
  
