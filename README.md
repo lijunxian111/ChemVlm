@@ -52,11 +52,11 @@ Put them under the image folder. Like this: 'image/chem_ocr/...'. Remember to ke
 
 ### Update:  
 A more effient way to evaluate performance is to use the evluation_tool folder.  
-'''
+```
 Generate a result file: args.stage --generation  
 Give scores to the results: args.stage --score  
 Both thing done in one round: args.stage --both  
-'''
+```
 You can also determine the dataset type and model type, etc.
 
 ## Reference  
