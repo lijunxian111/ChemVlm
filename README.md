@@ -1,5 +1,6 @@
 # Official repo for AAAI 2025 paper: "ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area".  
-Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You can see our Appendix here.
+Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You can see our Appendix here.  
+Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
 
 ## Abstract
 
@@ -63,14 +64,13 @@ You can also determine the dataset type and model type, etc.
 If this help you, please kindly cite:
 
 ```
-@misc{li2024chemvlmexploringpowermultimodal,
-      title={ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area}, 
-      author={Junxian Li and Di Zhang and Xunzhi Wang and Zeying Hao and Jingdi Lei and Qian Tan and Cai Zhou and Wei Liu and Yaotian Yang and Xinrui Xiong and Weiyun Wang and Zhe Chen and Wenhai Wang and Wei Li and Shufei Zhang and Mao Su and Wanli Ouyang and Yuqiang Li and Dongzhan Zhou},
-      year={2024},
-      eprint={2408.07246},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2408.07246}, 
+@inproceedings{li2025chemvlm,
+  title={Chemvlm: Exploring the power of multimodal large language models in chemistry area},
+  author={Li, Junxian and Zhang, Di and Wang, Xunzhi and Hao, Zeying and Lei, Jingdi and Tan, Qian and Zhou, Cai and Liu, Wei and Yang, Yaotian and Xiong, Xinrui and others},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={1},
+  pages={415--423},
+  year={2025}
 }
-
 ```
