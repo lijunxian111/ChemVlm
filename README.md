@@ -2,6 +2,7 @@
 This is the official repo for our paper: ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area.  
 Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You can see our Appendix here.  
 Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
+Huggingface link: [https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data](https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data)  
 
 ## Abstract
 
