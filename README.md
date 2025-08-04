@@ -30,6 +30,13 @@ CUDA_VISEBLE_DEVICES=xxx python merge_vit_and_llm.py
 ```
 to get the initial ChemVLM model checkpoint without training.  
 
+Some training data are in:  
+```
+https://huggingface.co/collections/di-zhang-fdu/multi-corpus-datasets-for-chemllm-66e7f14fd683a3f4e51d737b
+https://huggingface.co/AI4Chem/ChemExam-mm-data-parts  
+```
+If you use them, please kindly star our github and huggingface repo. That will be of great help!  
+
 ## Evaluation  
 Huggingface link: [https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data](https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data)  
 Our proposed benchmarks are in the ```datagen``` folder:  
