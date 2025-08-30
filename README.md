@@ -82,11 +82,4 @@ If this help you, please kindly cite:
   pages={415--423},
   year={2025}
 }
-or
-@article{li2024chemvlm,
-  title={ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area},
-  author={Li, Junxian and Zhang, Di and Wang, Xunzhi and Hao, Zeying and Lei, Jingdi and Tan, Qian and Zhou, Cai and Liu, Wei and Yang, Yaotian and Xiong, Xinrui and others},
-  journal={arXiv preprint arXiv:2408.07246},
-  year={2024}
-}
 ```
