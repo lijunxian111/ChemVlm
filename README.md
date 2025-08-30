@@ -4,7 +4,7 @@ Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You c
 Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
 
 ## Reference  
-If this help you, please kindly cite:
+If using our model or datasets or any other purposes, please kindly cite:
 
 ```
 @inproceedings{li2025chemvlm,
