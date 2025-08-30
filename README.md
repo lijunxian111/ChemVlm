@@ -3,6 +3,21 @@ This is the official repo for our paper: ChemVLM: Exploring the Power of Multimo
 Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You can see our Appendix here.  
 Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
 
+## Reference  
+If this help you, please kindly cite:
+
+```
+@inproceedings{li2025chemvlm,
+  title={Chemvlm: Exploring the power of multimodal large language models in chemistry area},
+  author={Li, Junxian and Zhang, Di and Wang, Xunzhi and Hao, Zeying and Lei, Jingdi and Tan, Qian and Zhou, Cai and Liu, Wei and Yang, Yaotian and Xiong, Xinrui and others},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={1},
+  pages={415--423},
+  year={2025}
+}
+```
+
 ## Abstract
 
 Large Language Models (LLMs) have achieved remarkable success and have been applied across various scientific fields, including chemistry. However, many chemical tasks require the processing of visual information, which cannot be successfully handled by existing chemical LLMs. This brings a growing need for models capable of integrating multimodal information in the chemical domain. In this paper, we introduce **ChemVLM**, an open-source chemical multimodal large language model specifically designed for chemical applications. ChemVLM is trained on a carefully curated bilingual multimodal dataset that enhances its ability to understand both textual and visual chemical information, including molecular structures, reactions, and chemistry examination questions. We develop three datasets for comprehensive evaluation, tailored to Chemical Optical Character Recognition (OCR), Multimodal Chemical Reasoning (MMCR), and Multimodal Molecule Understanding tasks. We benchmark ChemVLM against a range of open-source and proprietary multimodal large language models on various tasks. Experimental results demonstrate that ChemVLM achieves competitive performance across all evaluated tasks. Our code is available at https://github.com/AI4Chem/ChemVlm.
@@ -68,18 +83,3 @@ Give scores to the results: args.stage --score
 Both thing done in one round: args.stage --both  
 ```
 You can also determine the dataset type and model type, etc.
-
-## Reference  
-If this help you, please kindly cite:
-
-```
-@inproceedings{li2025chemvlm,
-  title={Chemvlm: Exploring the power of multimodal large language models in chemistry area},
-  author={Li, Junxian and Zhang, Di and Wang, Xunzhi and Hao, Zeying and Lei, Jingdi and Tan, Qian and Zhou, Cai and Liu, Wei and Yang, Yaotian and Xiong, Xinrui and others},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={39},
-  number={1},
-  pages={415--423},
-  year={2025}
-}
-```
