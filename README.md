@@ -24,7 +24,7 @@ Large Language Models (LLMs) have achieved remarkable success and have been appl
 
 ## Data
 
-We have released our training data at: https://huggingface.co/di-zhang-fdu/chemvlm-sft-datasets.  
+We have released our training data at: https://huggingface.co/datasets/di-zhang-fdu/chemvlm-sft-datasets.  
 Some pure text data and exam data are here:  
 https://huggingface.co/collections/di-zhang-fdu/multi-corpus-datasets-for-chemllm-66e7f14fd683a3f4e51d737b   
 https://huggingface.co/AI4Chem/ChemExam-mm-data-parts  
