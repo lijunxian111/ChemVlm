@@ -88,3 +88,6 @@ Give scores to the results: args.stage --score
 Both thing done in one round: args.stage --both  
 ```
 You can also determine the dataset type and model type, etc.
+
+### Demo
+You can try <a href='https://migo-chem.intern-ai.org.cn/'>here</a> !
