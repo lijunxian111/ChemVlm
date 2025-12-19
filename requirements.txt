@@ -83,7 +83,6 @@ hyperframe @ file:///home/conda/feedstock_root/build_artifacts/hyperframe_161911
 idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1713279365350/work
 imageio==2.35.1
 importlib_resources==6.4.0
--e git+https://github.com/AI4Chem/ChemLLM_Multimodal_Exam.git@0158b6d5878c94bfbd48167d8495a3bd5752a0a9#egg=internvl_chat
 ipython==8.12.3
 jedi==0.19.1
 Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1715127149914/work
