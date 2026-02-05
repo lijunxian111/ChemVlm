@@ -1,7 +1,5 @@
 # # [🏆AAAI2025] ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area.    
 This is the official repo for our paper: ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry Area.  
-Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You can see our Appendix here.  
-Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
 
 <div>
 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32020"><img src="https://img.shields.io/badge/Paper-AAAI%202025-blue?logo=aaai&logoColor=white"></a>
