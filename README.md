@@ -4,6 +4,7 @@ Our extended version of the paper is at: https://arxiv.org/abs/2408.07246. You c
 Conference Version is at: [https://ojs.aaai.org/index.php/AAAI/article/view/32020](https://ojs.aaai.org/index.php/AAAI/article/view/32020).  
 
 <div>
+<a href="" target='_blank' style="text-decoration: none;"><img src="https://img.shields.io/github/downloads/lijunxian111/ChemVlm/total?color=green"></a>
 <a href="https://github.com/lijunxian111/ChemVlm" target='_blank' style="text-decoration: none;"><img src="https://visitor-badge.laobi.icu/badge?page_id=lijunxian111/ChemVlm"></a>
 <a href="https://github.com/lijunxian111/ChemVlm/stargazers" target='_blank' style="text-decoration: none;"><img src="https://img.shields.io/github/stars/lijunxian111/ChemVlm?style=social"></a>
 </div>
