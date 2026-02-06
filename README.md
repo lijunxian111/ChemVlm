@@ -38,7 +38,7 @@ Usually, you can use the first link only to finetune your model for better multi
 
 If you use them, please kindly star our github and huggingface repo and cite our paper. That will be of great help!  
 
-[](./imgs/data_processing.png)
+![](./imgs/data_processing.png)
 
 ## Model
 
