@@ -64,6 +64,7 @@ to get the initial ChemVLM model checkpoint without training.
 
 
 ## Evaluation  
+Evaluation of our 26B model needs at least one NVIDIA A100 80G GPU (flash attention+bfloat16), and 8B needs at least one GPU with 48G memory.  
 Huggingface link: [https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data](https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data)  
 Our proposed benchmarks are in the ```datagen``` folder:  
 ```
