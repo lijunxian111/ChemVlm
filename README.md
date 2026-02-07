@@ -23,6 +23,7 @@ If using our model or datasets or any other purposes, please kindly cite:
   year={2025}
 }
 ```
+That will be of great help!  
 
 ## Abstract
 
@@ -35,8 +36,6 @@ Some pure text data and exam data are here:
 https://huggingface.co/collections/di-zhang-fdu/multi-corpus-datasets-for-chemllm-66e7f14fd683a3f4e51d737b   
 https://huggingface.co/AI4Chem/ChemExam-mm-data-parts  
 Usually, you can use the first link only to finetune your model for better multi-modal chemistry ability.  
-
-If you use them, please kindly star our github and huggingface repo and cite our paper. That will be of great help!  
 
 ![](./imgs/data_processing.png)
 
