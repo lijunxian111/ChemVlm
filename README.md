@@ -62,7 +62,6 @@ CUDA_VISEBLE_DEVICES=xxx python merge_vit_and_llm.py
 ```
 to get the initial ChemVLM model checkpoint without training.  
 
-If you use them, please kindly star our github and huggingface repo and cite our paper. That will be of great help!  
 
 ## Evaluation  
 Huggingface link: [https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data](https://huggingface.co/datasets/Duke-de-Artois/ChemVLM_test_data)  
