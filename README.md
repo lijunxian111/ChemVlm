@@ -4,7 +4,8 @@ Official repo for our paper: ChemVLM: Exploring the Power of Multimodal Large La
 <div>
 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32020"><img src="https://img.shields.io/badge/Paper-AAAI%202025-blue?logo=aaai&logoColor=white"></a>
 <a href="https://arxiv.org/abs/2408.07246"><img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg"></a>
-<a href="https://huggingface.co/AI4Chem" target="_blank"><img src="https://img.shields.io/badge/HuggingFace-repo-yellow?style=for-the-badge&logo=huggingface&logoColor=white"></a>
+<a href="https://huggingface.co/AI4Chem" target="_blank">
+  <img src="https://img.shields.io/badge/HF-repo-yellow?logo=huggingface&logoColor=white"></a>
 <a href="https://github.com/lijunxian111/ChemVlm" target='_blank' style="text-decoration: none;"><img src="https://visitor-badge.laobi.icu/badge?page_id=lijunxian111/ChemVlm&right_color=violet"></a>
 <a href="https://github.com/lijunxian111/ChemVlm/stargazers" target='_blank' style="text-decoration: none;"><img src="https://img.shields.io/github/stars/lijunxian111/ChemVlm?style=social"></a>
 <a href="https://migo-chem.intern-ai.org.cn/"><img src="https://img.shields.io/badge/Demo-Available-brightgreen?style=flat"></a>
